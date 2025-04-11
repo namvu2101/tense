@@ -1,14 +1,14 @@
+import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { AppIcon } from "@/components/ui/AppIcon";
+import { Table } from "@/components/ui/Table";
+import { Sizes } from "@/constants/Sizes";
+import { useAppColor } from "@/hooks/useAppColor";
+import { consonants, vowels } from "@/modules";
 import { Audio } from "expo-av";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
-import { FlatList, ScrollView, TouchableOpacity, View } from "react-native";
-import { vowels, consonants } from "@/modules";
-import { ThemedText } from "@/components/ThemedText";
-import { Sizes } from "@/constants/Sizes";
-import { useAppColor } from "@/hooks/useAppColor";
-import { Table } from "@/components/ui/Table";
+import { ScrollView, TouchableOpacity, View } from "react-native";
 export default function DetailItem() {
   const { id } = useLocalSearchParams();
   const { Colors } = useAppColor();
@@ -21,13 +21,15 @@ export default function DetailItem() {
     articulation,
     audio,
     examples,
-    type,
     exceptions,
     identify,
   } = findedItem!;
+
   const playAudio = async () => {
     const { sound } = await Audio.Sound.createAsync({
-      uri: "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai1/u1.mp3",
+      uri:
+        audio ??
+        "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai1/u1.mp3",
     });
     await sound.playAsync();
   };
@@ -125,6 +127,7 @@ export default function DetailItem() {
             </View>
           );
         })}
+        <Table data={exceptions} title="Ngoại lệ" />
       </ScrollView>
     </ThemedView>
   );

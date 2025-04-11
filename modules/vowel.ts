@@ -1,21 +1,41 @@
 import { TIPA } from "./types";
 
 const vowels: TIPA[] = [
-  // SHORT VOWELS
   {
     symbol: "/ɪ/",
     type: "short vowel",
     keyword: "sit",
-    audio: "https://example.com/audio/ɪ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai2/u2.mp3",
     description:
       "Âm /ɪ/ là một nguyên âm ngắn. Khi phát âm, miệng mở hơi hẹp, môi thư giãn, lưỡi được nâng lên gần vòm miệng trên nhưng thấp hơn âm /iː/. Âm này được phát âm ngắn và nhanh, không kéo dài.",
     articulation:
       "Lưỡi nâng vừa phải về phía trước, môi hơi mở tự nhiên, không căng. Âm phát ra ngắn, nhanh.",
     examples: [
-      { value: "sit", transcription: "/sɪt/", audio: "", meaning: "ngồi" },
-      { value: "fish", transcription: "/fɪʃ/", audio: "", meaning: "cá" },
-      { value: "milk", transcription: "/mɪlk/", audio: "", meaning: "sữa" },
-      { value: "big", transcription: "/bɪɡ/", audio: "", meaning: "to lớn" },
+      {
+        value: "sit",
+        transcription: "/sɪt/",
+        audio: "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai2/sit.mp3",
+        meaning: "ngồi",
+      },
+      {
+        value: "fish",
+        transcription: "/fɪʃ/",
+        audio: "",
+        meaning: "cá",
+      },
+      {
+        value: "milk",
+        transcription: "/mɪlk/",
+        audio: "",
+        meaning: "sữa",
+      },
+      {
+        value: "big",
+        transcription: "/bɪɡ/",
+        audio: "",
+        meaning: "to lớn",
+      },
       {
         value: "win",
         transcription: "/wɪn/",
@@ -45,8 +65,18 @@ const vowels: TIPA[] = [
     ],
     identify: {
       i: [
-        { value: "sit", transcription: "/sɪt/", audio: "", meaning: "ngồi" },
-        { value: "fish", transcription: "/fɪʃ/", audio: "", meaning: "cá" },
+        {
+          value: "sit",
+          transcription: "/sɪt/",
+          audio: "",
+          meaning: "ngồi",
+        },
+        {
+          value: "fish",
+          transcription: "/fɪʃ/",
+          audio: "",
+          meaning: "cá",
+        },
       ],
       y: [
         {
@@ -82,16 +112,37 @@ const vowels: TIPA[] = [
     symbol: "/e/",
     type: "short vowel",
     keyword: "bed",
-    audio: "https://example.com/audio/e.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai3/u3.mp3",
     description:
       "Âm /e/ là một nguyên âm ngắn. Khi phát âm, miệng mở vừa phải, môi hơi căng, lưỡi được nâng lên ở vị trí trung bình phía trước miệng. Âm này được phát âm ngắn và nhanh.",
     articulation:
       "Lưỡi nâng ở vị trí trung bình phía trước miệng, miệng mở vừa phải, môi hơi căng. Âm phát ra ngắn, nhanh.",
     examples: [
-      { value: "bed", transcription: "/bed/", audio: "", meaning: "giường" },
-      { value: "head", transcription: "/hed/", audio: "", meaning: "đầu" },
-      { value: "red", transcription: "/red/", audio: "", meaning: "màu đỏ" },
-      { value: "egg", transcription: "/eɡ/", audio: "", meaning: "trứng" },
+      {
+        value: "bed",
+        transcription: "/bed/",
+        audio: "",
+        meaning: "giường",
+      },
+      {
+        value: "head",
+        transcription: "/hed/",
+        audio: "",
+        meaning: "đầu",
+      },
+      {
+        value: "red",
+        transcription: "/red/",
+        audio: "",
+        meaning: "màu đỏ",
+      },
+      {
+        value: "egg",
+        transcription: "/eɡ/",
+        audio: "",
+        meaning: "trứng",
+      },
       {
         value: "friend",
         transcription: "/frend/",
@@ -121,11 +172,26 @@ const vowels: TIPA[] = [
     ],
     identify: {
       e: [
-        { value: "bed", transcription: "/bed/", audio: "", meaning: "giường" },
-        { value: "egg", transcription: "/eɡ/", audio: "", meaning: "trứng" },
+        {
+          value: "bed",
+          transcription: "/bed/",
+          audio: "",
+          meaning: "giường",
+        },
+        {
+          value: "egg",
+          transcription: "/eɡ/",
+          audio: "",
+          meaning: "trứng",
+        },
       ],
       ea: [
-        { value: "head", transcription: "/hed/", audio: "", meaning: "đầu" },
+        {
+          value: "head",
+          transcription: "/hed/",
+          audio: "",
+          meaning: "đầu",
+        },
         {
           value: "bread",
           transcription: "/bred/",
@@ -134,7 +200,12 @@ const vowels: TIPA[] = [
         },
       ],
       ai: [
-        { value: "said", transcription: "/sed/", audio: "", meaning: "đã nói" },
+        {
+          value: "said",
+          transcription: "/sed/",
+          audio: "",
+          meaning: "đã nói",
+        },
       ],
     },
   },
@@ -142,17 +213,43 @@ const vowels: TIPA[] = [
     symbol: "/æ/",
     type: "short vowel",
     keyword: "cat",
-    audio: "https://example.com/audio/æ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai4/u4.mp3",
     description:
       "Âm /æ/ là một nguyên âm ngắn. Khi phát âm, miệng mở rộng, môi căng ra, lưỡi được đặt thấp ở phía trước miệng. Âm này được phát âm ngắn và nhanh.",
     articulation:
       "Lưỡi đặt thấp ở phía trước miệng, miệng mở rộng, môi căng ra. Âm phát ra ngắn, nhanh.",
     examples: [
-      { value: "cat", transcription: "/kæt/", audio: "", meaning: "con mèo" },
-      { value: "hat", transcription: "/hæt/", audio: "", meaning: "cái mũ" },
-      { value: "map", transcription: "/mæp/", audio: "", meaning: "bản đồ" },
-      { value: "bad", transcription: "/bæd/", audio: "", meaning: "tồi tệ" },
-      { value: "hand", transcription: "/hænd/", audio: "", meaning: "bàn tay" },
+      {
+        value: "cat",
+        transcription: "/kæt/",
+        audio: "",
+        meaning: "con mèo",
+      },
+      {
+        value: "hat",
+        transcription: "/hæt/",
+        audio: "",
+        meaning: "cái mũ",
+      },
+      {
+        value: "map",
+        transcription: "/mæp/",
+        audio: "",
+        meaning: "bản đồ",
+      },
+      {
+        value: "bad",
+        transcription: "/bæd/",
+        audio: "",
+        meaning: "tồi tệ",
+      },
+      {
+        value: "hand",
+        transcription: "/hænd/",
+        audio: "",
+        meaning: "bàn tay",
+      },
     ],
     exceptions: [
       {
@@ -170,8 +267,18 @@ const vowels: TIPA[] = [
     ],
     identify: {
       a: [
-        { value: "cat", transcription: "/kæt/", audio: "", meaning: "con mèo" },
-        { value: "hat", transcription: "/hæt/", audio: "", meaning: "cái mũ" },
+        {
+          value: "cat",
+          transcription: "/kæt/",
+          audio: "",
+          meaning: "con mèo",
+        },
+        {
+          value: "hat",
+          transcription: "/hæt/",
+          audio: "",
+          meaning: "cái mũ",
+        },
       ],
       ai: [
         {
@@ -182,7 +289,12 @@ const vowels: TIPA[] = [
         },
       ],
       au: [
-        { value: "laugh", transcription: "/læf/", audio: "", meaning: "cười" },
+        {
+          value: "laugh",
+          transcription: "/læf/",
+          audio: "",
+          meaning: "cười",
+        },
       ],
     },
   },
@@ -190,17 +302,43 @@ const vowels: TIPA[] = [
     symbol: "/ʌ/",
     type: "short vowel",
     keyword: "cup",
-    audio: "https://example.com/audio/ʌ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai5/u5.mp3",
     description:
       "Âm /ʌ/ là một nguyên âm ngắn. Khi phát âm, miệng mở vừa phải, môi thư giãn, lưỡi được đặt ở vị trí trung tâm miệng. Âm này được phát âm ngắn và nhanh.",
     articulation:
       "Lưỡi đặt ở vị trí trung tâm miệng, miệng mở vừa phải, môi thư giãn. Âm phát ra ngắn, nhanh.",
     examples: [
-      { value: "cup", transcription: "/kʌp/", audio: "", meaning: "cái cốc" },
-      { value: "bus", transcription: "/bʌs/", audio: "", meaning: "xe buýt" },
-      { value: "love", transcription: "/lʌv/", audio: "", meaning: "tình yêu" },
-      { value: "sun", transcription: "/sʌn/", audio: "", meaning: "mặt trời" },
-      { value: "money", transcription: "/ˈmʌni/", audio: "", meaning: "tiền" },
+      {
+        value: "cup",
+        transcription: "/kʌp/",
+        audio: "",
+        meaning: "cái cốc",
+      },
+      {
+        value: "bus",
+        transcription: "/bʌs/",
+        audio: "",
+        meaning: "xe buýt",
+      },
+      {
+        value: "love",
+        transcription: "/lʌv/",
+        audio: "",
+        meaning: "tình yêu",
+      },
+      {
+        value: "sun",
+        transcription: "/sʌn/",
+        audio: "",
+        meaning: "mặt trời",
+      },
+      {
+        value: "money",
+        transcription: "/ˈmʌni/",
+        audio: "",
+        meaning: "tiền",
+      },
     ],
     exceptions: [
       {
@@ -224,8 +362,18 @@ const vowels: TIPA[] = [
     ],
     identify: {
       u: [
-        { value: "cup", transcription: "/kʌp/", audio: "", meaning: "cái cốc" },
-        { value: "bus", transcription: "/bʌs/", audio: "", meaning: "xe buýt" },
+        {
+          value: "cup",
+          transcription: "/kʌp/",
+          audio: "",
+          meaning: "cái cốc",
+        },
+        {
+          value: "bus",
+          transcription: "/bʌs/",
+          audio: "",
+          meaning: "xe buýt",
+        },
       ],
       o: [
         {
@@ -242,7 +390,12 @@ const vowels: TIPA[] = [
         },
       ],
       oo: [
-        { value: "blood", transcription: "/blʌd/", audio: "", meaning: "máu" },
+        {
+          value: "blood",
+          transcription: "/blʌd/",
+          audio: "",
+          meaning: "máu",
+        },
         {
           value: "flood",
           transcription: "/flʌd/",
@@ -256,17 +409,43 @@ const vowels: TIPA[] = [
     symbol: "/ʊ/",
     type: "short vowel",
     keyword: "put",
-    audio: "https://example.com/audio/ʊ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai9/u9.mp3",
     description:
       "Âm /ʊ/ là một nguyên âm ngắn. Khi phát âm, miệng mở hẹp và tròn, môi hơi nhô ra, lưỡi được nâng lên ở phía sau miệng nhưng thấp hơn âm /uː/. Âm này được phát âm ngắn và nhanh.",
     articulation:
       "Lưỡi nâng lên ở phía sau miệng, miệng mở hẹp và tròn, môi hơi nhô ra. Âm phát ra ngắn, nhanh.",
     examples: [
-      { value: "put", transcription: "/pʊt/", audio: "", meaning: "đặt" },
-      { value: "book", transcription: "/bʊk/", audio: "", meaning: "sách" },
-      { value: "good", transcription: "/ɡʊd/", audio: "", meaning: "tốt" },
-      { value: "foot", transcription: "/fʊt/", audio: "", meaning: "bàn chân" },
-      { value: "push", transcription: "/pʊʃ/", audio: "", meaning: "đẩy" },
+      {
+        value: "put",
+        transcription: "/pʊt/",
+        audio: "",
+        meaning: "đặt",
+      },
+      {
+        value: "book",
+        transcription: "/bʊk/",
+        audio: "",
+        meaning: "sách",
+      },
+      {
+        value: "good",
+        transcription: "/ɡʊd/",
+        audio: "",
+        meaning: "tốt",
+      },
+      {
+        value: "foot",
+        transcription: "/fʊt/",
+        audio: "",
+        meaning: "bàn chân",
+      },
+      {
+        value: "push",
+        transcription: "/pʊʃ/",
+        audio: "",
+        meaning: "đẩy",
+      },
     ],
     exceptions: [
       {
@@ -284,11 +463,26 @@ const vowels: TIPA[] = [
     ],
     identify: {
       u: [
-        { value: "put", transcription: "/pʊt/", audio: "", meaning: "đặt" },
-        { value: "push", transcription: "/pʊʃ/", audio: "", meaning: "đẩy" },
+        {
+          value: "put",
+          transcription: "/pʊt/",
+          audio: "",
+          meaning: "đặt",
+        },
+        {
+          value: "push",
+          transcription: "/pʊʃ/",
+          audio: "",
+          meaning: "đẩy",
+        },
       ],
       oo: [
-        { value: "book", transcription: "/bʊk/", audio: "", meaning: "sách" },
+        {
+          value: "book",
+          transcription: "/bʊk/",
+          audio: "",
+          meaning: "sách",
+        },
         {
           value: "foot",
           transcription: "/fʊt/",
@@ -303,7 +497,12 @@ const vowels: TIPA[] = [
           audio: "",
           meaning: "phụ nữ",
         },
-        { value: "wolf", transcription: "/wʊlf/", audio: "", meaning: "sói" },
+        {
+          value: "wolf",
+          transcription: "/wʊlf/",
+          audio: "",
+          meaning: "sói",
+        },
       ],
     },
   },
@@ -311,21 +510,37 @@ const vowels: TIPA[] = [
     symbol: "/ɒ/",
     type: "short vowel",
     keyword: "hot",
-    audio: "https://example.com/audio/ɒ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai7/u7.mp3",
     description:
       "Âm /ɒ/ là một nguyên âm ngắn. Khi phát âm, miệng mở rộng và tròn, môi hơi nhô ra, lưỡi được đặt thấp ở phía sau miệng. Âm này được phát âm ngắn và nhanh.",
     articulation:
       "Lưỡi đặt thấp ở phía sau miệng, miệng mở rộng và tròn, môi hơi nhô ra. Âm phát ra ngắn, nhanh.",
     examples: [
-      { value: "hot", transcription: "/hɒt/", audio: "", meaning: "nóng" },
-      { value: "dog", transcription: "/dɒɡ/", audio: "", meaning: "chó" },
+      {
+        value: "hot",
+        transcription: "/hɒt/",
+        audio: "",
+        meaning: "nóng",
+      },
+      {
+        value: "dog",
+        transcription: "/dɒɡ/",
+        audio: "",
+        meaning: "chó",
+      },
       {
         value: "stop",
         transcription: "/stɒp/",
         audio: "",
         meaning: "dừng lại",
       },
-      { value: "box", transcription: "/bɒks/", audio: "", meaning: "hộp" },
+      {
+        value: "box",
+        transcription: "/bɒks/",
+        audio: "",
+        meaning: "hộp",
+      },
       {
         value: "watch",
         transcription: "/wɒtʃ/",
@@ -349,12 +564,32 @@ const vowels: TIPA[] = [
     ],
     identify: {
       o: [
-        { value: "hot", transcription: "/hɒt/", audio: "", meaning: "nóng" },
-        { value: "dog", transcription: "/dɒɡ/", audio: "", meaning: "chó" },
+        {
+          value: "hot",
+          transcription: "/hɒt/",
+          audio: "",
+          meaning: "nóng",
+        },
+        {
+          value: "dog",
+          transcription: "/dɒɡ/",
+          audio: "",
+          meaning: "chó",
+        },
       ],
       a: [
-        { value: "want", transcription: "/wɒnt/", audio: "", meaning: "muốn" },
-        { value: "wash", transcription: "/wɒʃ/", audio: "", meaning: "rửa" },
+        {
+          value: "want",
+          transcription: "/wɒnt/",
+          audio: "",
+          meaning: "muốn",
+        },
+        {
+          value: "wash",
+          transcription: "/wɒʃ/",
+          audio: "",
+          meaning: "rửa",
+        },
       ],
     },
   },
@@ -362,13 +597,19 @@ const vowels: TIPA[] = [
     symbol: "/ə/",
     type: "short vowel",
     keyword: "about",
-    audio: "https://example.com/audio/ə.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai12/u12.mp3",
     description:
       "Âm /ə/ là một nguyên âm ngắn, còn được gọi là âm trung hòa (schwa). Khi phát âm, miệng mở vừa phải, môi thư giãn, lưỡi được đặt ở vị trí trung tâm miệng. Âm này được phát âm ngắn, nhẹ và thường xuất hiện trong các âm tiết không nhấn.",
     articulation:
       "Lưỡi đặt ở vị trí trung tâm miệng, miệng mở vừa phải, môi thư giãn. Âm phát ra ngắn, nhẹ.",
     examples: [
-      { value: "about", transcription: "/əˈbaʊt/", audio: "", meaning: "về" },
+      {
+        value: "about",
+        transcription: "/əˈbaʊt/",
+        audio: "",
+        meaning: "về",
+      },
       {
         value: "banana",
         transcription: "/bəˈnɑːnə/",
@@ -410,7 +651,12 @@ const vowels: TIPA[] = [
     ],
     identify: {
       a: [
-        { value: "about", transcription: "/əˈbaʊt/", audio: "", meaning: "về" },
+        {
+          value: "about",
+          transcription: "/əˈbaʊt/",
+          audio: "",
+          meaning: "về",
+        },
         {
           value: "banana",
           transcription: "/bəˈnɑːnə/",
@@ -448,20 +694,29 @@ const vowels: TIPA[] = [
       ],
     },
   },
-
-  // LONG VOWELS
   {
     symbol: "/iː/",
     type: "long vowel",
     keyword: "see",
-    audio: "https://example.com/audio/iː.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai1/u1.mp3",
     description:
       "Âm /iː/ là một nguyên âm dài. Khi phát âm, miệng mở hẹp, môi hơi căng và kéo về hai bên, lưỡi được nâng cao về phía trước gần vòm miệng. Âm này được phát âm dài và kéo dài hơn so với âm /ɪ/.",
     articulation:
       "Lưỡi nâng cao về phía trước, môi hơi căng và kéo về hai bên. Âm phát ra dài và kéo dài.",
     examples: [
-      { value: "see", transcription: "/siː/", audio: "", meaning: "nhìn thấy" },
-      { value: "eat", transcription: "/iːt/", audio: "", meaning: "ăn" },
+      {
+        value: "see",
+        transcription: "/siː/",
+        audio: "",
+        meaning: "nhìn thấy",
+      },
+      {
+        value: "eat",
+        transcription: "/iːt/",
+        audio: "",
+        meaning: "ăn",
+      },
       {
         value: "sheep",
         transcription: "/ʃiːp/",
@@ -474,7 +729,12 @@ const vowels: TIPA[] = [
         audio: "",
         meaning: "cảm thấy",
       },
-      { value: "meet", transcription: "/miːt/", audio: "", meaning: "gặp gỡ" },
+      {
+        value: "meet",
+        transcription: "/miːt/",
+        audio: "",
+        meaning: "gặp gỡ",
+      },
     ],
     exceptions: [
       {
@@ -512,12 +772,32 @@ const vowels: TIPA[] = [
         },
       ],
       ea: [
-        { value: "eat", transcription: "/iːt/", audio: "", meaning: "ăn" },
-        { value: "teach", transcription: "/tiːtʃ/", audio: "", meaning: "dạy" },
+        {
+          value: "eat",
+          transcription: "/iːt/",
+          audio: "",
+          meaning: "ăn",
+        },
+        {
+          value: "teach",
+          transcription: "/tiːtʃ/",
+          audio: "",
+          meaning: "dạy",
+        },
       ],
       e: [
-        { value: "me", transcription: "/miː/", audio: "", meaning: "tôi" },
-        { value: "be", transcription: "/biː/", audio: "", meaning: "là" },
+        {
+          value: "me",
+          transcription: "/miː/",
+          audio: "",
+          meaning: "tôi",
+        },
+        {
+          value: "be",
+          transcription: "/biː/",
+          audio: "",
+          meaning: "là",
+        },
       ],
       ie: [
         {
@@ -539,13 +819,19 @@ const vowels: TIPA[] = [
     symbol: "/ɑː/",
     type: "long vowel",
     keyword: "car",
-    audio: "https://example.com/audio/ɑː.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai6/u6.mp3",
     description:
       "Âm /ɑː/ là một nguyên âm dài. Khi phát âm, miệng mở rộng, môi thư giãn, lưỡi được đặt thấp ở phía sau miệng. Âm này được phát âm dài và kéo dài.",
     articulation:
       "Lưỡi đặt thấp ở phía sau miệng, miệng mở rộng, môi thư giãn. Âm phát ra dài và kéo dài.",
     examples: [
-      { value: "car", transcription: "/kɑː(r)/", audio: "", meaning: "xe hơi" },
+      {
+        value: "car",
+        transcription: "/kɑː(r)/",
+        audio: "",
+        meaning: "xe hơi",
+      },
       {
         value: "heart",
         transcription: "/hɑːt/",
@@ -628,15 +914,31 @@ const vowels: TIPA[] = [
     symbol: "/ɔː/",
     type: "long vowel",
     keyword: "call",
-    audio: "https://example.com/audio/ɔː.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai8/u8.mp3",
     description:
       "Âm /ɔː/ là một nguyên âm dài. Khi phát âm, miệng mở rộng và tròn, môi nhô ra, lưỡi được đặt thấp ở phía sau miệng. Âm này được phát âm dài và kéo dài.",
     articulation:
       "Lưỡi đặt thấp ở phía sau miệng, miệng mở rộng và tròn, môi nhô ra. Âm phát ra dài và kéo dài.",
     examples: [
-      { value: "call", transcription: "/kɔːl/", audio: "", meaning: "gọi" },
-      { value: "walk", transcription: "/wɔːk/", audio: "", meaning: "đi bộ" },
-      { value: "door", transcription: "/dɔː(r)/", audio: "", meaning: "cửa" },
+      {
+        value: "call",
+        transcription: "/kɔːl/",
+        audio: "",
+        meaning: "gọi",
+      },
+      {
+        value: "walk",
+        transcription: "/wɔːk/",
+        audio: "",
+        meaning: "đi bộ",
+      },
+      {
+        value: "door",
+        transcription: "/dɔː(r)/",
+        audio: "",
+        meaning: "cửa",
+      },
       {
         value: "more",
         transcription: "/mɔː(r)/",
@@ -666,7 +968,12 @@ const vowels: TIPA[] = [
     ],
     identify: {
       or: [
-        { value: "door", transcription: "/dɔː(r)/", audio: "", meaning: "cửa" },
+        {
+          value: "door",
+          transcription: "/dɔː(r)/",
+          audio: "",
+          meaning: "cửa",
+        },
         {
           value: "more",
           transcription: "/mɔː(r)/",
@@ -675,8 +982,18 @@ const vowels: TIPA[] = [
         },
       ],
       al: [
-        { value: "call", transcription: "/kɔːl/", audio: "", meaning: "gọi" },
-        { value: "walk", transcription: "/wɔːk/", audio: "", meaning: "đi bộ" },
+        {
+          value: "call",
+          transcription: "/kɔːl/",
+          audio: "",
+          meaning: "gọi",
+        },
+        {
+          value: "walk",
+          transcription: "/wɔːk/",
+          audio: "",
+          meaning: "đi bộ",
+        },
       ],
       au: [
         {
@@ -718,8 +1035,18 @@ const vowels: TIPA[] = [
     articulation:
       "Lưỡi nâng cao ở phía sau miệng, miệng mở hẹp và tròn, môi nhô ra và tròn. Âm phát ra dài và kéo dài.",
     examples: [
-      { value: "too", transcription: "/tuː/", audio: "", meaning: "quá, cũng" },
-      { value: "food", transcription: "/fuːd/", audio: "", meaning: "thức ăn" },
+      {
+        value: "too",
+        transcription: "/tuː/",
+        audio: "",
+        meaning: "quá, cũng",
+      },
+      {
+        value: "food",
+        transcription: "/fuːd/",
+        audio: "",
+        meaning: "thức ăn",
+      },
       {
         value: "blue",
         transcription: "/bluː/",
@@ -775,7 +1102,12 @@ const vowels: TIPA[] = [
           audio: "",
           meaning: "màu xanh dương",
         },
-        { value: "true", transcription: "/truː/", audio: "", meaning: "đúng" },
+        {
+          value: "true",
+          transcription: "/truː/",
+          audio: "",
+          meaning: "đúng",
+        },
       ],
       ue: [
         {
@@ -784,7 +1116,12 @@ const vowels: TIPA[] = [
           audio: "",
           meaning: "màu xanh dương",
         },
-        { value: "true", transcription: "/truː/", audio: "", meaning: "đúng" },
+        {
+          value: "true",
+          transcription: "/truː/",
+          audio: "",
+          meaning: "đúng",
+        },
       ],
       ough: [
         {
@@ -826,8 +1163,18 @@ const vowels: TIPA[] = [
         audio: "",
         meaning: "công việc",
       },
-      { value: "learn", transcription: "/lɜːn/", audio: "", meaning: "học" },
-      { value: "nurse", transcription: "/nɜːs/", audio: "", meaning: "y tá" },
+      {
+        value: "learn",
+        transcription: "/lɜːn/",
+        audio: "",
+        meaning: "học",
+      },
+      {
+        value: "nurse",
+        transcription: "/nɜːs/",
+        audio: "",
+        meaning: "y tá",
+      },
       {
         value: "turn",
         transcription: "/tɜːn/",
@@ -865,7 +1212,12 @@ const vowels: TIPA[] = [
         },
       ],
       ur: [
-        { value: "nurse", transcription: "/nɜːs/", audio: "", meaning: "y tá" },
+        {
+          value: "nurse",
+          transcription: "/nɜːs/",
+          audio: "",
+          meaning: "y tá",
+        },
         {
           value: "turn",
           transcription: "/tɜːn/",
@@ -894,10 +1246,20 @@ const vowels: TIPA[] = [
           audio: "",
           meaning: "công việc",
         },
-        { value: "word", transcription: "/wɜːd/", audio: "", meaning: "từ" },
+        {
+          value: "word",
+          transcription: "/wɜːd/",
+          audio: "",
+          meaning: "từ",
+        },
       ],
       ear: [
-        { value: "learn", transcription: "/lɜːn/", audio: "", meaning: "học" },
+        {
+          value: "learn",
+          transcription: "/lɜːn/",
+          audio: "",
+          meaning: "học",
+        },
         {
           value: "earn",
           transcription: "/ɜːn/",
@@ -907,22 +1269,41 @@ const vowels: TIPA[] = [
       ],
     },
   },
-
-  // DIPHTHONGS
   {
     symbol: "/eɪ/",
     type: "diphthong",
     keyword: "day",
-    audio: "https://example.com/audio/eɪ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai13/u13.mp3",
     description:
       "Âm /eɪ/ là một nguyên âm đôi. Khi phát âm, bắt đầu với vị trí của âm /e/ và kết thúc với vị trí gần với âm /ɪ/. Miệng bắt đầu mở vừa phải và dần khép lại, lưỡi di chuyển từ vị trí trung bình lên cao hơn.",
     articulation:
       "Bắt đầu với lưỡi ở vị trí trung bình phía trước và di chuyển lên cao hơn, miệng bắt đầu mở vừa phải và dần khép lại.",
     examples: [
-      { value: "day", transcription: "/deɪ/", audio: "", meaning: "ngày" },
-      { value: "make", transcription: "/meɪk/", audio: "", meaning: "làm" },
-      { value: "rain", transcription: "/reɪn/", audio: "", meaning: "mưa" },
-      { value: "play", transcription: "/pleɪ/", audio: "", meaning: "chơi" },
+      {
+        value: "day",
+        transcription: "/deɪ/",
+        audio: "",
+        meaning: "ngày",
+      },
+      {
+        value: "make",
+        transcription: "/meɪk/",
+        audio: "",
+        meaning: "làm",
+      },
+      {
+        value: "rain",
+        transcription: "/reɪn/",
+        audio: "",
+        meaning: "mưa",
+      },
+      {
+        value: "play",
+        transcription: "/pleɪ/",
+        audio: "",
+        meaning: "chơi",
+      },
       {
         value: "great",
         transcription: "/ɡreɪt/",
@@ -946,11 +1327,26 @@ const vowels: TIPA[] = [
     ],
     identify: {
       a: [
-        { value: "day", transcription: "/deɪ/", audio: "", meaning: "ngày" },
-        { value: "make", transcription: "/meɪk/", audio: "", meaning: "làm" },
+        {
+          value: "day",
+          transcription: "/deɪ/",
+          audio: "",
+          meaning: "ngày",
+        },
+        {
+          value: "make",
+          transcription: "/meɪk/",
+          audio: "",
+          meaning: "làm",
+        },
       ],
       ai: [
-        { value: "rain", transcription: "/reɪn/", audio: "", meaning: "mưa" },
+        {
+          value: "rain",
+          transcription: "/reɪn/",
+          audio: "",
+          meaning: "mưa",
+        },
         {
           value: "wait",
           transcription: "/weɪt/",
@@ -959,8 +1355,18 @@ const vowels: TIPA[] = [
         },
       ],
       ay: [
-        { value: "play", transcription: "/pleɪ/", audio: "", meaning: "chơi" },
-        { value: "say", transcription: "/seɪ/", audio: "", meaning: "nói" },
+        {
+          value: "play",
+          transcription: "/pleɪ/",
+          audio: "",
+          meaning: "chơi",
+        },
+        {
+          value: "say",
+          transcription: "/seɪ/",
+          audio: "",
+          meaning: "nói",
+        },
       ],
       ea: [
         {
@@ -983,7 +1389,12 @@ const vowels: TIPA[] = [
           audio: "",
           meaning: "cân nặng",
         },
-        { value: "eight", transcription: "/eɪt/", audio: "", meaning: "tám" },
+        {
+          value: "eight",
+          transcription: "/eɪt/",
+          audio: "",
+          meaning: "tám",
+        },
       ],
     },
   },
@@ -991,22 +1402,43 @@ const vowels: TIPA[] = [
     symbol: "/aɪ/",
     type: "diphthong",
     keyword: "my",
-    audio: "https://example.com/audio/aɪ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai14/u14.mp3",
     description:
       "Âm /aɪ/ là một nguyên âm đôi. Khi phát âm, bắt đầu với vị trí của âm /a/ và kết thúc với vị trí gần với âm /ɪ/. Miệng bắt đầu mở rộng và dần khép lại, lưỡi di chuyển từ vị trí thấp lên cao hơn.",
     articulation:
       "Bắt đầu với lưỡi ở vị trí thấp và di chuyển lên cao hơn về phía trước, miệng bắt đầu mở rộng và dần khép lại.",
     examples: [
-      { value: "my", transcription: "/maɪ/", audio: "", meaning: "của tôi" },
-      { value: "like", transcription: "/laɪk/", audio: "", meaning: "thích" },
+      {
+        value: "my",
+        transcription: "/maɪ/",
+        audio: "",
+        meaning: "của tôi",
+      },
+      {
+        value: "like",
+        transcription: "/laɪk/",
+        audio: "",
+        meaning: "thích",
+      },
       {
         value: "time",
         transcription: "/taɪm/",
         audio: "",
         meaning: "thời gian",
       },
-      { value: "night", transcription: "/naɪt/", audio: "", meaning: "đêm" },
-      { value: "fly", transcription: "/flaɪ/", audio: "", meaning: "bay" },
+      {
+        value: "night",
+        transcription: "/naɪt/",
+        audio: "",
+        meaning: "đêm",
+      },
+      {
+        value: "fly",
+        transcription: "/flaɪ/",
+        audio: "",
+        meaning: "bay",
+      },
     ],
     exceptions: [
       {
@@ -1024,7 +1456,12 @@ const vowels: TIPA[] = [
     ],
     identify: {
       i: [
-        { value: "like", transcription: "/laɪk/", audio: "", meaning: "thích" },
+        {
+          value: "like",
+          transcription: "/laɪk/",
+          audio: "",
+          meaning: "thích",
+        },
         {
           value: "time",
           transcription: "/taɪm/",
@@ -1033,11 +1470,26 @@ const vowels: TIPA[] = [
         },
       ],
       y: [
-        { value: "my", transcription: "/maɪ/", audio: "", meaning: "của tôi" },
-        { value: "fly", transcription: "/flaɪ/", audio: "", meaning: "bay" },
+        {
+          value: "my",
+          transcription: "/maɪ/",
+          audio: "",
+          meaning: "của tôi",
+        },
+        {
+          value: "fly",
+          transcription: "/flaɪ/",
+          audio: "",
+          meaning: "bay",
+        },
       ],
       igh: [
-        { value: "night", transcription: "/naɪt/", audio: "", meaning: "đêm" },
+        {
+          value: "night",
+          transcription: "/naɪt/",
+          audio: "",
+          meaning: "đêm",
+        },
         {
           value: "light",
           transcription: "/laɪt/",
@@ -1054,7 +1506,12 @@ const vowels: TIPA[] = [
         },
       ],
       uy: [
-        { value: "buy", transcription: "/baɪ/", audio: "", meaning: "mua" },
+        {
+          value: "buy",
+          transcription: "/baɪ/",
+          audio: "",
+          meaning: "mua",
+        },
         {
           value: "guy",
           transcription: "/ɡaɪ/",
@@ -1068,14 +1525,25 @@ const vowels: TIPA[] = [
     symbol: "/ɔɪ/",
     type: "diphthong",
     keyword: "boy",
-    audio: "https://example.com/audio/ɔɪ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai15/u15.mp3",
     description:
       "Âm /ɔɪ/ là một nguyên âm đôi. Khi phát âm, bắt đầu với vị trí của âm /ɔ/ và kết thúc với vị trí gần với âm /ɪ/. Miệng bắt đầu mở rộng và tròn, sau đó dần khép lại, lưỡi di chuyển từ vị trí thấp ở phía sau lên cao hơn ở phía trước.",
     articulation:
       "Bắt đầu với lưỡi ở vị trí thấp phía sau và di chuyển lên cao hơn về phía trước, miệng bắt đầu mở rộng và tròn, sau đó dần khép lại.",
     examples: [
-      { value: "boy", transcription: "/bɔɪ/", audio: "", meaning: "cậu bé" },
-      { value: "toy", transcription: "/tɔɪ/", audio: "", meaning: "đồ chơi" },
+      {
+        value: "boy",
+        transcription: "/bɔɪ/",
+        audio: "",
+        meaning: "cậu bé",
+      },
+      {
+        value: "toy",
+        transcription: "/tɔɪ/",
+        audio: "",
+        meaning: "đồ chơi",
+      },
       {
         value: "noise",
         transcription: "/nɔɪz/",
@@ -1119,8 +1587,18 @@ const vowels: TIPA[] = [
         },
       ],
       oy: [
-        { value: "boy", transcription: "/bɔɪ/", audio: "", meaning: "cậu bé" },
-        { value: "toy", transcription: "/tɔɪ/", audio: "", meaning: "đồ chơi" },
+        {
+          value: "boy",
+          transcription: "/bɔɪ/",
+          audio: "",
+          meaning: "cậu bé",
+        },
+        {
+          value: "toy",
+          transcription: "/tɔɪ/",
+          audio: "",
+          meaning: "đồ chơi",
+        },
       ],
     },
   },
@@ -1128,22 +1606,43 @@ const vowels: TIPA[] = [
     symbol: "/əʊ/",
     type: "diphthong",
     keyword: "go",
-    audio: "https://example.com/audio/əʊ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai17/u17.mp3",
     description:
       "Âm /əʊ/ là một nguyên âm đôi. Khi phát âm, bắt đầu với vị trí của âm /ə/ và kết thúc với vị trí gần với âm /ʊ/. Miệng bắt đầu mở vừa phải và dần trở nên tròn hơn, lưỡi di chuyển từ vị trí trung tâm lên cao hơn ở phía sau.",
     articulation:
       "Bắt đầu với lưỡi ở vị trí trung tâm và di chuyển lên cao hơn về phía sau, miệng bắt đầu mở vừa phải và dần trở nên tròn hơn.",
     examples: [
-      { value: "go", transcription: "/ɡəʊ/", audio: "", meaning: "đi" },
-      { value: "home", transcription: "/həʊm/", audio: "", meaning: "nhà" },
-      { value: "know", transcription: "/nəʊ/", audio: "", meaning: "biết" },
+      {
+        value: "go",
+        transcription: "/ɡəʊ/",
+        audio: "",
+        meaning: "đi",
+      },
+      {
+        value: "home",
+        transcription: "/həʊm/",
+        audio: "",
+        meaning: "nhà",
+      },
+      {
+        value: "know",
+        transcription: "/nəʊ/",
+        audio: "",
+        meaning: "biết",
+      },
       {
         value: "show",
         transcription: "/ʃəʊ/",
         audio: "",
         meaning: "trình diễn",
       },
-      { value: "boat", transcription: "/bəʊt/", audio: "", meaning: "thuyền" },
+      {
+        value: "boat",
+        transcription: "/bəʊt/",
+        audio: "",
+        meaning: "thuyền",
+      },
     ],
     exceptions: [
       {
@@ -1161,11 +1660,26 @@ const vowels: TIPA[] = [
     ],
     identify: {
       o: [
-        { value: "go", transcription: "/ɡəʊ/", audio: "", meaning: "đi" },
-        { value: "home", transcription: "/həʊm/", audio: "", meaning: "nhà" },
+        {
+          value: "go",
+          transcription: "/ɡəʊ/",
+          audio: "",
+          meaning: "đi",
+        },
+        {
+          value: "home",
+          transcription: "/həʊm/",
+          audio: "",
+          meaning: "nhà",
+        },
       ],
       ow: [
-        { value: "know", transcription: "/nəʊ/", audio: "", meaning: "biết" },
+        {
+          value: "know",
+          transcription: "/nəʊ/",
+          audio: "",
+          meaning: "biết",
+        },
         {
           value: "show",
           transcription: "/ʃəʊ/",
@@ -1180,7 +1694,12 @@ const vowels: TIPA[] = [
           audio: "",
           meaning: "thuyền",
         },
-        { value: "road", transcription: "/rəʊd/", audio: "", meaning: "đường" },
+        {
+          value: "road",
+          transcription: "/rəʊd/",
+          audio: "",
+          meaning: "đường",
+        },
       ],
       ough: [
         {
@@ -1190,24 +1709,57 @@ const vowels: TIPA[] = [
           meaning: "mặc dù",
         },
       ],
-      ew: [{ value: "sew", transcription: "/səʊ/", audio: "", meaning: "may" }],
+      ew: [
+        {
+          value: "sew",
+          transcription: "/səʊ/",
+          audio: "",
+          meaning: "may",
+        },
+      ],
     },
   },
   {
     symbol: "/aʊ/",
     type: "diphthong",
     keyword: "now",
-    audio: "https://example.com/audio/aʊ.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai16/u16.mp3",
     description:
       "Âm /aʊ/ là một nguyên âm đôi. Khi phát âm, bắt đầu với vị trí của âm /a/ và kết thúc với vị trí gần với âm /ʊ/. Miệng bắt đầu mở rộng và dần trở nên tròn hơn, lưỡi di chuyển từ vị trí thấp lên cao hơn ở phía sau.",
     articulation:
       "Bắt đầu với lưỡi ở vị trí thấp và di chuyển lên cao hơn về phía sau, miệng bắt đầu mở rộng và dần trở nên tròn hơn.",
     examples: [
-      { value: "now", transcription: "/naʊ/", audio: "", meaning: "bây giờ" },
-      { value: "house", transcription: "/haʊs/", audio: "", meaning: "nhà" },
-      { value: "down", transcription: "/daʊn/", audio: "", meaning: "xuống" },
-      { value: "about", transcription: "/əˈbaʊt/", audio: "", meaning: "về" },
-      { value: "mouth", transcription: "/maʊθ/", audio: "", meaning: "miệng" },
+      {
+        value: "now",
+        transcription: "/naʊ/",
+        audio: "",
+        meaning: "bây giờ",
+      },
+      {
+        value: "house",
+        transcription: "/haʊs/",
+        audio: "",
+        meaning: "nhà",
+      },
+      {
+        value: "down",
+        transcription: "/daʊn/",
+        audio: "",
+        meaning: "xuống",
+      },
+      {
+        value: "about",
+        transcription: "/əˈbaʊt/",
+        audio: "",
+        meaning: "về",
+      },
+      {
+        value: "mouth",
+        transcription: "/maʊθ/",
+        audio: "",
+        meaning: "miệng",
+      },
     ],
     exceptions: [
       {
@@ -1219,7 +1771,12 @@ const vowels: TIPA[] = [
     ],
     identify: {
       ou: [
-        { value: "house", transcription: "/haʊs/", audio: "", meaning: "nhà" },
+        {
+          value: "house",
+          transcription: "/haʊs/",
+          audio: "",
+          meaning: "nhà",
+        },
         {
           value: "mouth",
           transcription: "/maʊθ/",
@@ -1228,8 +1785,18 @@ const vowels: TIPA[] = [
         },
       ],
       ow: [
-        { value: "now", transcription: "/naʊ/", audio: "", meaning: "bây giờ" },
-        { value: "down", transcription: "/daʊn/", audio: "", meaning: "xuống" },
+        {
+          value: "now",
+          transcription: "/naʊ/",
+          audio: "",
+          meaning: "bây giờ",
+        },
+        {
+          value: "down",
+          transcription: "/daʊn/",
+          audio: "",
+          meaning: "xuống",
+        },
       ],
       ough: [
         {
@@ -1245,14 +1812,25 @@ const vowels: TIPA[] = [
     symbol: "/ɪə/",
     type: "diphthong",
     keyword: "near",
-    audio: "https://example.com/audio/ɪə.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai18/u18.mp3",
     description:
       "Âm /ɪə/ là một nguyên âm đôi. Khi phát âm, bắt đầu với vị trí của âm /ɪ/ và kết thúc với vị trí gần với âm /ə/. Miệng bắt đầu mở hẹp và dần mở rộng hơn, lưỡi di chuyển từ vị trí cao ở phía trước xuống vị trí trung tâm.",
     articulation:
       "Bắt đầu với lưỡi ở vị trí cao phía trước và di chuyển xuống vị trí trung tâm, miệng bắt đầu mở hẹp và dần mở rộng hơn.",
     examples: [
-      { value: "near", transcription: "/nɪə(r)/", audio: "", meaning: "gần" },
-      { value: "hear", transcription: "/hɪə(r)/", audio: "", meaning: "nghe" },
+      {
+        value: "near",
+        transcription: "/nɪə(r)/",
+        audio: "",
+        meaning: "gần",
+      },
+      {
+        value: "hear",
+        transcription: "/hɪə(r)/",
+        audio: "",
+        meaning: "nghe",
+      },
       {
         value: "clear",
         transcription: "/klɪə(r)/",
@@ -1282,7 +1860,12 @@ const vowels: TIPA[] = [
     ],
     identify: {
       ear: [
-        { value: "near", transcription: "/nɪə(r)/", audio: "", meaning: "gần" },
+        {
+          value: "near",
+          transcription: "/nɪə(r)/",
+          audio: "",
+          meaning: "gần",
+        },
         {
           value: "hear",
           transcription: "/hɪə(r)/",
@@ -1326,13 +1909,19 @@ const vowels: TIPA[] = [
     symbol: "/eə/",
     type: "diphthong",
     keyword: "hair",
-    audio: "https://example.com/audio/eə.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai19/u19.mp3",
     description:
       "Âm /eə/ là một nguyên âm đôi. Khi phát âm, bắt đầu với vị trí của âm /e/ và kết thúc với vị trí gần với âm /ə/. Miệng bắt đầu mở vừa phải và dần mở rộng hơn, lưỡi di chuyển từ vị trí trung bình ở phía trước xuống vị trí trung tâm.",
     articulation:
       "Bắt đầu với lưỡi ở vị trí trung bình phía trước và di chuyển xuống vị trí trung tâm, miệng bắt đầu mở vừa phải và dần mở rộng hơn.",
     examples: [
-      { value: "hair", transcription: "/heə(r)/", audio: "", meaning: "tóc" },
+      {
+        value: "hair",
+        transcription: "/heə(r)/",
+        audio: "",
+        meaning: "tóc",
+      },
       {
         value: "care",
         transcription: "/keə(r)/",
@@ -1345,7 +1934,12 @@ const vowels: TIPA[] = [
         audio: "",
         meaning: "ở đâu",
       },
-      { value: "chair", transcription: "/tʃeə(r)/", audio: "", meaning: "ghế" },
+      {
+        value: "chair",
+        transcription: "/tʃeə(r)/",
+        audio: "",
+        meaning: "ghế",
+      },
       {
         value: "fair",
         transcription: "/feə(r)/",
@@ -1363,7 +1957,12 @@ const vowels: TIPA[] = [
     ],
     identify: {
       air: [
-        { value: "hair", transcription: "/heə(r)/", audio: "", meaning: "tóc" },
+        {
+          value: "hair",
+          transcription: "/heə(r)/",
+          audio: "",
+          meaning: "tóc",
+        },
         {
           value: "fair",
           transcription: "/feə(r)/",
@@ -1386,8 +1985,18 @@ const vowels: TIPA[] = [
         },
       ],
       ear: [
-        { value: "bear", transcription: "/beə(r)/", audio: "", meaning: "gấu" },
-        { value: "wear", transcription: "/weə(r)/", audio: "", meaning: "mặc" },
+        {
+          value: "bear",
+          transcription: "/beə(r)/",
+          audio: "",
+          meaning: "gấu",
+        },
+        {
+          value: "wear",
+          transcription: "/weə(r)/",
+          audio: "",
+          meaning: "mặc",
+        },
       ],
       eir: [
         {
@@ -1403,7 +2012,8 @@ const vowels: TIPA[] = [
     symbol: "/ʊə/",
     type: "diphthong",
     keyword: "pure",
-    audio: "https://example.com/audio/ʊə.mp3",
+    audio:
+      "https://noidung.tienganh123.com/file/baihoc/pronunciation/coban/bai20/u20.mp3",
     description:
       "Âm /ʊə/ là một nguyên âm đôi. Khi phát âm, bắt đầu với vị trí của âm /ʊ/ và kết thúc với vị trí gần với âm /ə/. Miệng bắt đầu mở hẹp và tròn, sau đó dần mở rộng hơn, lưỡi di chuyển từ vị trí cao ở phía sau xuống vị trí trung tâm.",
     articulation:
@@ -1433,7 +2043,12 @@ const vowels: TIPA[] = [
         audio: "",
         meaning: "chắc chắn",
       },
-      { value: "poor", transcription: "/pʊə(r)/", audio: "", meaning: "nghèo" },
+      {
+        value: "poor",
+        transcription: "/pʊə(r)/",
+        audio: "",
+        meaning: "nghèo",
+      },
     ],
     exceptions: [
       {

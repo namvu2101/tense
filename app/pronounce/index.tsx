@@ -5,7 +5,7 @@ import { ThemedView } from "@/components/ThemedView";
 import { Styles } from "@/constants/Commons";
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import { consonants, vowels } from "@/modules";
 
 export default function Index() {
@@ -64,8 +64,8 @@ export default function Index() {
                       padding: Sizes.smaller,
                       borderRadius: Sizes.smaller,
                       marginBottom: Sizes.smaller,
-                      width: Sizes.wpx(50),
-                      height: Sizes.wpx(50),
+                      width: Sizes.wpx(55),
+                      height: Sizes.wpx(55),
                       borderWidth: 2,
                       borderColor: Colors.tint,
                       alignItems: "center",
@@ -74,7 +74,7 @@ export default function Index() {
                     Styles.shadow,
                   ]}
                 >
-                  <ThemedText type="default">{ipa.symbol}</ThemedText>
+                  <ThemedText type="defaultSemiBold">{ipa.symbol}</ThemedText>
                 </TouchableOpacity>
               ))}
             </View>
@@ -123,7 +123,7 @@ export default function Index() {
                 Styles.shadow,
               ]}
             >
-              <ThemedText type="default">{item.symbol}</ThemedText>
+              <ThemedText type="defaultSemiBold">{item.symbol}</ThemedText>
             </TouchableOpacity>
           ))}
         </View>
