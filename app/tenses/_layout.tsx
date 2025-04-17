@@ -5,7 +5,7 @@ export default function TensesLayout() {
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" />
       <Stack.Screen name="present/index" />
-      <Stack.Screen name="pass/index" />
+      <Stack.Screen name="past/index" />
       <Stack.Screen name="future/index" />
     </Stack>
   );

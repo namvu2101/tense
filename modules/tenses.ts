@@ -132,7 +132,7 @@ const tenses:TenseData[] = [
         ],
         note: "Chúng ta sử dụng 'am' với 'I', 'is' với 'he, she, it', và 'are' với 'you, we, they'.",
         details:
-          "Thì hiện tại tiếp diễn được tạo bằng cách sử dụng động từ 'to be' (am/is/are) + động từ chính ở dạng V-ing. Lưu ý một số quy tắc thêm '-ing': nếu động từ kết thúc bằng 'e', bỏ 'e' và thêm 'ing' (make → making); nếu động từ ngắn kết thúc bằng một nguyên âm + một phụ âm, gấp đôi phụ âm cuối và thêm 'ing' (run → running).",
+          "Thì hiện tại tiếp diễn được tạo bằng cách sử dụng động từ 'to be' (am/is/are) + động từ chính ở dạng V-ing.\n Lưu ý một số quy tắc thêm '-ing': nếu động từ kết thúc bằng 'e', bỏ 'e' và thêm 'ing' (make → making); \nnếu động từ ngắn kết thúc bằng một nguyên âm + một phụ âm, gấp đôi phụ âm cuối và thêm 'ing' (run → running).",
       },
       negative: {
         formula: "S + am/is/are + not + V-ing",

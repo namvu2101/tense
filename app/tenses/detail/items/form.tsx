@@ -44,7 +44,11 @@ const RenderChildren = ({
             Ví dụ:
           </ThemedText>
           {data?.examples.map((item) => (
-            <ThemedText key={item} type="default">
+            <ThemedText
+              key={item}
+              type="default"
+              style={{ marginVertical: Sizes.tiny }}
+            >
               {item}
             </ThemedText>
           ))}

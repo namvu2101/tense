@@ -60,3 +60,36 @@ export type TenseData = {
   usage: TenseUsage;
   note?: string[]; // các ghi chú đặc biệt, optional
 };
+
+export type Examples = {
+  type: "grammar" | "pronounce";
+  tense: string | null;
+  symbol: string | null;
+  examples: [
+    {
+      title: string;
+      questions: [
+        {
+          question: string;
+          selects: { value: string; label: string }[];
+          answer: string;
+        }
+      ];
+    }
+  ];
+};
+
+export type TOptionsSymbol = {
+  value: string;
+  underline: string; // ở đây là các chữ cái cần phân biệt để gạch chân thường là các chữ cái cần phần biệt
+  transcription: string;
+  meaning: string;
+};
+
+export type TQuestionSymbol = {
+  symbol: string;
+  type: "multiple_choice"
+  question: string;
+  options: TOptionsSymbol[];
+  correct_answer: string;
+};

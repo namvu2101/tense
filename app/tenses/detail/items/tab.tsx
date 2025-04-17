@@ -73,7 +73,11 @@ export function Tab({ data }: Readonly<{ data: TenseData }>) {
               Ví dụ:
             </ThemedText>
             {usage.examples.map((item) => (
-              <ThemedText key={item} type="default">
+              <ThemedText
+                key={item}
+                type="default"
+                style={{ marginVertical: Sizes.tiny }}
+              >
                 {item}
               </ThemedText>
             ))}
@@ -100,6 +104,7 @@ export function Tab({ data }: Readonly<{ data: TenseData }>) {
                     backgroundColor: Colors.tint,
                     color: Colors.background,
                     borderRadius: Sizes.big,
+                    
                   }}
                 >
                   {item}
@@ -143,7 +148,10 @@ export function Tab({ data }: Readonly<{ data: TenseData }>) {
                 <ThemedText
                   key={item}
                   type="default"
-                  style={{ textAlignVertical: "center" }}
+                  style={{
+                    textAlignVertical: "center",
+                    marginVertical: Sizes.tiny,
+                  }}
                 >
                   - {item}
                 </ThemedText>
