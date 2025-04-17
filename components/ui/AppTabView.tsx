@@ -7,18 +7,15 @@ import {
   TouchableOpacity,
   View,
   ViewStyle,
-  Dimensions,
 } from "react-native";
 import Animated, {
-  useAnimatedRef,
-  useSharedValue,
-  useAnimatedScrollHandler,
   runOnJS,
+  useAnimatedRef,
+  useAnimatedScrollHandler,
 } from "react-native-reanimated";
 import { ThemedText } from "../ThemedText";
 
 export type TPages = { key: string; component: JSX.Element }[];
-const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 export type TAppTabViewProps = {
   headers: string[];

@@ -13,7 +13,11 @@ export function Tab({ data }: Readonly<{ data: TenseData }>) {
   return (
     <ScrollView
       style={{ flex: 1 }}
-      contentContainerStyle={{ padding: Sizes.default, gap: Sizes.default }}
+      contentContainerStyle={{
+        padding: Sizes.default,
+        gap: Sizes.default,
+        overflow: "hidden",
+      }}
     >
       <ThemedText type="subtitle">{description}</ThemedText>
 

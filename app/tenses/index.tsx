@@ -4,6 +4,7 @@ import { ThemedView } from "@/components/ThemedView";
 import { ThemedText } from "@/components/ThemedText";
 import { useAppColor } from "@/hooks/useAppColor";
 import { Route, router } from "expo-router";
+import { Sizes } from "@/constants/Sizes";
 
 type TData = {
   name: string;
@@ -24,7 +25,7 @@ export default function Tenses() {
     {
       name: "Pass Tense",
       description: "Thì quá khứ",
-      route: "/tenses/pass",
+      route: "/tenses/past",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
     {
@@ -36,17 +37,17 @@ export default function Tenses() {
   ];
 
   return (
-    <ThemedView>
+    <ThemedView headerTitle="Các thì trong Tiếng Anh">
       <ScrollView>
         {data.map((item, index) => (
           <TouchableOpacity
             key={item.route}
             style={{
               borderColor: Colors.tint,
-              borderWidth: 2,
-              borderRadius: 10,
-              padding: 10,
-              margin: 10,
+              borderWidth: Sizes.border * 2,
+              borderRadius: Sizes.border_radius * 2,
+              padding: Sizes.default,
+              margin: Sizes.smaller,
               flexDirection: "row",
               alignItems: "center",
               gap: 10,

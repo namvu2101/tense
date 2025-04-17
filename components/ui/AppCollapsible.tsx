@@ -1,4 +1,3 @@
-import { useAppColor } from "@/hooks/useAppColor";
 import React, { useEffect, useRef, useState } from "react";
 import {
   View,
@@ -10,14 +9,15 @@ import {
   Platform,
   UIManager,
 } from "react-native";
-import { AppIcon, TypeIconName } from "./AppIcon";
-import { Sizes } from "@/constants/Sizes";
-import { ThemedText } from "../ThemedText";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
+import { useAppColor } from "@/hooks/useAppColor";
+import { Sizes } from "@/constants/Sizes";
+import { AppIcon, TypeIconName } from "./AppIcon";
+import { ThemedText } from "../ThemedText";
 
 if (
   Platform.OS === "android" &&
@@ -48,7 +48,7 @@ export function AppCollapsible({
   titleStyle,
 }: Readonly<TAppCollapsibleProps>) {
   const { Colors } = useAppColor();
-  const [collapsed, setCollapsed] = useState(isHide);
+  const [collapsed, setCollapsed] = useState(false);
   const [contentHeight, setContentHeight] = useState(0);
   const heightValue = useSharedValue(0);
   const measured = useRef(false); // tránh đo nhiều lần
@@ -67,16 +67,33 @@ export function AppCollapsible({
   const handleHeaderPress = () => {
     onTitlePress ? onTitlePress() : toggleCollapse();
   };
-
-  const iconName: TypeIconName = iconDropDownType
-    ? collapsed
-      ? "arrow-down"
-      : "arrow-up"
-    : collapsed
-    ? "caret-down"
-    : "caret-up";
-
-  const iconSize = iconDropDownType ? Sizes.larger : Sizes.big;
+  let iconName: TypeIconName = "caret-up";
+  if (iconDropDownType) {
+    iconName = "arrow-up";
+  }
+  if (collapsed) {
+    iconName = "caret-down";
+    if (iconDropDownType) {
+      iconName = "arrow-down";
+    }
+  }
+  const IconDropDown = {
+    false: (
+      <AppIcon
+        name={iconName}
+        onPress={handleHeaderPress}
+        size={Sizes.larger}
+        color={Colors.background}
+      />
+    ),
+    true: (
+      <AppIcon
+        name={iconName}
+        onPress={handleHeaderPress}
+        size={Sizes.larger}
+      />
+    ),
+  }[`${iconDropDownType}`];
 
   const animatedStyle = useAnimatedStyle(() => ({
     height: heightValue.value,
@@ -112,7 +129,7 @@ export function AppCollapsible({
           {title}
         </ThemedText>
         {ExtraHeader}
-        <AppIcon name={iconName} size={iconSize} color={Colors.background} />
+        {IconDropDown}
       </TouchableOpacity>
 
       {/* Hidden content to measure height (render once) */}

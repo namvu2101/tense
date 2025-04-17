@@ -42,7 +42,7 @@ export default function PresentList() {
   ];
 
   return (
-    <ThemedView>
+    <ThemedView headerTitle="Thì hiện tại">
       <ScrollView>
         {data.map((item, index) => (
           <TouchableOpacity

@@ -19,31 +19,31 @@ export default function PassList() {
     {
       name: "Past Simple",
       description: "Quá khứ đơn",
-      route: "pass-simple",
+      route: "past-simple",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
     {
       name: "Past Continuous",
       description: "Quá khứ tiếp diễn",
-      route: "pass-continuous",
+      route: "past-continuous",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
     {
       name: "Past Perfect",
       description: "Quá khứ hoàn thành",
-      route: "pass-perfect",
+      route: "past-perfect",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
     {
       name: "Past Perfect Continuous",
       description: "Quá khứ hoàn thành tiếp diễn",
-      route: "pass-perfect-continuous",
+      route: "past-perfect-continuous",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
   ];
 
   return (
-    <ThemedView>
+    <ThemedView headerTitle="Thì quá khứ">
       <ScrollView>
         {data.map((item, index) => (
           <TouchableOpacity

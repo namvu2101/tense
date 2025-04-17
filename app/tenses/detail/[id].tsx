@@ -22,6 +22,7 @@ export default function DetailScreen() {
   if (!data) return null;
 
   const { tense, form } = data;
+  const titleIndex = tense.indexOf(" ");
 
   const dataHeader = Object.keys(form).map((item) => {
     switch (item) {
@@ -87,7 +88,7 @@ export default function DetailScreen() {
   );
 
   return (
-    <ThemedView headerTitle={tense.toUpperCase()}>
+    <ThemedView headerTitle={tense.slice(titleIndex).toUpperCase()}>
       <View
         style={{
           flexDirection: "row",
@@ -96,8 +97,8 @@ export default function DetailScreen() {
           backgroundColor: Colors.tint,
           justifyContent: "center",
           alignItems: "center",
-          marginHorizontal: Sizes.small,
-          borderRadius: Sizes.border_radius,
+          marginHorizontal: Sizes.default,
+          borderRadius: Sizes.border_radius * 2,
         }}
       >
         {headers.map(renderTabItem)}

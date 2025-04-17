@@ -43,7 +43,7 @@ export default function FutureList() {
   ];
 
   return (
-    <ThemedView>
+    <ThemedView headerTitle="Thì tương lai">
       <ScrollView>
         {data.map((item, index) => (
           <TouchableOpacity
