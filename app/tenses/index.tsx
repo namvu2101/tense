@@ -17,19 +17,19 @@ export default function Tenses() {
   const data: TData[] = [
     {
       name: "Present Tense",
-      description: "Hiện tại",
+      description: "Thì hiện tại",
       route: "/tenses/present",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
     {
       name: "Pass Tense",
-      description: "Quá khứ",
+      description: "Thì quá khứ",
       route: "/tenses/pass",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
     {
       name: "Future Tense",
-      description: "Tương lai",
+      description: "Thì tương lai",
       route: "/tenses/future",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },

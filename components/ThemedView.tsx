@@ -1,13 +1,13 @@
 import { View, type ViewProps } from "react-native";
 
-import { useThemeColor } from "@/hooks/useThemeColor";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { FormProvider, UseFormReturn } from "react-hook-form";
-import { ThemedText } from "./ThemedText";
 import { Sizes } from "@/constants/Sizes";
-import { AppIcon } from "./ui/AppIcon";
+import { useAppColor } from "@/hooks/useAppColor";
 import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { FormProvider, UseFormReturn } from "react-hook-form";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { ThemedText } from "./ThemedText";
+import { AppIcon } from "./ui/AppIcon";
 
 export type ThemedViewProps = ViewProps & {
   lightColor?: string;
@@ -29,25 +29,18 @@ export function ThemedView({
   headerBgColor,
   ...otherProps
 }: ThemedViewProps) {
-  const backgroundColor = useThemeColor(
-    { light: lightColor, dark: darkColor },
-    "background"
-  );
-
-  const textColor = useThemeColor(
-    { light: lightColor, dark: darkColor },
-    "text"
-  );
-
+  const { Colors } = useAppColor();
   const renderView = () => {
     return (
       <SafeAreaView
         edges={["top"]}
-        style={[{ backgroundColor: headerBgColor ?? backgroundColor, flex: 1 }]}
+        style={[
+          { backgroundColor: headerBgColor ?? Colors.background, flex: 1 },
+        ]}
         {...otherProps}
       >
         <StatusBar style="auto" />
-        <View style={[{ flex: 1, backgroundColor }, style]}>
+        <View style={[{ flex: 1, backgroundColor: Colors.background }, style]}>
           {headerShow && (
             <View
               style={{
@@ -55,20 +48,20 @@ export function ThemedView({
                 alignItems: "center",
                 justifyContent: "space-between",
                 padding: Sizes.smaller,
-                backgroundColor: headerBgColor ?? backgroundColor,
+                backgroundColor: headerBgColor ?? Colors.background,
               }}
             >
               <AppIcon
                 type="AntDesign"
                 name="arrowleft"
-                size={24}
-                color={textColor}
+                size={Sizes.wpx(24)}
+                color={Colors.tint}
                 onPress={() => {
                   router.back();
                 }}
               />
               <ThemedText type="subtitle">{headerTitle}</ThemedText>
-              <View />
+              <View style={{ width: Sizes.wpx(24) }} />
             </View>
           )}
           {children}

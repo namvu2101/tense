@@ -1,15 +1,23 @@
 import React from "react";
-import { Image, ScrollView, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  ImageSourcePropType,
+  ScrollView,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { ThemedView } from "@/components/ThemedView";
 import { ThemedText } from "@/components/ThemedText";
 import { useAppColor } from "@/hooks/useAppColor";
 import { RelativePathString, Route, router } from "expo-router";
+import { images } from "@/assets/images";
+import { Sizes } from "@/constants/Sizes";
 
 type TData = {
   name: string;
   description: string;
   route: Route;
-  image?: string;
+  image?: ImageSourcePropType;
 };
 
 export default function Home() {
@@ -17,21 +25,24 @@ export default function Home() {
   const data: TData[] = [
     {
       name: "Ngữ pháp",
-      description: "A framework for building native apps using React",
+      description:
+        "Hệ thống quy tắc và cấu trúc giúp bạn sử dụng tiếng anh",
       route: "/tenses",
-      image: "https://reactnative.dev/img/tiny_logo.png",
+      image: images.grammar,
     },
     {
-      name: "Phát Âm",
-      description: "A framework for building native apps using React",
+      name: "Phát âm",
+      description:
+        "Hướng dẫn cách phát âm chuẩn các âm trong tiếng Anh",
       route: "/pronounce",
-      image: "https://reactnative.dev/img/tiny_logo.png",
+      image: images.pronounce,
     },
     {
       name: "Luyện tập",
-      description: "A framework for building native apps using React",
+      description:
+        "Tổng hợp bài tập đa dạng giúp bạn củng cố và nâng cao kỹ năng",
       route: "/tests",
-      image: "https://reactnative.dev/img/tiny_logo.png",
+      image: images.exams,
     },
   ];
 
@@ -56,8 +67,12 @@ export default function Home() {
             }}
           >
             <Image
-              source={{ uri: item.image }}
-              style={{ height: 50, width: 50 }}
+              source={item.image}
+              style={{
+                height: Sizes.wpx(50),
+                width: Sizes.wpx(50),
+                borderRadius: Sizes.default,
+              }}
             />
             <View style={{ flexShrink: 1 }}>
               <ThemedText type="subtitle">{item.name}</ThemedText>

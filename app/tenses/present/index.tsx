@@ -1,14 +1,14 @@
 import React from "react";
 import { Image, ScrollView, TouchableOpacity, View } from "react-native";
-import { ThemedView } from "@/components/ThemedView";
+import { router } from "expo-router";
 import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
 import { useAppColor } from "@/hooks/useAppColor";
-import { Route, router } from "expo-router";
 
 type TData = {
   name: string;
   description: string;
-  route: Route;
+  route: string;
   image?: string;
 };
 
@@ -18,25 +18,25 @@ export default function PresentList() {
     {
       name: "Present Simple",
       description: "Hiện tại đơn",
-      route: "/tenses/present/simple",
+      route: "present-simple",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
     {
       name: "Present Continuous",
       description: "Hiện tại tiếp diễn",
-      route: "/tenses/present/continuous",
+      route: "present-continuous",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
     {
       name: "Present Perfect",
       description: "Hiện tại hoàn thành",
-      route: "/tenses/present/perfect",
+      route: "present-perfect",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
     {
       name: "Present Perfect Continuous",
       description: "Hiện tại hoàn thành tiếp diễn",
-      route: "/tenses/present/perfect-continuous",
+      route: "present-perfect-continuous",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
   ];
@@ -58,7 +58,10 @@ export default function PresentList() {
               gap: 10,
             }}
             onPress={() => {
-              router.push(item.route);
+              router.push({
+                pathname: "/tenses/detail/[id]",
+                params: { id: item.route },
+              });
             }}
           >
             <Image

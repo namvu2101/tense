@@ -1,10 +1,13 @@
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { AppIcon } from "@/components/ui/AppIcon";
+import { AppVideo } from "@/components/ui/AppVideo";
 import { Table } from "@/components/ui/Table";
+import { Styles } from "@/constants/Commons";
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
 import { consonants, vowels } from "@/modules";
+import { ipaData } from "@/modules/ipa";
 import { Audio } from "expo-av";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
@@ -12,8 +15,22 @@ import { ScrollView, TouchableOpacity, View } from "react-native";
 export default function DetailItem() {
   const { id } = useLocalSearchParams();
   const { Colors } = useAppColor();
-  const ipaData = vowels.concat(consonants);
-  const findedItem = ipaData.find((item) => item.symbol === id);
+  const data = vowels.concat(consonants);
+  const convertData = data.map((item) => {
+    const findedItem = ipaData.find((i) => i.ipa_symbol === id);
+
+    if (findedItem) {
+      return {
+        ...item,
+        examples: findedItem.examples,
+        video_url: findedItem.video_url,
+      };
+    }
+    return { ...item, examples: [] };
+  });
+
+  const findedItem = convertData.find((item) => item.symbol === id);
+
   const {
     symbol,
     keyword,
@@ -21,8 +38,8 @@ export default function DetailItem() {
     articulation,
     audio,
     examples,
-    exceptions,
     identify,
+    video_url,
   } = findedItem!;
 
   const playAudio = async () => {
@@ -41,31 +58,58 @@ export default function DetailItem() {
         style={{ flex: 1 }}
         contentContainerStyle={{ padding: Sizes.default }}
       >
-        <ThemedText
-          type="huge"
-          style={{ textAlign: "center", marginVertical: Sizes.huge }}
+        <View
+          style={[
+            {
+              marginVertical: Sizes.default,
+              borderRadius: Sizes.default,
+              padding: Sizes.wpx(4),
+              alignSelf: "center",
+            },
+            Styles.shadow,
+          ]}
         >
-          {symbol}
-        </ThemedText>
+          <View
+            style={{
+              backgroundColor: Colors.background,
+              height: Sizes.wpx(130),
+              width: Sizes.wpx(130),
+              borderRadius: Sizes.default,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <ThemedText type="huge">{symbol}</ThemedText>
+          </View>
+        </View>
 
         <TouchableOpacity
           style={{
             flexDirection: "row",
-            backgroundColor: Colors.primary,
+            backgroundColor: Colors.link,
             padding: Sizes.smaller,
             borderRadius: Sizes.border_radius,
             alignItems: "center",
             justifyContent: "center",
-            alignSelf: "center",
             marginBottom: Sizes.big,
+            alignSelf: "center",
             gap: Sizes.tiny,
           }}
           onPress={playAudio}
         >
-          <AppIcon name="volume-high-outline" size={24} color="#fff" />
-          <ThemedText type="defaultSemiBold">Phát âm</ThemedText>
+          <AppIcon
+            name="volume-high-outline"
+            size={24}
+            color={Colors.background}
+          />
+          <ThemedText
+            type="defaultSemiBold"
+            style={{ color: Colors.background }}
+          >
+            Phát âm
+          </ThemedText>
         </TouchableOpacity>
-
+        <AppVideo url={video_url!} />
         <ThemedText style={{ textAlign: "center" }}>
           Ví dụ: <ThemedText type="defaultSemiBold">{keyword}</ThemedText>
         </ThemedText>
@@ -85,49 +129,13 @@ export default function DetailItem() {
           <ThemedText type="defaultSemiBold">{dataIdentify}</ThemedText>
         </ThemedText>
 
-        {/* <ThemedText type="subtitle" style={{ marginVertical: Sizes.smaller }}>
-          Ví dụ từ:
-        </ThemedText>
-        <View
-          style={{
-            flexDirection: "row",
-            flexWrap: "wrap",
-            gap: Sizes.tiny,
-          }}
-        >
-          {examples.map((example) => (
-            <View
-              key={example.value}
-              style={{
-                borderRadius: Sizes.border_radius,
-                borderWidth: 2,
-                paddingVertical: Sizes.wpx(4),
-                paddingHorizontal: Sizes.wpx(8),
-                borderColor: Colors.tint,
-                backgroundColor: Colors.background,
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <ThemedText type="defaultSemiBold">{example.value}</ThemedText>
-            </View>
-          ))}
-        </View> */}
-        <Table data={examples} title="Ví dụ" />
-        {Object.keys(identify).map((key) => {
-          return (
-            <View key={key}>
-              <ThemedText
-                type="subtitle"
-                style={{ marginVertical: Sizes.smaller }}
-              >
-                {`Ví dụ về ${key}:`}
-              </ThemedText>
-              <Table data={identify[key]} />
-            </View>
-          );
-        })}
-        <Table data={exceptions} title="Ngoại lệ" />
+        {examples.map((example, index) => (
+          <Table
+            key={example.title + index}
+            data={example.examples}
+            title={example.title}
+          />
+        ))}
       </ScrollView>
     </ThemedView>
   );

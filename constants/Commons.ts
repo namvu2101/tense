@@ -1,11 +1,11 @@
 const Styles = {
     shadow:{
-        shadowColor: "#000",
+        shadowColor: "#cccccc",
         shadowOffset: {
             width: 0,
-            height: 1,
+            height: 2,
         },
-        shadowOpacity: 0.18,
+        shadowOpacity: 0.3,
         shadowRadius: 1.0,
         elevation: 4,
     }

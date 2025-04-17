@@ -61,20 +61,29 @@ export default function Index() {
                   style={[
                     {
                       backgroundColor: Colors.background,
-                      padding: Sizes.smaller,
                       borderRadius: Sizes.smaller,
                       marginBottom: Sizes.smaller,
-                      width: Sizes.wpx(55),
-                      height: Sizes.wpx(55),
-                      borderWidth: 2,
-                      borderColor: Colors.tint,
-                      alignItems: "center",
-                      justifyContent: "center",
+                      padding: 5,
                     },
                     Styles.shadow,
                   ]}
                 >
-                  <ThemedText type="defaultSemiBold">{ipa.symbol}</ThemedText>
+                  <View
+                    style={{
+                      borderWidth: 0.5,
+                      width: Sizes.wpx(55),
+                      height: Sizes.wpx(55),
+                      padding: Sizes.smaller,
+                      borderColor: Colors.tint,
+                      borderRadius: Sizes.smaller,
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <ThemedText type="defaultSemiBold">
+                      {ipa.symbol.replace(/\//g, "")}
+                    </ThemedText>
+                  </View>
                 </TouchableOpacity>
               ))}
             </View>
@@ -110,20 +119,29 @@ export default function Index() {
               style={[
                 {
                   backgroundColor: Colors.background,
-                  padding: Sizes.smaller,
                   borderRadius: Sizes.smaller,
                   marginBottom: Sizes.smaller,
-                  width: Sizes.wpx(50),
-                  height: Sizes.wpx(50),
-                  borderWidth: 2,
-                  borderColor: Colors.tint,
-                  alignItems: "center",
-                  justifyContent: "center",
+                  padding: 5,
                 },
                 Styles.shadow,
               ]}
             >
-              <ThemedText type="defaultSemiBold">{item.symbol}</ThemedText>
+              <View
+                style={{
+                  borderWidth: 0.5,
+                  width: Sizes.wpx(55),
+                  height: Sizes.wpx(55),
+                  padding: Sizes.smaller,
+                  borderColor: Colors.tint,
+                  borderRadius: Sizes.smaller,
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <ThemedText type="defaultSemiBold">
+                  {item.symbol.replace(/\//g, "")}
+                </ThemedText>
+              </View>
             </TouchableOpacity>
           ))}
         </View>

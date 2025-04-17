@@ -1,11 +1,10 @@
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
 import { TWord } from "@/modules/types";
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import { ThemedText } from "../ThemedText";
-import { AppIcon } from "./AppIcon";
 import { Audio } from "expo-av";
+import React from "react";
+import { TouchableOpacity, View } from "react-native";
+import { ThemedText } from "../ThemedText";
 
 export function Table({
   data,
@@ -23,7 +22,7 @@ export function Table({
     await sound.playAsync();
   };
 
-  const renderCell = (value: string) => {
+  const renderCell = (value: string | JSX.Element) => {
     return (
       <View
         style={{
@@ -36,9 +35,7 @@ export function Table({
           borderLeftWidth: 0.5,
         }}
       >
-        <ThemedText
-          style={{ textAlign: "center", paddingVertical: Sizes.wpx(4) }}
-        >
+        <ThemedText style={{ textAlign: "center", padding: Sizes.wpx(8) }}>
           {value}
         </ThemedText>
       </View>
@@ -61,7 +58,7 @@ export function Table({
           borderBottomColor: Colors.tint,
         }}
       >
-        {headers.map((header, index) => (
+        {headers.slice(0, 3).map((header, index) => (
           <View
             key={header}
             style={{
@@ -71,15 +68,22 @@ export function Table({
               borderLeftWidth: index == 0 ? 0.5 : 0,
               borderLeftColor: Colors.tint,
               borderRightColor: Colors.tint,
-              borderRightWidth: index == 3 ? 0.5 : 0,
+              borderRightWidth: index == 2 ? 0.5 : 0,
             }}
           >
-            {renderCell(header === "transcription" ? "trans" : header)}
+            {renderCell(
+              <ThemedText
+                type="defaultSemiBold"
+                style={{ textAlign: "center" }}
+              >
+                {header}
+              </ThemedText>
+            )}
           </View>
         ))}
       </View>
       <View>
-        {data.map((item, index) => (
+        {data.map((item) => (
           <View
             key={item.value}
             style={{
@@ -95,27 +99,25 @@ export function Table({
                 borderLeftColor: Colors.tint,
               }}
             >
-              {renderCell(item.value)}
+              {renderCell(
+                <TouchableOpacity
+                  hitSlop={Sizes.tiny}
+                  onPress={() => playAudio(item.audio)}
+                >
+                  <ThemedText
+                    type="defaultSemiBold"
+                    style={{
+                      textAlign: "center",
+                      textDecorationLine: "underline",
+                      color: Colors.link,
+                    }}
+                  >
+                    {item.value}
+                  </ThemedText>
+                </TouchableOpacity>
+              )}
             </View>
             {renderCell(item.transcription)}
-            <View
-              style={{
-                flex: 1,
-                justifyContent: "center",
-                alignItems: "center",
-                borderRightColor: Colors.tint,
-                borderRightWidth: 0.5,
-                borderLeftColor: Colors.tint,
-                borderLeftWidth: 0.5,
-              }}
-            >
-              <AppIcon
-                name="play"
-                onPress={() => playAudio(item.audio)}
-                size={Sizes.wpx(20)}
-                color={Colors.tint}
-              />
-            </View>
             <View
               style={{
                 flex: 1,
@@ -131,33 +133,3 @@ export function Table({
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 10,
-    marginTop: 30,
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 10,
-    textAlign: "center",
-  },
-  tableHeader: {
-    flexDirection: "row",
-    borderBottomWidth: 1,
-    paddingBottom: 5,
-    marginBottom: 5,
-  },
-  row: {
-    flexDirection: "row",
-    marginBottom: 8,
-  },
-  cell: {
-    flex: 1,
-    paddingRight: 5,
-  },
-  headerCell: {
-    fontWeight: "bold",
-  },
-});
