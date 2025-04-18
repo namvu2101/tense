@@ -6,22 +6,24 @@ import { Styles } from "@/constants/Commons";
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
 import { router } from "expo-router";
-import { consonants, vowels } from "@/modules";
+import { useGetSymbol } from "./modules/useGetSymbol";
 
 export default function Index() {
   const { Colors } = useAppColor();
+  const { data } = useGetSymbol();
+
   const dataVowels = [
     {
       title: "Nguyên âm ngắn",
-      data: vowels.filter((item) => item.type === "short vowel"),
+      data: data?.vowels.filter((item) => item.type === "short vowel") ?? [],
     },
     {
       title: "Nguyên âm dài",
-      data: vowels.filter((item) => item.type === "long vowel"),
+      data: data?.vowels.filter((item) => item.type === "long vowel") ?? [],
     },
     {
       title: "Nguyên âm đôi",
-      data: vowels.filter((item) => item.type === "diphthong"),
+      data: data?.vowels.filter((item) => item.type === "diphthong") ?? [],
     },
   ];
 
@@ -107,7 +109,7 @@ export default function Index() {
             marginTop: Sizes.smaller,
           }}
         >
-          {consonants.map((item, index) => (
+          {data?.consonants.map((item, index) => (
             <TouchableOpacity
               onPress={() => {
                 router.push({

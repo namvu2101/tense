@@ -3,11 +3,12 @@ import { ThemedView } from "@/components/ThemedView";
 import { AppTabView, TPages } from "@/components/ui/AppTabView";
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
-import { Tense, getTenses } from "@/modules/tenses";
+import { Tense } from "@/modules/tenses";
 import { TenseForms } from "@/modules/types";
 import { useLocalSearchParams } from "expo-router";
 import React, { useState } from "react";
 import { TouchableOpacity, View } from "react-native";
+import useGetDetailTense from "../modules/useGetDetailTense";
 import { Form } from "./items/form";
 import { Tab } from "./items/tab";
 
@@ -16,7 +17,7 @@ type TForm = keyof TenseForms;
 export default function DetailScreen() {
   const { id } = useLocalSearchParams();
   const { Colors } = useAppColor();
-  const data = getTenses(id as Tense);
+  const { data } = useGetDetailTense(id as Tense);
   const [selected, setSelected] = useState(0);
 
   if (!data) return null;

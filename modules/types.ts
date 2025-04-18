@@ -81,14 +81,16 @@ export type Examples = {
 
 export type TOptionsSymbol = {
   value: string;
-  underline: string; // ở đây là các chữ cái cần phân biệt để gạch chân thường là các chữ cái cần phần biệt
+  underline?: string; //nếu type = find_different thì sẽ có trường này ở đây là các chữ cái cần phân biệt để gạch chân thường là các chữ cái cần phần biệt
   transcription: string;
   meaning: string;
 };
 
 export type TQuestionSymbol = {
+  id: string;
   symbol: string;
-  type: "multiple_choice"
+  type: "multiple_choice" | "fill_to_the_blank"; // fill_to_the_blank là dạng Điền từ có chứa âm /æ/ vào chỗ trống: 'She carried a heavy __.'"
+  typeQuestions: "find_different" | "find_pronounce"; 
   question: string;
   options: TOptionsSymbol[];
   correct_answer: string;

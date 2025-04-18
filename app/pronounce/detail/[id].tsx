@@ -1,35 +1,29 @@
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { AppIcon } from "@/components/ui/AppIcon";
+import { AppViewLoading } from "@/components/ui/AppLoading";
 import { AppVideo } from "@/components/ui/AppVideo";
 import { Table } from "@/components/ui/Table";
 import { Styles } from "@/constants/Commons";
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
-import { consonants, vowels } from "@/modules";
-import { ipaData } from "@/modules/ipa";
 import { Audio } from "expo-av";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import { ScrollView, TouchableOpacity, View } from "react-native";
+import useGetDetailSymbol from "../modules/useGetDetailSymbol";
 export default function DetailItem() {
   const { id } = useLocalSearchParams();
   const { Colors } = useAppColor();
-  const data = vowels.concat(consonants);
-  const convertData = data.map((item) => {
-    const findedItem = ipaData.find((i) => i.ipa_symbol === id);
+  const { data, isLoading } = useGetDetailSymbol(id as string);
 
-    if (findedItem) {
-      return {
-        ...item,
-        examples: findedItem.examples,
-        video_url: findedItem.video_url,
-      };
-    }
-    return { ...item, examples: [] };
-  });
-
-  const findedItem = convertData.find((item) => item.symbol === id);
+  if (isLoading || !data) {
+    return (
+      <ThemedView headerTitle={`Cách phát âm: ${id}`}>
+        <AppViewLoading style={{ flex: 1 }} />
+      </ThemedView>
+    );
+  }
 
   const {
     symbol,
@@ -40,7 +34,7 @@ export default function DetailItem() {
     examples,
     identify,
     video_url,
-  } = findedItem!;
+  } = data
 
   const playAudio = async () => {
     const { sound } = await Audio.Sound.createAsync({
