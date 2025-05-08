@@ -1,6 +1,6 @@
-import { TQuestionSymbol } from "@/modules/types";
+import type { TQuestion } from "@/modules/types"
 
-export const questionsSymbol: TQuestionSymbol[] = [
+export const questionsSymbol: TQuestion[] = [
   // 1-20: Các câu hỏi về nguyên âm đơn
   {
     id: "1",
@@ -10,31 +10,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "cat",
         underline: "a",
         transcription: "/kæt/",
         meaning: "con mèo",
       },
       {
+        id: "b",
         value: "hat",
         underline: "a",
         transcription: "/hæt/",
         meaning: "cái mũ",
       },
       {
+        id: "c",
         value: "said",
         underline: "ai",
         transcription: "/sed/",
         meaning: "đã nói (quá khứ của say)",
       },
       {
+        id: "d",
         value: "back",
         underline: "a",
         transcription: "/bæk/",
         meaning: "phía sau, lưng",
       },
     ],
-    correct_answer: "said",
+    correct_answer: "c",
+    explain: "Từ 'said' có âm /e/ trong khi các từ còn lại có âm /æ/",
   },
   {
     id: "2",
@@ -44,27 +49,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /i:/?",
     options: [
       {
+        id: "a",
         value: "sit",
         transcription: "/sɪt/",
         meaning: "ngồi",
       },
       {
+        id: "b",
         value: "beat",
         transcription: "/bi:t/",
         meaning: "đánh, đập",
       },
       {
+        id: "c",
         value: "bit",
         transcription: "/bɪt/",
         meaning: "một chút, mảnh nhỏ",
       },
       {
+        id: "d",
         value: "bet",
         transcription: "/bet/",
         meaning: "đánh cược",
       },
     ],
-    correct_answer: "beat",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'beat' chứa âm /i:/, các từ khác có âm ngắn /ɪ/ hoặc /e/",
   },
   {
     id: "3",
@@ -74,27 +84,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The hikers reached the ___ of the mountain.",
     options: [
       {
+        id: "a",
         value: "top",
         transcription: "/tɒp/",
         meaning: "đỉnh, phần cao nhất",
       },
       {
+        id: "b",
         value: "peak",
         transcription: "/pi:k/",
         meaning: "đỉnh núi",
       },
       {
+        id: "c",
         value: "summit",
         transcription: "/ˈsʌmɪt/",
         meaning: "đỉnh cao nhất của núi",
       },
       {
+        id: "d",
         value: "height",
         transcription: "/haɪt/",
         meaning: "chiều cao",
       },
     ],
-    correct_answer: "summit",
+    correct_answer: "c",
+    explain: "Từ 'summit' chứa âm /ʌ/ trong khi các từ khác không có âm này",
   },
   {
     id: "4",
@@ -104,31 +119,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "call",
         underline: "a",
         transcription: "/kɔ:l/",
         meaning: "gọi",
       },
       {
+        id: "b",
         value: "walk",
         underline: "a",
         transcription: "/wɔ:k/",
         meaning: "đi bộ",
       },
       {
+        id: "c",
         value: "gone",
         underline: "o",
         transcription: "/ɡɒn/",
         meaning: "đã đi (quá khứ phân từ của go)",
       },
       {
+        id: "d",
         value: "law",
         underline: "aw",
         transcription: "/lɔ:/",
         meaning: "luật pháp",
       },
     ],
-    correct_answer: "gone",
+    correct_answer: "c",
+    explain: "Từ 'gone' có âm /ɒ/ trong khi các từ khác có âm /ɔ:/",
   },
   {
     id: "5",
@@ -138,27 +158,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "She couldn't ___ for the concert tickets.",
     options: [
       {
+        id: "a",
         value: "pay",
         transcription: "/peɪ/",
         meaning: "trả tiền",
       },
       {
+        id: "b",
         value: "buy",
         transcription: "/baɪ/",
         meaning: "mua",
       },
       {
+        id: "c",
         value: "spend",
         transcription: "/spend/",
         meaning: "chi tiêu",
       },
       {
+        id: "d",
         value: "afford",
         transcription: "/əˈfɔ:d/",
         meaning: "có đủ khả năng chi trả",
       },
     ],
-    correct_answer: "pay",
+    correct_answer: "a",
+    explain: "Từ 'pay' chứa âm /eɪ/ trong khi các từ khác không có âm này",
   },
   {
     id: "6",
@@ -168,31 +193,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "sit",
         underline: "i",
         transcription: "/sɪt/",
         meaning: "ngồi",
       },
       {
+        id: "b",
         value: "fit",
         underline: "i",
         transcription: "/fɪt/",
         meaning: "vừa vặn",
       },
       {
+        id: "c",
         value: "meet",
         underline: "ee",
         transcription: "/mi:t/",
         meaning: "gặp gỡ",
       },
       {
+        id: "d",
         value: "big",
         underline: "i",
         transcription: "/bɪɡ/",
         meaning: "to lớn",
       },
     ],
-    correct_answer: "meet",
+    correct_answer: "c",
+    explain: "Từ 'meet' có âm /i:/ trong khi các từ khác có âm /ɪ/",
   },
   {
     id: "7",
@@ -202,27 +232,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /aʊ/?",
     options: [
       {
+        id: "a",
         value: "boat",
         transcription: "/bəʊt/",
         meaning: "thuyền",
       },
       {
+        id: "b",
         value: "about",
         transcription: "/əˈbaʊt/",
         meaning: "về",
       },
       {
+        id: "c",
         value: "boot",
         transcription: "/bu:t/",
         meaning: "ủng",
       },
       {
+        id: "d",
         value: "bought",
         transcription: "/bɔ:t/",
         meaning: "đã mua",
       },
     ],
-    correct_answer: "about",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'about' chứa âm /aʊ/, các từ khác có âm khác",
   },
   {
     id: "8",
@@ -232,27 +267,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The ___ of the story surprised everyone.",
     options: [
       {
+        id: "a",
         value: "end",
         transcription: "/end/",
         meaning: "kết thúc",
       },
       {
+        id: "b",
         value: "conclusion",
         transcription: "/kənˈklu:ʒən/",
         meaning: "kết luận",
       },
       {
+        id: "c",
         value: "finish",
         transcription: "/ˈfɪnɪʃ/",
         meaning: "hoàn thành",
       },
       {
+        id: "d",
         value: "close",
         transcription: "/kləʊz/",
         meaning: "đóng lại",
       },
     ],
-    correct_answer: "conclusion",
+    correct_answer: "b",
+    explain: "Từ 'conclusion' chứa âm /ə/ trong âm tiết đầu và cuối",
   },
   {
     id: "9",
@@ -262,31 +302,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "hot",
         underline: "o",
         transcription: "/hɒt/",
         meaning: "nóng",
       },
       {
+        id: "b",
         value: "pot",
         underline: "o",
         transcription: "/pɒt/",
         meaning: "nồi",
       },
       {
+        id: "c",
         value: "note",
         underline: "o",
         transcription: "/nəʊt/",
         meaning: "ghi chú",
       },
       {
+        id: "d",
         value: "lot",
         underline: "o",
         transcription: "/lɒt/",
         meaning: "nhiều",
       },
     ],
-    correct_answer: "note",
+    correct_answer: "c",
+    explain: "Từ 'note' có âm /əʊ/ trong khi các từ khác có âm /ɒ/",
   },
   {
     id: "10",
@@ -296,27 +341,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /u:/?",
     options: [
       {
+        id: "a",
         value: "book",
         transcription: "/bʊk/",
         meaning: "sách",
       },
       {
+        id: "b",
         value: "blue",
         transcription: "/blu:/",
         meaning: "màu xanh dương",
       },
       {
+        id: "c",
         value: "put",
         transcription: "/pʊt/",
         meaning: "đặt",
       },
       {
+        id: "d",
         value: "but",
         transcription: "/bʌt/",
         meaning: "nhưng",
       },
     ],
-    correct_answer: "blue",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'blue' chứa âm /u:/, các từ khác có âm ngắn /ʊ/ hoặc /ʌ/",
   },
   {
     id: "11",
@@ -326,27 +376,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The doctor will ___ the patient tomorrow.",
     options: [
       {
+        id: "a",
         value: "see",
         transcription: "/si:/",
         meaning: "nhìn thấy",
       },
       {
+        id: "b",
         value: "nurse",
         transcription: "/nɜ:s/",
         meaning: "chăm sóc (bệnh nhân)",
       },
       {
+        id: "c",
         value: "treat",
         transcription: "/tri:t/",
         meaning: "điều trị",
       },
       {
+        id: "d",
         value: "cure",
         transcription: "/kjʊə/",
         meaning: "chữa khỏi",
       },
     ],
-    correct_answer: "nurse",
+    correct_answer: "b",
+    explain: "Từ 'nurse' chứa âm /ɜ:/ trong khi các từ khác không có âm này",
   },
   {
     id: "12",
@@ -356,31 +411,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "time",
         underline: "i",
         transcription: "/taɪm/",
         meaning: "thời gian",
       },
       {
+        id: "b",
         value: "my",
         underline: "y",
         transcription: "/maɪ/",
         meaning: "của tôi",
       },
       {
+        id: "c",
         value: "team",
         underline: "ea",
         transcription: "/ti:m/",
         meaning: "đội",
       },
       {
+        id: "d",
         value: "high",
         underline: "igh",
         transcription: "/haɪ/",
         meaning: "cao",
       },
     ],
-    correct_answer: "team",
+    correct_answer: "c",
+    explain: "Từ 'team' có âm /i:/ trong khi các từ khác có âm /aɪ/",
   },
   {
     id: "13",
@@ -390,27 +450,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ʃ/?",
     options: [
       {
+        id: "a",
         value: "zip",
         transcription: "/zɪp/",
         meaning: "khóa kéo",
       },
       {
+        id: "b",
         value: "ship",
         transcription: "/ʃɪp/",
         meaning: "tàu thủy",
       },
       {
+        id: "c",
         value: "thin",
         transcription: "/θɪn/",
         meaning: "mỏng",
       },
       {
+        id: "d",
         value: "sing",
         transcription: "/sɪŋ/",
         meaning: "hát",
       },
     ],
-    correct_answer: "ship",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'ship' chứa âm /ʃ/, các từ khác có âm /z/, /θ/ và /s/",
   },
   {
     id: "14",
@@ -420,27 +485,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "I need to ___ about my future plans.",
     options: [
       {
+        id: "a",
         value: "talk",
         transcription: "/tɔ:k/",
         meaning: "nói chuyện",
       },
       {
+        id: "b",
         value: "speak",
         transcription: "/spi:k/",
         meaning: "nói",
       },
       {
+        id: "c",
         value: "think",
         transcription: "/θɪŋk/",
         meaning: "suy nghĩ",
       },
       {
+        id: "d",
         value: "discuss",
         transcription: "/dɪˈskʌs/",
         meaning: "thảo luận",
       },
     ],
-    correct_answer: "think",
+    correct_answer: "c",
+    explain: "Từ 'think' chứa âm /θ/ trong khi các từ khác không có âm này",
   },
   {
     id: "15",
@@ -450,31 +520,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "judge",
         underline: "j",
         transcription: "/dʒʌdʒ/",
         meaning: "thẩm phán",
       },
       {
+        id: "b",
         value: "gem",
         underline: "g",
         transcription: "/dʒem/",
         meaning: "đá quý",
       },
       {
+        id: "c",
         value: "giant",
         underline: "g",
         transcription: "/ˈdʒaɪənt/",
         meaning: "người khổng lồ",
       },
       {
+        id: "d",
         value: "get",
         underline: "g",
         transcription: "/ɡet/",
         meaning: "lấy, nhận",
       },
     ],
-    correct_answer: "get",
+    correct_answer: "d",
+    explain: "Từ 'get' có âm /g/ trong khi các từ khác có âm /dʒ/",
   },
   {
     id: "16",
@@ -484,27 +559,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /əʊ/?",
     options: [
       {
+        id: "a",
         value: "cow",
         transcription: "/kaʊ/",
         meaning: "con bò",
       },
       {
+        id: "b",
         value: "go",
         transcription: "/ɡəʊ/",
         meaning: "đi",
       },
       {
+        id: "c",
         value: "now",
         transcription: "/naʊ/",
         meaning: "bây giờ",
       },
       {
+        id: "d",
         value: "put",
         transcription: "/pʊt/",
         meaning: "đặt",
       },
     ],
-    correct_answer: "go",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'go' chứa âm /əʊ/, các từ khác có âm /aʊ/ hoặc /ʊ/",
   },
   {
     id: "17",
@@ -514,27 +594,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The teacher asked the students to ___ the answers.",
     options: [
       {
+        id: "a",
         value: "check",
         transcription: "/tʃek/",
         meaning: "kiểm tra",
       },
       {
+        id: "b",
         value: "see",
         transcription: "/si:/",
         meaning: "nhìn",
       },
       {
+        id: "c",
         value: "tell",
         transcription: "/tel/",
         meaning: "nói",
       },
       {
+        id: "d",
         value: "know",
         transcription: "/nəʊ/",
         meaning: "biết",
       },
     ],
-    correct_answer: "check",
+    correct_answer: "a",
+    explain: "Từ 'check' chứa âm /tʃ/ trong khi các từ khác không có âm này",
   },
   {
     id: "18",
@@ -544,31 +629,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "book",
         underline: "oo",
         transcription: "/bʊk/",
         meaning: "sách",
       },
       {
+        id: "b",
         value: "put",
         underline: "u",
         transcription: "/pʊt/",
         meaning: "đặt",
       },
       {
+        id: "c",
         value: "food",
         underline: "oo",
         transcription: "/fu:d/",
         meaning: "thức ăn",
       },
       {
+        id: "d",
         value: "good",
         underline: "oo",
         transcription: "/ɡʊd/",
         meaning: "tốt",
       },
     ],
-    correct_answer: "food",
+    correct_answer: "c",
+    explain: "Từ 'food' có âm /u:/ trong khi các từ khác có âm /ʊ/",
   },
   {
     id: "19",
@@ -578,27 +668,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ŋ/?",
     options: [
       {
+        id: "a",
         value: "name",
         transcription: "/neɪm/",
         meaning: "tên",
       },
       {
+        id: "b",
         value: "knife",
         transcription: "/naɪf/",
         meaning: "dao",
       },
       {
+        id: "c",
         value: "sing",
         transcription: "/sɪŋ/",
         meaning: "hát",
       },
       {
+        id: "d",
         value: "nine",
         transcription: "/naɪn/",
         meaning: "số chín",
       },
     ],
-    correct_answer: "sing",
+    correct_answer: "c",
+    explain: "Chỉ có từ 'sing' chứa âm /ŋ/, các từ khác có âm /m/, /f/ và /n/",
   },
   {
     id: "20",
@@ -608,27 +703,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The company needs to ___ their new policy with the employees.",
     options: [
       {
+        id: "a",
         value: "tell",
         transcription: "/tel/",
         meaning: "nói",
       },
       {
+        id: "b",
         value: "share",
         transcription: "/ʃeə/",
         meaning: "chia sẻ",
       },
       {
+        id: "c",
         value: "show",
         transcription: "/ʃəʊ/",
         meaning: "cho xem",
       },
       {
+        id: "d",
         value: "explain",
         transcription: "/ɪkˈspleɪn/",
         meaning: "giải thích",
       },
     ],
-    correct_answer: "share",
+    correct_answer: "b",
+    explain: "Từ 'share' chứa âm /eə/ trong khi các từ khác không có âm này",
   },
 
   // 21-40: Thêm các câu hỏi về nguyên âm đôi và phụ âm
@@ -640,31 +740,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "pen",
         underline: "p",
         transcription: "/pen/",
         meaning: "bút",
       },
       {
+        id: "b",
         value: "happy",
         underline: "pp",
         transcription: "/ˈhæpi/",
         meaning: "hạnh phúc",
       },
       {
+        id: "c",
         value: "phone",
         underline: "ph",
         transcription: "/fəʊn/",
         meaning: "điện thoại",
       },
       {
+        id: "d",
         value: "map",
         underline: "p",
         transcription: "/mæp/",
         meaning: "bản đồ",
       },
     ],
-    correct_answer: "phone",
+    correct_answer: "c",
+    explain: "Từ 'phone' có âm /f/ trong khi các từ khác có âm /p/",
   },
   {
     id: "22",
@@ -674,27 +779,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "I want to ___ to the beach this weekend.",
     options: [
       {
+        id: "a",
         value: "go",
         transcription: "/ɡoʊ/",
         meaning: "đi",
       },
       {
+        id: "b",
         value: "visit",
         transcription: "/ˈvɪzɪt/",
         meaning: "thăm",
       },
       {
+        id: "c",
         value: "travel",
         transcription: "/ˈtrævəl/",
         meaning: "du lịch",
       },
       {
+        id: "d",
         value: "walk",
         transcription: "/wɔːk/",
         meaning: "đi bộ",
       },
     ],
-    correct_answer: "go",
+    correct_answer: "a",
+    explain: "Từ 'go' chứa âm /oʊ/ (hoặc /əʊ/ trong tiếng Anh-Anh) trong khi các từ khác không có âm này",
   },
   {
     id: "23",
@@ -704,27 +814,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /b/?",
     options: [
       {
+        id: "a",
         value: "phone",
         transcription: "/fəʊn/",
         meaning: "điện thoại",
       },
       {
+        id: "b",
         value: "pen",
         transcription: "/pen/",
         meaning: "bút",
       },
       {
+        id: "c",
         value: "book",
         transcription: "/bʊk/",
         meaning: "sách",
       },
       {
+        id: "d",
         value: "fish",
         transcription: "/fɪʃ/",
         meaning: "cá",
       },
     ],
-    correct_answer: "book",
+    correct_answer: "c",
+    explain: "Chỉ có từ 'book' chứa âm /b/, các từ khác có âm /f/, /p/ và /f/",
   },
   {
     id: "24",
@@ -734,27 +849,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The ___ of the game is to score more points than your opponent.",
     options: [
       {
+        id: "a",
         value: "point",
         transcription: "/pɔɪnt/",
         meaning: "điểm",
       },
       {
+        id: "b",
         value: "goal",
         transcription: "/ɡəʊl/",
         meaning: "mục tiêu",
       },
       {
+        id: "c",
         value: "rule",
         transcription: "/ruːl/",
         meaning: "quy tắc",
       },
       {
+        id: "d",
         value: "idea",
         transcription: "/aɪˈdɪə/",
         meaning: "ý tưởng",
       },
     ],
-    correct_answer: "point",
+    correct_answer: "a",
+    explain: "Từ 'point' chứa âm /ɔɪ/ trong khi các từ khác không có âm này",
   },
   {
     id: "25",
@@ -764,31 +884,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "fish",
         underline: "f",
         transcription: "/fɪʃ/",
         meaning: "cá",
       },
       {
+        id: "b",
         value: "phone",
         underline: "ph",
         transcription: "/fəʊn/",
         meaning: "điện thoại",
       },
       {
+        id: "c",
         value: "enough",
         underline: "gh",
         transcription: "/ɪˈnʌf/",
         meaning: "đủ",
       },
       {
+        id: "d",
         value: "very",
         underline: "v",
         transcription: "/ˈveri/",
         meaning: "rất",
       },
     ],
-    correct_answer: "very",
+    correct_answer: "d",
+    explain: "Từ 'very' có âm /v/ trong khi các từ khác có âm /f/",
   },
   {
     id: "26",
@@ -798,27 +923,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ɪə/?",
     options: [
       {
+        id: "a",
         value: "hear",
         transcription: "/hɪə/",
         meaning: "nghe",
       },
       {
+        id: "b",
         value: "heart",
         transcription: "/hɑːt/",
         meaning: "trái tim",
       },
       {
+        id: "c",
         value: "hair",
         transcription: "/heə/",
         meaning: "tóc",
       },
       {
+        id: "d",
         value: "here",
         transcription: "/hɪə/",
         meaning: "ở đây",
       },
     ],
-    correct_answer: "hear",
+    correct_answer: "a",
+    explain: "Từ 'hear' và 'here' đều chứa âm /ɪə/, trong khi 'heart' có âm /ɑː/ và 'hair' có âm /eə/",
   },
   {
     id: "27",
@@ -828,27 +958,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "We need to ___ the situation carefully.",
     options: [
       {
+        id: "a",
         value: "view",
         transcription: "/vjuː/",
         meaning: "xem xét",
       },
       {
+        id: "b",
         value: "think",
         transcription: "/θɪŋk/",
         meaning: "suy nghĩ",
       },
       {
+        id: "c",
         value: "plan",
         transcription: "/plæn/",
         meaning: "lên kế hoạch",
       },
       {
+        id: "d",
         value: "fix",
         transcription: "/fɪks/",
         meaning: "sửa chữa",
       },
     ],
-    correct_answer: "view",
+    correct_answer: "a",
+    explain: "Từ 'view' chứa âm /v/ trong khi các từ khác không có âm này",
   },
   {
     id: "28",
@@ -858,31 +993,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "pure",
         underline: "u",
         transcription: "/pjʊə/",
         meaning: "tinh khiết",
       },
       {
+        id: "b",
         value: "cure",
         underline: "u",
         transcription: "/kjʊə/",
         meaning: "chữa trị",
       },
       {
+        id: "c",
         value: "tour",
         underline: "ou",
         transcription: "/tʊə/",
         meaning: "chuyến du lịch",
       },
       {
+        id: "d",
         value: "poor",
         underline: "oo",
         transcription: "/pɔː/",
         meaning: "nghèo",
       },
     ],
-    correct_answer: "poor",
+    correct_answer: "d",
+    explain: "Từ 'poor' có âm /ɔː/ trong khi các từ khác có âm /ʊə/",
   },
   {
     id: "29",
@@ -892,27 +1032,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ð/?",
     options: [
       {
+        id: "a",
         value: "think",
         transcription: "/θɪŋk/",
         meaning: "suy nghĩ",
       },
       {
+        id: "b",
         value: "this",
         transcription: "/ðɪs/",
         meaning: "này",
       },
       {
+        id: "c",
         value: "teeth",
         transcription: "/tiːθ/",
         meaning: "răng",
       },
       {
+        id: "d",
         value: "ten",
         transcription: "/ten/",
         meaning: "mười",
       },
     ],
-    correct_answer: "this",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'this' chứa âm /ð/, các từ khác có âm /θ/, /θ/ và /t/",
   },
   {
     id: "30",
@@ -922,27 +1067,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Please ___ me how to get to the station.",
     options: [
       {
+        id: "a",
         value: "tell",
         transcription: "/tel/",
         meaning: "nói",
       },
       {
+        id: "b",
         value: "show",
         transcription: "/ʃəʊ/",
         meaning: "chỉ",
       },
       {
+        id: "c",
         value: "help",
         transcription: "/help/",
         meaning: "giúp đỡ",
       },
       {
+        id: "d",
         value: "guide",
         transcription: "/ɡaɪd/",
         meaning: "hướng dẫn",
       },
     ],
-    correct_answer: "tell",
+    correct_answer: "a",
+    explain: "Từ 'tell' chứa âm /t/ ở đầu từ trong khi các từ khác không bắt đầu bằng âm này",
   },
   {
     id: "31",
@@ -952,31 +1102,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "day",
         underline: "d",
         transcription: "/deɪ/",
         meaning: "ngày",
       },
       {
+        id: "b",
         value: "lady",
         underline: "d",
         transcription: "/ˈleɪdi/",
         meaning: "quý bà",
       },
       {
+        id: "c",
         value: "walked",
         underline: "ed",
         transcription: "/wɔːkt/",
         meaning: "đã đi bộ",
       },
       {
+        id: "d",
         value: "made",
         underline: "d",
         transcription: "/meɪd/",
         meaning: "đã làm",
       },
     ],
-    correct_answer: "walked",
+    correct_answer: "c",
+    explain: "Từ 'walked' có âm /t/ ở cuối (không phải /d/) trong khi các từ khác có âm /d/",
   },
   {
     id: "32",
@@ -986,27 +1141,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /k/?",
     options: [
       {
+        id: "a",
         value: "know",
         transcription: "/nəʊ/",
         meaning: "biết",
       },
       {
+        id: "b",
         value: "cat",
         transcription: "/kæt/",
         meaning: "con mèo",
       },
       {
+        id: "c",
         value: "sign",
         transcription: "/saɪn/",
         meaning: "dấu hiệu",
       },
       {
+        id: "d",
         value: "ghost",
         transcription: "/ɡəʊst/",
         meaning: "ma",
       },
     ],
-    correct_answer: "cat",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'cat' chứa âm /k/, các từ khác có âm /n/, /s/ và /g/",
   },
   {
     id: "33",
@@ -1016,27 +1176,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The children were playing in the ___ behind the house.",
     options: [
       {
+        id: "a",
         value: "garden",
         transcription: "/ˈɡɑːdn/",
         meaning: "vườn",
       },
       {
+        id: "b",
         value: "yard",
         transcription: "/jɑːd/",
         meaning: "sân",
       },
       {
+        id: "c",
         value: "field",
         transcription: "/fiːld/",
         meaning: "cánh đồng",
       },
       {
+        id: "d",
         value: "park",
         transcription: "/pɑːk/",
         meaning: "công viên",
       },
     ],
-    correct_answer: "garden",
+    correct_answer: "a",
+    explain: "Từ 'garden' chứa âm /g/ trong khi các từ khác không có âm này",
   },
   {
     id: "34",
@@ -1046,31 +1211,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "see",
         underline: "s",
         transcription: "/siː/",
         meaning: "nhìn thấy",
       },
       {
+        id: "b",
         value: "city",
         underline: "c",
         transcription: "/ˈsɪti/",
         meaning: "thành phố",
       },
       {
+        id: "c",
         value: "pass",
         underline: "ss",
         transcription: "/pɑːs/",
         meaning: "đi qua",
       },
       {
+        id: "d",
         value: "zoo",
         underline: "z",
         transcription: "/zuː/",
         meaning: "sở thú",
       },
     ],
-    correct_answer: "zoo",
+    correct_answer: "d",
+    explain: "Từ 'zoo' có âm /z/ trong khi các từ khác có âm /s/",
   },
   {
     id: "35",
@@ -1080,27 +1250,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /z/?",
     options: [
       {
+        id: "a",
         value: "bus",
         transcription: "/bʌs/",
         meaning: "xe buýt",
       },
       {
+        id: "b",
         value: "zoo",
         transcription: "/zuː/",
         meaning: "sở thú",
       },
       {
+        id: "c",
         value: "place",
         transcription: "/pleɪs/",
         meaning: "địa điểm",
       },
       {
+        id: "d",
         value: "rice",
         transcription: "/raɪs/",
         meaning: "gạo",
       },
     ],
-    correct_answer: "zoo",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'zoo' chứa âm /z/, các từ khác có âm /s/",
   },
   {
     id: "36",
@@ -1110,27 +1285,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "My ___ hurts after running for so long.",
     options: [
       {
+        id: "a",
         value: "heart",
         transcription: "/hɑːt/",
         meaning: "trái tim",
       },
       {
+        id: "b",
         value: "arm",
         transcription: "/ɑːm/",
         meaning: "cánh tay",
       },
       {
+        id: "c",
         value: "leg",
         transcription: "/leɡ/",
         meaning: "chân",
       },
       {
+        id: "d",
         value: "ear",
         transcription: "/ɪə/",
         meaning: "tai",
       },
     ],
-    correct_answer: "heart",
+    correct_answer: "a",
+    explain: "Từ 'heart' chứa âm /h/ trong khi các từ khác không có âm này",
   },
   {
     id: "37",
@@ -1140,31 +1320,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "man",
         underline: "m",
         transcription: "/mæn/",
         meaning: "đàn ông",
       },
       {
+        id: "b",
         value: "come",
         underline: "m",
         transcription: "/kʌm/",
         meaning: "đến",
       },
       {
+        id: "c",
         value: "summer",
         underline: "mm",
         transcription: "/ˈsʌmə/",
         meaning: "mùa hè",
       },
       {
+        id: "d",
         value: "know",
         underline: "kn",
         transcription: "/nəʊ/",
         meaning: "biết",
       },
     ],
-    correct_answer: "know",
+    correct_answer: "d",
+    explain: "Từ 'know' không có âm /m/ trong khi các từ khác có âm /m/",
   },
   {
     id: "38",
@@ -1174,27 +1359,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /n/?",
     options: [
       {
+        id: "a",
         value: "sing",
         transcription: "/sɪŋ/",
         meaning: "hát",
       },
       {
+        id: "b",
         value: "knife",
         transcription: "/naɪf/",
         meaning: "dao",
       },
       {
+        id: "c",
         value: "wrong",
         transcription: "/rɒŋ/",
         meaning: "sai",
       },
       {
+        id: "d",
         value: "king",
         transcription: "/kɪŋ/",
         meaning: "vua",
       },
     ],
-    correct_answer: "knife",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'knife' chứa âm /n/, các từ khác có âm /ŋ/",
   },
   {
     id: "39",
@@ -1204,27 +1394,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "She ___ to music every morning.",
     options: [
       {
+        id: "a",
         value: "listens",
         transcription: "/ˈlɪsənz/",
         meaning: "nghe",
       },
       {
+        id: "b",
         value: "hears",
         transcription: "/hɪəz/",
         meaning: "nghe thấy",
       },
       {
+        id: "c",
         value: "enjoys",
         transcription: "/ɪnˈdʒɔɪz/",
         meaning: "thích",
       },
       {
+        id: "d",
         value: "plays",
         transcription: "/pleɪz/",
         meaning: "chơi",
       },
     ],
-    correct_answer: "listens",
+    correct_answer: "a",
+    explain: "Từ 'listens' bắt đầu với âm /l/ trong khi các từ khác không bắt đầu bằng âm này",
   },
   {
     id: "40",
@@ -1234,31 +1429,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "red",
         underline: "r",
         transcription: "/red/",
         meaning: "màu đỏ",
       },
       {
+        id: "b",
         value: "write",
         underline: "wr",
         transcription: "/raɪt/",
         meaning: "viết",
       },
       {
+        id: "c",
         value: "sorry",
         underline: "rr",
         transcription: "/ˈsɒri/",
         meaning: "xin lỗi",
       },
       {
+        id: "d",
         value: "know",
         underline: "kn",
         transcription: "/nəʊ/",
         meaning: "biết",
       },
     ],
-    correct_answer: "know",
+    correct_answer: "d",
+    explain: "Từ 'know' không có âm /r/ trong khi các từ khác có âm /r/",
   },
 
   // 41-60: Các câu hỏi về âm cuối và âm đầu
@@ -1270,27 +1470,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /j/?",
     options: [
       {
+        id: "a",
         value: "yes",
         transcription: "/jes/",
         meaning: "vâng, đúng",
       },
       {
+        id: "b",
         value: "jump",
         transcription: "/dʒʌmp/",
         meaning: "nhảy",
       },
       {
+        id: "c",
         value: "hat",
         transcription: "/hæt/",
         meaning: "mũ",
       },
       {
+        id: "d",
         value: "wet",
         transcription: "/wet/",
         meaning: "ướt",
       },
     ],
-    correct_answer: "yes",
+    correct_answer: "a",
+    explain: "Chỉ có từ 'yes' chứa âm /j/, các từ khác có âm /dʒ/, /h/ và /w/",
   },
   {
     id: "42",
@@ -1300,27 +1505,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "I ___ to be a doctor when I grow up.",
     options: [
       {
+        id: "a",
         value: "want",
         transcription: "/wɒnt/",
         meaning: "muốn",
       },
       {
+        id: "b",
         value: "hope",
         transcription: "/həʊp/",
         meaning: "hy vọng",
       },
       {
+        id: "c",
         value: "need",
         transcription: "/niːd/",
         meaning: "cần",
       },
       {
+        id: "d",
         value: "try",
         transcription: "/traɪ/",
         meaning: "cố gắng",
       },
     ],
-    correct_answer: "want",
+    correct_answer: "a",
+    explain: "Từ 'want' bắt đầu với âm /w/ trong khi các từ khác không bắt đầu bằng âm này",
   },
   {
     id: "43",
@@ -1330,31 +1540,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "dog",
         underline: "o",
         transcription: "/dɒɡ/",
         meaning: "con chó",
       },
       {
+        id: "b",
         value: "box",
         underline: "o",
         transcription: "/bɒks/",
         meaning: "hộp",
       },
       {
+        id: "c",
         value: "home",
         underline: "o",
         transcription: "/həʊm/",
         meaning: "nhà",
       },
       {
+        id: "d",
         value: "stop",
         underline: "o",
         transcription: "/stɒp/",
         meaning: "dừng lại",
       },
     ],
-    correct_answer: "home",
+    correct_answer: "c",
+    explain: "Từ 'home' có âm /əʊ/ trong khi các từ khác có âm /ɒ/",
   },
   {
     id: "44",
@@ -1364,27 +1579,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ʒ/?",
     options: [
       {
+        id: "a",
         value: "ship",
         transcription: "/ʃɪp/",
         meaning: "tàu thủy",
       },
       {
+        id: "b",
         value: "measure",
         transcription: "/ˈmeʒə/",
         meaning: "đo lường",
       },
       {
+        id: "c",
         value: "job",
         transcription: "/dʒɒb/",
         meaning: "công việc",
       },
       {
+        id: "d",
         value: "sugar",
         transcription: "/ˈʃʊɡə/",
         meaning: "đường",
       },
     ],
-    correct_answer: "measure",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'measure' chứa âm /ʒ/, các từ khác có âm /ʃ/, /dʒ/ và /ʃ/",
   },
   {
     id: "45",
@@ -1394,27 +1614,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "My ___ is a doctor at the local hospital.",
     options: [
       {
+        id: "a",
         value: "father",
         transcription: "/ˈfɑːðə/",
         meaning: "cha",
       },
       {
+        id: "b",
         value: "mother",
         transcription: "/ˈmʌðə/",
         meaning: "mẹ",
       },
       {
+        id: "c",
         value: "brother",
         transcription: "/ˈbrʌðə/",
         meaning: "anh/em trai",
       },
       {
+        id: "d",
         value: "friend",
         transcription: "/frend/",
         meaning: "bạn",
       },
     ],
-    correct_answer: "father",
+    correct_answer: "a",
+    explain: "Từ 'father' chứa âm /ɑː/ trong khi các từ khác có âm /ʌ/ hoặc /e/",
   },
   {
     id: "46",
@@ -1424,31 +1649,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "cup",
         underline: "u",
         transcription: "/kʌp/",
         meaning: "cốc",
       },
       {
+        id: "b",
         value: "bus",
         underline: "u",
         transcription: "/bʌs/",
         meaning: "xe buýt",
       },
       {
+        id: "c",
         value: "put",
         underline: "u",
         transcription: "/pʊt/",
         meaning: "đặt",
       },
       {
+        id: "d",
         value: "sun",
         underline: "u",
         transcription: "/sʌn/",
         meaning: "mặt trời",
       },
     ],
-    correct_answer: "put",
+    correct_answer: "c",
+    explain: "Từ 'put' có âm /ʊ/ trong khi các từ khác có âm /ʌ/",
   },
   {
     id: "47",
@@ -1458,27 +1688,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /iː/?",
     options: [
       {
+        id: "a",
         value: "sit",
         transcription: "/sɪt/",
         meaning: "ngồi",
       },
       {
+        id: "b",
         value: "eat",
         transcription: "/iːt/",
         meaning: "ăn",
       },
       {
+        id: "c",
         value: "bed",
         transcription: "/bed/",
         meaning: "giường",
       },
       {
+        id: "d",
         value: "hit",
         transcription: "/hɪt/",
         meaning: "đánh",
       },
     ],
-    correct_answer: "eat",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'eat' chứa âm /iː/, các từ khác có âm /ɪ/ hoặc /e/",
   },
   {
     id: "48",
@@ -1488,27 +1723,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Don't forget to ___ your homework.",
     options: [
       {
+        id: "a",
         value: "check",
         transcription: "/tʃek/",
         meaning: "kiểm tra",
       },
       {
+        id: "b",
         value: "look",
         transcription: "/lʊk/",
         meaning: "nhìn",
       },
       {
+        id: "c",
         value: "read",
         transcription: "/riːd/",
         meaning: "đọc",
       },
       {
+        id: "d",
         value: "write",
         transcription: "/raɪt/",
         meaning: "viết",
       },
     ],
-    correct_answer: "check",
+    correct_answer: "a",
+    explain: "Từ 'check' chứa âm /e/ trong khi các từ khác có âm /ʊ/, /iː/ và /aɪ/",
   },
   {
     id: "49",
@@ -1518,31 +1758,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "moon",
         underline: "oo",
         transcription: "/muːn/",
         meaning: "mặt trăng",
       },
       {
+        id: "b",
         value: "food",
         underline: "oo",
         transcription: "/fuːd/",
         meaning: "thức ăn",
       },
       {
+        id: "c",
         value: "book",
         underline: "oo",
         transcription: "/bʊk/",
         meaning: "sách",
       },
       {
+        id: "d",
         value: "soon",
         underline: "oo",
         transcription: "/suːn/",
         meaning: "sớm",
       },
     ],
-    correct_answer: "book",
+    correct_answer: "c",
+    explain: "Từ 'book' có âm /ʊ/ trong khi các từ khác có âm /uː/",
   },
   {
     id: "50",
@@ -1552,27 +1797,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ɔː/?",
     options: [
       {
+        id: "a",
         value: "more",
         transcription: "/mɔː/",
         meaning: "nhiều hơn",
       },
       {
+        id: "b",
         value: "hot",
         transcription: "/hɒt/",
         meaning: "nóng",
       },
       {
+        id: "c",
         value: "home",
         transcription: "/həʊm/",
         meaning: "nhà",
       },
       {
+        id: "d",
         value: "hope",
         transcription: "/həʊp/",
         meaning: "hy vọng",
       },
     ],
-    correct_answer: "more",
+    correct_answer: "a",
+    explain: "Chỉ có từ 'more' chứa âm /ɔː/, các từ khác có âm /ɒ/ hoặc /əʊ/",
   },
   {
     id: "51",
@@ -1582,27 +1832,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Can you ___ what I'm saying?",
     options: [
       {
+        id: "a",
         value: "hear",
         transcription: "/hɪə/",
         meaning: "nghe",
       },
       {
+        id: "b",
         value: "listen",
         transcription: "/ˈlɪsn/",
         meaning: "lắng nghe",
       },
       {
+        id: "c",
         value: "understand",
         transcription: "/ˌʌndəˈstænd/",
         meaning: "hiểu",
       },
       {
+        id: "d",
         value: "know",
         transcription: "/nəʊ/",
         meaning: "biết",
       },
     ],
-    correct_answer: "hear",
+    correct_answer: "a",
+    explain: "Từ 'hear' chứa âm /ɪə/ trong khi các từ khác không có âm này",
   },
   {
     id: "52",
@@ -1612,31 +1867,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "care",
         underline: "a",
         transcription: "/keə/",
         meaning: "quan tâm",
       },
       {
+        id: "b",
         value: "hair",
         underline: "ai",
         transcription: "/heə/",
         meaning: "tóc",
       },
       {
+        id: "c",
         value: "hear",
         underline: "ea",
         transcription: "/hɪə/",
         meaning: "nghe",
       },
       {
+        id: "d",
         value: "bear",
         underline: "ea",
         transcription: "/beə/",
         meaning: "gấu",
       },
     ],
-    correct_answer: "hear",
+    correct_answer: "c",
+    explain: "Từ 'hear' có âm /ɪə/ trong khi các từ khác có âm /eə/",
   },
   {
     id: "53",
@@ -1646,27 +1906,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ʊə/?",
     options: [
       {
+        id: "a",
         value: "tour",
         transcription: "/tʊə/",
         meaning: "chuyến du lịch",
       },
       {
+        id: "b",
         value: "four",
         transcription: "/fɔː/",
         meaning: "số bốn",
       },
       {
+        id: "c",
         value: "hour",
         transcription: "/aʊə/",
         meaning: "giờ",
       },
       {
+        id: "d",
         value: "pour",
         transcription: "/pɔː/",
         meaning: "đổ",
       },
     ],
-    correct_answer: "tour",
+    correct_answer: "a",
+    explain: "Chỉ có từ 'tour' chứa âm /ʊə/, các từ khác có âm /ɔː/ hoặc /aʊə/",
   },
   {
     id: "54",
@@ -1676,27 +1941,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "It's ___ time to go to bed.",
     options: [
       {
+        id: "a",
         value: "night",
         transcription: "/naɪt/",
         meaning: "đêm",
       },
       {
+        id: "b",
         value: "day",
         transcription: "/deɪ/",
         meaning: "ngày",
       },
       {
+        id: "c",
         value: "late",
         transcription: "/leɪt/",
         meaning: "muộn",
       },
       {
+        id: "d",
         value: "early",
         transcription: "/ˈɜːli/",
         meaning: "sớm",
       },
     ],
-    correct_answer: "night",
+    correct_answer: "a",
+    explain: "Từ 'night' chứa âm /aɪ/ trong khi các từ khác có âm /eɪ/, /eɪ/ và /ɜː/",
   },
   {
     id: "55",
@@ -1706,31 +1976,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "now",
         underline: "ow",
         transcription: "/naʊ/",
         meaning: "bây giờ",
       },
       {
+        id: "b",
         value: "house",
         underline: "ou",
         transcription: "/haʊs/",
         meaning: "nhà",
       },
       {
+        id: "c",
         value: "show",
         underline: "ow",
         transcription: "/ʃəʊ/",
         meaning: "chỉ",
       },
       {
+        id: "d",
         value: "down",
         underline: "ow",
         transcription: "/daʊn/",
         meaning: "xuống",
       },
     ],
-    correct_answer: "show",
+    correct_answer: "c",
+    explain: "Từ 'show' có âm /əʊ/ trong khi các từ khác có âm /aʊ/",
   },
   {
     id: "56",
@@ -1740,27 +2015,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ɔɪ/?",
     options: [
       {
+        id: "a",
         value: "boy",
         transcription: "/bɔɪ/",
         meaning: "cậu bé",
       },
       {
+        id: "b",
         value: "buy",
         transcription: "/baɪ/",
         meaning: "mua",
       },
       {
+        id: "c",
         value: "bow",
         transcription: "/baʊ/",
         meaning: "cúi chào",
       },
       {
+        id: "d",
         value: "boat",
         transcription: "/bəʊt/",
         meaning: "thuyền",
       },
     ],
-    correct_answer: "boy",
+    correct_answer: "a",
+    explain: "Chỉ có từ 'boy' chứa âm /ɔɪ/, các từ khác có âm /aɪ/, /aʊ/ và /əʊ/",
   },
   {
     id: "57",
@@ -1770,27 +2050,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "I want to ___ home now.",
     options: [
       {
+        id: "a",
         value: "go",
         transcription: "/ɡəʊ/",
         meaning: "đi",
       },
       {
+        id: "b",
         value: "get",
         transcription: "/ɡet/",
         meaning: "lấy",
       },
       {
+        id: "c",
         value: "come",
         transcription: "/kʌm/",
         meaning: "đến",
       },
       {
+        id: "d",
         value: "walk",
         transcription: "/wɔːk/",
         meaning: "đi bộ",
       },
     ],
-    correct_answer: "go",
+    correct_answer: "a",
+    explain: "Từ 'go' chứa âm /əʊ/ trong khi các từ khác có âm /e/, /ʌ/ và /ɔː/",
   },
   {
     id: "58",
@@ -1800,31 +2085,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "pen",
         underline: "p",
         transcription: "/pen/",
         meaning: "bút",
       },
       {
+        id: "b",
         value: "apple",
         underline: "pp",
         transcription: "/ˈæpl/",
         meaning: "táo",
       },
       {
+        id: "c",
         value: "cup",
         underline: "p",
         transcription: "/kʌp/",
         meaning: "cốc",
       },
       {
+        id: "d",
         value: "photo",
         underline: "ph",
         transcription: "/ˈfəʊtəʊ/",
         meaning: "ảnh",
       },
     ],
-    correct_answer: "photo",
+    correct_answer: "d",
+    explain: "Từ 'photo' có âm /f/ trong khi các từ khác có âm /p/",
   },
   {
     id: "59",
@@ -1834,27 +2124,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /b/?",
     options: [
       {
+        id: "a",
         value: "pen",
         transcription: "/pen/",
         meaning: "bút",
       },
       {
+        id: "b",
         value: "ball",
         transcription: "/bɔːl/",
         meaning: "quả bóng",
       },
       {
+        id: "c",
         value: "photo",
         transcription: "/ˈfəʊtəʊ/",
         meaning: "ảnh",
       },
       {
+        id: "d",
         value: "van",
         transcription: "/væn/",
         meaning: "xe tải nhỏ",
       },
     ],
-    correct_answer: "ball",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'ball' chứa âm /b/, các từ khác có âm /p/, /f/ và /v/",
   },
   {
     id: "60",
@@ -1864,27 +2159,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "I need ___ more minutes to finish.",
     options: [
       {
+        id: "a",
         value: "ten",
         transcription: "/ten/",
         meaning: "mười",
       },
       {
+        id: "b",
         value: "some",
         transcription: "/sʌm/",
         meaning: "một vài",
       },
       {
+        id: "c",
         value: "few",
         transcription: "/fjuː/",
         meaning: "ít",
       },
       {
+        id: "d",
         value: "many",
         transcription: "/ˈmeni/",
         meaning: "nhiều",
       },
     ],
-    correct_answer: "ten",
+    correct_answer: "a",
+    explain: "Từ 'ten' bắt đầu với âm /t/ trong khi các từ khác không bắt đầu bằng âm này",
   },
 
   // 61-80: Các câu hỏi về âm phức tạp và âm khó phân biệt
@@ -1896,31 +2196,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "dog",
         underline: "d",
         transcription: "/dɒɡ/",
         meaning: "con chó",
       },
       {
+        id: "b",
         value: "ladder",
         underline: "dd",
         transcription: "/ˈlædə/",
         meaning: "cái thang",
       },
       {
+        id: "c",
         value: "washed",
         underline: "ed",
         transcription: "/wɒʃt/",
         meaning: "đã rửa",
       },
       {
+        id: "d",
         value: "made",
         underline: "d",
         transcription: "/meɪd/",
         meaning: "đã làm",
       },
     ],
-    correct_answer: "washed",
+    correct_answer: "c",
+    explain: "Từ 'washed' có âm /t/ ở cuối (không phải /d/) trong khi các từ khác có âm /d/",
   },
   {
     id: "62",
@@ -1930,27 +2235,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /k/?",
     options: [
       {
+        id: "a",
         value: "knife",
         transcription: "/naɪf/",
         meaning: "dao",
       },
       {
+        id: "b",
         value: "cat",
         transcription: "/kæt/",
         meaning: "con mèo",
       },
       {
+        id: "c",
         value: "ghost",
         transcription: "/ɡəʊst/",
         meaning: "ma",
       },
       {
+        id: "d",
         value: "phone",
         transcription: "/fəʊn/",
         meaning: "điện thoại",
       },
     ],
-    correct_answer: "cat",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'cat' chứa âm /k/, các từ khác có âm /n/, /g/ và /f/",
   },
   {
     id: "63",
@@ -1960,27 +2270,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The ___ is very beautiful in spring.",
     options: [
       {
+        id: "a",
         value: "garden",
         transcription: "/ˈɡɑːdn/",
         meaning: "vườn",
       },
       {
+        id: "b",
         value: "park",
         transcription: "/pɑːk/",
         meaning: "công viên",
       },
       {
+        id: "c",
         value: "forest",
         transcription: "/ˈfɒrɪst/",
         meaning: "rừng",
       },
       {
+        id: "d",
         value: "yard",
         transcription: "/jɑːd/",
         meaning: "sân",
       },
     ],
-    correct_answer: "garden",
+    correct_answer: "a",
+    explain: "Từ 'garden' chứa âm /g/ trong khi các từ khác không có âm này",
   },
   {
     id: "64",
@@ -1990,31 +2305,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "fish",
         underline: "f",
         transcription: "/fɪʃ/",
         meaning: "cá",
       },
       {
+        id: "b",
         value: "photo",
         underline: "ph",
         transcription: "/ˈfəʊtəʊ/",
         meaning: "ảnh",
       },
       {
+        id: "c",
         value: "laugh",
         underline: "gh",
         transcription: "/lɑːf/",
         meaning: "cười",
       },
       {
+        id: "d",
         value: "van",
         underline: "v",
         transcription: "/væn/",
         meaning: "xe tải nhỏ",
       },
     ],
-    correct_answer: "van",
+    correct_answer: "d",
+    explain: "Từ 'van' có âm /v/ trong khi các từ khác có âm /f/",
   },
   {
     id: "65",
@@ -2024,27 +2344,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /v/?",
     options: [
       {
+        id: "a",
         value: "fan",
         transcription: "/fæn/",
         meaning: "quạt",
       },
       {
+        id: "b",
         value: "very",
         transcription: "/ˈveri/",
         meaning: "rất",
       },
       {
+        id: "c",
         value: "photo",
         transcription: "/ˈfəʊtəʊ/",
         meaning: "ảnh",
       },
       {
+        id: "d",
         value: "water",
         transcription: "/ˈwɔːtə/",
         meaning: "nước",
       },
     ],
-    correct_answer: "very",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'very' chứa âm /v/, các từ khác có âm /f/, /f/ và /w/",
   },
   {
     id: "66",
@@ -2054,27 +2379,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "I ___ we should leave early tomorrow.",
     options: [
       {
+        id: "a",
         value: "think",
         transcription: "/θɪŋk/",
         meaning: "nghĩ",
       },
       {
+        id: "b",
         value: "say",
         transcription: "/seɪ/",
         meaning: "nói",
       },
       {
+        id: "c",
         value: "tell",
         transcription: "/tel/",
         meaning: "kể",
       },
       {
+        id: "d",
         value: "speak",
         transcription: "/spiːk/",
         meaning: "nói",
       },
     ],
-    correct_answer: "think",
+    correct_answer: "a",
+    explain: "Từ 'think' chứa âm /θ/ trong khi các từ khác không có âm này",
   },
   {
     id: "67",
@@ -2084,31 +2414,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "this",
         underline: "th",
         transcription: "/ðɪs/",
         meaning: "này",
       },
       {
+        id: "b",
         value: "that",
         underline: "th",
         transcription: "/ðæt/",
         meaning: "đó",
       },
       {
+        id: "c",
         value: "thank",
         underline: "th",
         transcription: "/θæŋk/",
         meaning: "cảm ơn",
       },
       {
+        id: "d",
         value: "they",
         underline: "th",
         transcription: "/ðeɪ/",
         meaning: "họ",
       },
     ],
-    correct_answer: "thank",
+    correct_answer: "c",
+    explain: "Từ 'thank' có âm /θ/ trong khi các từ khác có âm /ð/",
   },
   {
     id: "68",
@@ -2118,27 +2453,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /s/?",
     options: [
       {
+        id: "a",
         value: "zoo",
         transcription: "/zuː/",
         meaning: "sở thú",
       },
       {
+        id: "b",
         value: "sun",
         transcription: "/sʌn/",
         meaning: "mặt trời",
       },
       {
+        id: "c",
         value: "shoes",
         transcription: "/ʃuːz/",
         meaning: "giày",
       },
       {
+        id: "d",
         value: "vision",
         transcription: "/ˈvɪʒn/",
         meaning: "tầm nhìn",
       },
     ],
-    correct_answer: "sun",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'sun' chứa âm /s/, các từ khác có âm /z/, /ʃ/ và /ʒ/",
   },
   {
     id: "69",
@@ -2148,27 +2488,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "We visited the ___ to see the animals.",
     options: [
       {
+        id: "a",
         value: "zoo",
         transcription: "/zuː/",
         meaning: "sở thú",
       },
       {
+        id: "b",
         value: "park",
         transcription: "/pɑːk/",
         meaning: "công viên",
       },
       {
+        id: "c",
         value: "forest",
         transcription: "/ˈfɒrɪst/",
         meaning: "rừng",
       },
       {
+        id: "d",
         value: "sea",
         transcription: "/siː/",
         meaning: "biển",
       },
     ],
-    correct_answer: "zoo",
+    correct_answer: "a",
+    explain: "Từ 'zoo' chứa âm /z/ trong khi các từ khác không có âm này",
   },
   {
     id: "70",
@@ -2178,31 +2523,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "ship",
         underline: "sh",
         transcription: "/ʃɪp/",
         meaning: "tàu thủy",
       },
       {
+        id: "b",
         value: "she",
         underline: "sh",
         transcription: "/ʃiː/",
         meaning: "cô ấy",
       },
       {
+        id: "c",
         value: "sugar",
         underline: "s",
         transcription: "/ˈʃʊɡə/",
         meaning: "đường",
       },
       {
+        id: "d",
         value: "zip",
         underline: "z",
         transcription: "/zɪp/",
         meaning: "khóa kéo",
       },
     ],
-    correct_answer: "zip",
+    correct_answer: "d",
+    explain: "Từ 'zip' có âm /z/ trong khi các từ khác có âm /ʃ/",
   },
   {
     id: "71",
@@ -2212,27 +2562,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ʒ/?",
     options: [
       {
+        id: "a",
         value: "ship",
         transcription: "/ʃɪp/",
         meaning: "tàu thủy",
       },
       {
+        id: "b",
         value: "measure",
         transcription: "/ˈmeʒə/",
         meaning: "đo lường",
       },
       {
+        id: "c",
         value: "sugar",
         transcription: "/ˈʃʊɡə/",
         meaning: "đường",
       },
       {
+        id: "d",
         value: "job",
         transcription: "/dʒɒb/",
         meaning: "công việc",
       },
     ],
-    correct_answer: "measure",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'measure' chứa âm /ʒ/, các từ khác có âm /ʃ/, /ʃ/ và /dʒ/",
   },
   {
     id: "72",
@@ -2242,27 +2597,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "My ___ is very big and comfortable.",
     options: [
       {
+        id: "a",
         value: "house",
         transcription: "/haʊs/",
         meaning: "nhà",
       },
       {
+        id: "b",
         value: "apartment",
         transcription: "/əˈpɑːtmənt/",
         meaning: "căn hộ",
       },
       {
+        id: "c",
         value: "office",
         transcription: "/ˈɒfɪs/",
         meaning: "văn phòng",
       },
       {
+        id: "d",
         value: "room",
         transcription: "/ruːm/",
         meaning: "phòng",
       },
     ],
-    correct_answer: "house",
+    correct_answer: "a",
+    explain: "Từ 'house' chứa âm /h/ trong khi các từ khác không có âm này",
   },
   {
     id: "73",
@@ -2272,31 +2632,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "chair",
         underline: "ch",
         transcription: "/tʃeə/",
         meaning: "ghế",
       },
       {
+        id: "b",
         value: "match",
         underline: "tch",
         transcription: "/mætʃ/",
         meaning: "trận đấu",
       },
       {
+        id: "c",
         value: "picture",
         underline: "t",
         transcription: "/ˈpɪktʃə/",
         meaning: "bức tranh",
       },
       {
+        id: "d",
         value: "ship",
         underline: "sh",
         transcription: "/ʃɪp/",
         meaning: "tàu thủy",
       },
     ],
-    correct_answer: "ship",
+    correct_answer: "d",
+    explain: "Từ 'ship' có âm /ʃ/ trong khi các từ khác có âm /tʃ/",
   },
   {
     id: "74",
@@ -2306,27 +2671,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /dʒ/?",
     options: [
       {
+        id: "a",
         value: "chair",
         transcription: "/tʃeə/",
         meaning: "ghế",
       },
       {
+        id: "b",
         value: "job",
         transcription: "/dʒɒb/",
         meaning: "công việc",
       },
       {
+        id: "c",
         value: "ship",
         transcription: "/ʃɪp/",
         meaning: "tàu thủy",
       },
       {
+        id: "d",
         value: "yes",
         transcription: "/jes/",
         meaning: "vâng",
       },
     ],
-    correct_answer: "job",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'job' chứa âm /dʒ/, các từ khác có âm /tʃ/, /ʃ/ và /j/",
   },
   {
     id: "75",
@@ -2336,27 +2706,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "My ___ is a doctor at the local hospital.",
     options: [
       {
+        id: "a",
         value: "mother",
         transcription: "/ˈmʌðə/",
         meaning: "mẹ",
       },
       {
+        id: "b",
         value: "father",
         transcription: "/ˈfɑːðə/",
         meaning: "cha",
       },
       {
+        id: "c",
         value: "sister",
         transcription: "/ˈsɪstə/",
         meaning: "chị/em gái",
       },
       {
+        id: "d",
         value: "brother",
         transcription: "/ˈbrʌðə/",
         meaning: "anh/em trai",
       },
     ],
-    correct_answer: "mother",
+    correct_answer: "a",
+    explain: "Từ 'mother' bắt đầu với âm /m/ trong khi các từ khác không bắt đầu bằng âm này",
   },
   {
     id: "76",
@@ -2366,31 +2741,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "name",
         underline: "n",
         transcription: "/neɪm/",
         meaning: "tên",
       },
       {
+        id: "b",
         value: "know",
         underline: "kn",
         transcription: "/nəʊ/",
         meaning: "biết",
       },
       {
+        id: "c",
         value: "sing",
         underline: "n",
         transcription: "/sɪŋ/",
         meaning: "hát",
       },
       {
+        id: "d",
         value: "dinner",
         underline: "nn",
         transcription: "/ˈdɪnə/",
         meaning: "bữa tối",
       },
     ],
-    correct_answer: "sing",
+    correct_answer: "c",
+    explain: "Từ 'sing' có âm /ŋ/ (không phải /n/) trong khi các từ khác có âm /n/",
   },
   {
     id: "77",
@@ -2400,27 +2780,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ŋ/?",
     options: [
       {
+        id: "a",
         value: "name",
         transcription: "/neɪm/",
         meaning: "tên",
       },
       {
+        id: "b",
         value: "sing",
         transcription: "/sɪŋ/",
         meaning: "hát",
       },
       {
+        id: "c",
         value: "now",
         transcription: "/naʊ/",
         meaning: "bây giờ",
       },
       {
+        id: "d",
         value: "knife",
         transcription: "/naɪf/",
         meaning: "dao",
       },
     ],
-    correct_answer: "sing",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'sing' chứa âm /ŋ/, các từ khác có âm /m/, /n/ và /f/",
   },
   {
     id: "78",
@@ -2430,27 +2815,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "I ___ reading books in my free time.",
     options: [
       {
+        id: "a",
         value: "like",
         transcription: "/laɪk/",
         meaning: "thích",
       },
       {
+        id: "b",
         value: "enjoy",
         transcription: "/ɪnˈdʒɔɪ/",
         meaning: "thích thú",
       },
       {
+        id: "c",
         value: "want",
         transcription: "/wɒnt/",
         meaning: "muốn",
       },
       {
+        id: "d",
         value: "need",
         transcription: "/niːd/",
         meaning: "cần",
       },
     ],
-    correct_answer: "like",
+    correct_answer: "a",
+    explain: "Từ 'like' bắt đầu với âm /l/ trong khi các từ khác không bắt đầu bằng âm này",
   },
   {
     id: "79",
@@ -2460,31 +2850,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different consonant sound:",
     options: [
       {
+        id: "a",
         value: "red",
         underline: "r",
         transcription: "/red/",
         meaning: "màu đỏ",
       },
       {
+        id: "b",
         value: "write",
         underline: "wr",
         transcription: "/raɪt/",
         meaning: "viết",
       },
       {
+        id: "c",
         value: "car",
         underline: "r",
         transcription: "/kɑː/",
         meaning: "xe hơi",
       },
       {
+        id: "d",
         value: "know",
         underline: "kn",
         transcription: "/nəʊ/",
         meaning: "biết",
       },
     ],
-    correct_answer: "know",
+    correct_answer: "d",
+    explain: "Từ 'know' không có âm /r/ trong khi các từ khác có âm /r/",
   },
   {
     id: "80",
@@ -2494,27 +2889,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /j/?",
     options: [
       {
+        id: "a",
         value: "yellow",
         transcription: "/ˈjeləʊ/",
         meaning: "màu vàng",
       },
       {
+        id: "b",
         value: "window",
         transcription: "/ˈwɪndəʊ/",
         meaning: "cửa sổ",
       },
       {
+        id: "c",
         value: "house",
         transcription: "/haʊs/",
         meaning: "nhà",
       },
       {
+        id: "d",
         value: "zoo",
         transcription: "/zuː/",
         meaning: "sở thú",
       },
     ],
-    correct_answer: "yellow",
+    correct_answer: "a",
+    explain: "Chỉ có từ 'yellow' chứa âm /j/, các từ khác có âm /w/, /h/ và /z/",
   },
 
   // 81-100: Các câu hỏi về âm khó và âm đặc biệt
@@ -2526,27 +2926,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "I ___ to be a doctor when I grow up.",
     options: [
       {
+        id: "a",
         value: "want",
         transcription: "/wɒnt/",
         meaning: "muốn",
       },
       {
+        id: "b",
         value: "like",
         transcription: "/laɪk/",
         meaning: "thích",
       },
       {
+        id: "c",
         value: "need",
         transcription: "/niːd/",
         meaning: "cần",
       },
       {
+        id: "d",
         value: "hope",
         transcription: "/həʊp/",
         meaning: "hy vọng",
       },
     ],
-    correct_answer: "want",
+    correct_answer: "a",
+    explain: "Từ 'want' bắt đầu với âm /w/ trong khi các từ khác không bắt đầu bằng âm này",
   },
   {
     id: "82",
@@ -2556,31 +2961,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "sit",
         underline: "i",
         transcription: "/sɪt/",
         meaning: "ngồi",
       },
       {
+        id: "b",
         value: "big",
         underline: "i",
         transcription: "/bɪɡ/",
         meaning: "to lớn",
       },
       {
+        id: "c",
         value: "eat",
         underline: "ea",
         transcription: "/iːt/",
         meaning: "ăn",
       },
       {
+        id: "d",
         value: "women",
         underline: "o",
         transcription: "/ˈwɪmɪn/",
         meaning: "phụ nữ",
       },
     ],
-    correct_answer: "eat",
+    correct_answer: "c",
+    explain: "Từ 'eat' có âm /iː/ trong khi các từ khác có âm /ɪ/",
   },
   {
     id: "83",
@@ -2590,27 +3000,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /e/?",
     options: [
       {
+        id: "a",
         value: "eat",
         transcription: "/iːt/",
         meaning: "ăn",
       },
       {
+        id: "b",
         value: "bed",
         transcription: "/bed/",
         meaning: "giường",
       },
       {
+        id: "c",
         value: "bird",
         transcription: "/bɜːd/",
         meaning: "chim",
       },
       {
+        id: "d",
         value: "boot",
         transcription: "/buːt/",
         meaning: "ủng",
       },
     ],
-    correct_answer: "bed",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'bed' chứa âm /e/, các từ khác có âm /iː/, /ɜː/ và /uː/",
   },
   {
     id: "84",
@@ -2620,27 +3035,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The ___ is sleeping on the sofa.",
     options: [
       {
+        id: "a",
         value: "cat",
         transcription: "/kæt/",
         meaning: "con mèo",
       },
       {
+        id: "b",
         value: "dog",
         transcription: "/dɒɡ/",
         meaning: "con chó",
       },
       {
+        id: "c",
         value: "bird",
         transcription: "/bɜːd/",
         meaning: "con chim",
       },
       {
+        id: "d",
         value: "fish",
         transcription: "/fɪʃ/",
         meaning: "con cá",
       },
     ],
-    correct_answer: "cat",
+    correct_answer: "a",
+    explain: "Từ 'cat' chứa âm /æ/ trong khi các từ khác có âm /ɒ/, /ɜː/ và /ɪ/",
   },
   {
     id: "85",
@@ -2650,31 +3070,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "cup",
         underline: "u",
         transcription: "/kʌp/",
         meaning: "cốc",
       },
       {
+        id: "b",
         value: "bus",
         underline: "u",
         transcription: "/bʌs/",
         meaning: "xe buýt",
       },
       {
+        id: "c",
         value: "pull",
         underline: "u",
         transcription: "/pʊl/",
         meaning: "kéo",
       },
       {
+        id: "d",
         value: "sun",
         underline: "u",
         transcription: "/sʌn/",
         meaning: "mặt trời",
       },
     ],
-    correct_answer: "pull",
+    correct_answer: "c",
+    explain: "Từ 'pull' có âm /ʊ/ trong khi các từ khác có âm /ʌ/",
   },
   {
     id: "86",
@@ -2684,27 +3109,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ɑː/?",
     options: [
       {
+        id: "a",
         value: "cat",
         transcription: "/kæt/",
         meaning: "con mèo",
       },
       {
+        id: "b",
         value: "car",
         transcription: "/kɑː/",
         meaning: "xe hơi",
       },
       {
+        id: "c",
         value: "cut",
         transcription: "/kʌt/",
         meaning: "cắt",
       },
       {
+        id: "d",
         value: "coat",
         transcription: "/kəʊt/",
         meaning: "áo khoác",
       },
     ],
-    correct_answer: "car",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'car' chứa âm /ɑː/, các từ khác có âm /æ/, /ʌ/ và /əʊ/",
   },
   {
     id: "87",
@@ -2714,27 +3144,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "It's very ___ today, let's go to the beach.",
     options: [
       {
+        id: "a",
         value: "hot",
         transcription: "/hɒt/",
         meaning: "nóng",
       },
       {
+        id: "b",
         value: "cold",
         transcription: "/kəʊld/",
         meaning: "lạnh",
       },
       {
+        id: "c",
         value: "warm",
         transcription: "/wɔːm/",
         meaning: "ấm",
       },
       {
+        id: "d",
         value: "cool",
         transcription: "/kuːl/",
         meaning: "mát",
       },
     ],
-    correct_answer: "hot",
+    correct_answer: "a",
+    explain: "Từ 'hot' chứa âm /ɒ/ trong khi các từ khác có âm /əʊ/, /ɔː/ và /uː/",
   },
   {
     id: "88",
@@ -2744,31 +3179,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "door",
         underline: "oo",
         transcription: "/dɔː/",
         meaning: "cửa",
       },
       {
+        id: "b",
         value: "more",
         underline: "o",
         transcription: "/mɔː/",
         meaning: "nhiều hơn",
       },
       {
+        id: "c",
         value: "floor",
         underline: "oo",
         transcription: "/flɔː/",
         meaning: "sàn nhà",
       },
       {
+        id: "d",
         value: "book",
         underline: "oo",
         transcription: "/bʊk/",
         meaning: "sách",
       },
     ],
-    correct_answer: "book",
+    correct_answer: "d",
+    explain: "Từ 'book' có âm /ʊ/ trong khi các từ khác có âm /ɔː/",
   },
   {
     id: "89",
@@ -2778,27 +3218,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /ʊ/?",
     options: [
       {
+        id: "a",
         value: "blue",
         transcription: "/bluː/",
         meaning: "màu xanh dương",
       },
       {
+        id: "b",
         value: "book",
         transcription: "/bʊk/",
         meaning: "sách",
       },
       {
+        id: "c",
         value: "boot",
         transcription: "/buːt/",
         meaning: "ủng",
       },
       {
+        id: "d",
         value: "but",
         transcription: "/bʌt/",
         meaning: "nhưng",
       },
     ],
-    correct_answer: "book",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'book' chứa âm /ʊ/, các từ khác có âm /uː/, /uː/ và /ʌ/",
   },
   {
     id: "90",
@@ -2808,27 +3253,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The sky is ___ today, no clouds at all.",
     options: [
       {
+        id: "a",
         value: "blue",
         transcription: "/bluː/",
         meaning: "màu xanh dương",
       },
       {
+        id: "b",
         value: "gray",
         transcription: "/ɡreɪ/",
         meaning: "màu xám",
       },
       {
+        id: "c",
         value: "dark",
         transcription: "/dɑːk/",
         meaning: "tối",
       },
       {
+        id: "d",
         value: "white",
         transcription: "/waɪt/",
         meaning: "màu trắng",
       },
     ],
-    correct_answer: "blue",
+    correct_answer: "a",
+    explain: "Từ 'blue' chứa âm /uː/ trong khi các từ khác có âm /eɪ/, /ɑː/ và /aɪ/",
   },
   {
     id: "91",
@@ -2838,31 +3288,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "bird",
         underline: "ir",
         transcription: "/bɜːd/",
         meaning: "con chim",
       },
       {
+        id: "b",
         value: "word",
         underline: "or",
         transcription: "/wɜːd/",
         meaning: "từ",
       },
       {
+        id: "c",
         value: "work",
         underline: "or",
         transcription: "/wɜːk/",
         meaning: "làm việc",
       },
       {
+        id: "d",
         value: "world",
         underline: "or",
         transcription: "/wɜːld/",
         meaning: "thế giới",
       },
     ],
-    correct_answer: "world",
+    correct_answer: "d",
+    explain: "Từ 'world' có âm /ɜː/ nhưng cách phát âm khác với các từ còn lại do có âm /l/ theo sau",
   },
   {
     id: "92",
@@ -2872,27 +3327,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /eɪ/?",
     options: [
       {
+        id: "a",
         value: "bed",
         transcription: "/bed/",
         meaning: "giường",
       },
       {
+        id: "b",
         value: "day",
         transcription: "/deɪ/",
         meaning: "ngày",
       },
       {
+        id: "c",
         value: "dead",
         transcription: "/ded/",
         meaning: "chết",
       },
       {
+        id: "d",
         value: "head",
         transcription: "/hed/",
         meaning: "đầu",
       },
     ],
-    correct_answer: "day",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'day' chứa âm /eɪ/, các từ khác có âm /e/",
   },
   {
     id: "93",
@@ -2902,27 +3362,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "I need to buy a ___ for my sister's birthday.",
     options: [
       {
+        id: "a",
         value: "gift",
         transcription: "/ɡɪft/",
         meaning: "quà tặng",
       },
       {
+        id: "b",
         value: "bike",
         transcription: "/baɪk/",
         meaning: "xe đạp",
       },
       {
+        id: "c",
         value: "book",
         transcription: "/bʊk/",
         meaning: "sách",
       },
       {
+        id: "d",
         value: "pen",
         transcription: "/pen/",
         meaning: "bút",
       },
     ],
-    correct_answer: "bike",
+    correct_answer: "b",
+    explain: "Từ 'bike' chứa âm /aɪ/ trong khi các từ khác có âm /ɪ/, /ʊ/ và /e/",
   },
   {
     id: "94",
@@ -2932,31 +3397,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "boy",
         underline: "oy",
         transcription: "/bɔɪ/",
         meaning: "cậu bé",
       },
       {
+        id: "b",
         value: "toy",
         underline: "oy",
         transcription: "/tɔɪ/",
         meaning: "đồ chơi",
       },
       {
+        id: "c",
         value: "coin",
         underline: "oi",
         transcription: "/kɔɪn/",
         meaning: "đồng xu",
       },
       {
+        id: "d",
         value: "boat",
         underline: "oa",
         transcription: "/bəʊt/",
         meaning: "thuyền",
       },
     ],
-    correct_answer: "boat",
+    correct_answer: "d",
+    explain: "Từ 'boat' có âm /əʊ/ trong khi các từ khác có âm /ɔɪ/",
   },
   {
     id: "95",
@@ -2966,27 +3436,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /əʊ/?",
     options: [
       {
+        id: "a",
         value: "cow",
         transcription: "/kaʊ/",
         meaning: "con bò",
       },
       {
+        id: "b",
         value: "coat",
         transcription: "/kəʊt/",
         meaning: "áo khoác",
       },
       {
+        id: "c",
         value: "cut",
         transcription: "/kʌt/",
         meaning: "cắt",
       },
       {
+        id: "d",
         value: "caught",
         transcription: "/kɔːt/",
         meaning: "bắt được",
       },
     ],
-    correct_answer: "coat",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'coat' chứa âm /əʊ/, các từ khác có âm /aʊ/, /ʌ/ và /ɔː/",
   },
   {
     id: "96",
@@ -2996,27 +3471,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "The ___ is in the field eating grass.",
     options: [
       {
+        id: "a",
         value: "cow",
         transcription: "/kaʊ/",
         meaning: "con bò",
       },
       {
+        id: "b",
         value: "horse",
         transcription: "/hɔːs/",
         meaning: "con ngựa",
       },
       {
+        id: "c",
         value: "sheep",
         transcription: "/ʃiːp/",
         meaning: "con cừu",
       },
       {
+        id: "d",
         value: "goat",
         transcription: "/ɡəʊt/",
         meaning: "con dê",
       },
     ],
-    correct_answer: "cow",
+    correct_answer: "a",
+    explain: "Từ 'cow' chứa âm /aʊ/ trong khi các từ khác có âm /ɔː/, /iː/ và /əʊ/",
   },
   {
     id: "97",
@@ -3026,31 +3506,36 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "hear",
         underline: "ea",
         transcription: "/hɪə/",
         meaning: "nghe",
       },
       {
+        id: "b",
         value: "near",
         underline: "ea",
         transcription: "/nɪə/",
         meaning: "gần",
       },
       {
+        id: "c",
         value: "fear",
         underline: "ea",
         transcription: "/fɪə/",
         meaning: "sợ hãi",
       },
       {
+        id: "d",
         value: "bear",
         underline: "ea",
         transcription: "/beə/",
         meaning: "con gấu",
       },
     ],
-    correct_answer: "bear",
+    correct_answer: "d",
+    explain: "Từ 'bear' có âm /eə/ trong khi các từ khác có âm /ɪə/",
   },
   {
     id: "98",
@@ -3060,27 +3545,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Which word contains the sound /eə/?",
     options: [
       {
+        id: "a",
         value: "here",
         transcription: "/hɪə/",
         meaning: "ở đây",
       },
       {
+        id: "b",
         value: "hair",
         transcription: "/heə/",
         meaning: "tóc",
       },
       {
+        id: "c",
         value: "hear",
         transcription: "/hɪə/",
         meaning: "nghe",
       },
       {
+        id: "d",
         value: "her",
         transcription: "/hɜː/",
         meaning: "cô ấy",
       },
     ],
-    correct_answer: "hair",
+    correct_answer: "b",
+    explain: "Chỉ có từ 'hair' chứa âm /eə/, các từ khác có âm /ɪə/, /ɪə/ và /ɜː/",
   },
   {
     id: "99",
@@ -3090,27 +3580,32 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "We booked a guided ___ of the museum.",
     options: [
       {
+        id: "a",
         value: "tour",
         transcription: "/tʊə/",
         meaning: "chuyến tham quan",
       },
       {
+        id: "b",
         value: "visit",
         transcription: "/ˈvɪzɪt/",
         meaning: "chuyến thăm",
       },
       {
+        id: "c",
         value: "trip",
         transcription: "/trɪp/",
         meaning: "chuyến đi",
       },
       {
+        id: "d",
         value: "walk",
         transcription: "/wɔːk/",
         meaning: "đi bộ",
       },
     ],
-    correct_answer: "tour",
+    correct_answer: "a",
+    explain: "Từ 'tour' chứa âm /ʊə/ trong khi các từ khác có âm /ɪ/, /ɪ/ và /ɔː/",
   },
   {
     id: "100",
@@ -3120,30 +3615,35 @@ export const questionsSymbol: TQuestionSymbol[] = [
     question: "Find the word with a different vowel sound:",
     options: [
       {
+        id: "a",
         value: "about",
         underline: "a",
         transcription: "/əˈbaʊt/",
         meaning: "về",
       },
       {
+        id: "b",
         value: "computer",
         underline: "e",
         transcription: "/kəmˈpjuːtə/",
         meaning: "máy tính",
       },
       {
+        id: "c",
         value: "banana",
         underline: "a",
         transcription: "/bəˈnɑːnə/",
         meaning: "chuối",
       },
       {
+        id: "d",
         value: "happy",
         underline: "a",
         transcription: "/ˈhæpi/",
         meaning: "hạnh phúc",
       },
     ],
-    correct_answer: "happy",
+    correct_answer: "d",
+    explain: "Từ 'happy' có âm /æ/ trong khi các từ khác có âm /ə/",
   },
-];
+]

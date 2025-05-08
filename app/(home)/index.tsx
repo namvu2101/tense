@@ -35,14 +35,21 @@ export default function Home() {
       description:
         "Hướng dẫn cách phát âm chuẩn các âm trong tiếng Anh",
       route: "/pronounce",
-      image: images.pronounce,
+      image: images.grammar,
+    },
+    {
+      name: "Từ vựng",
+      description:
+        "Làm quen với những dạng từ thường xuất hiện trong tiếng Anh",
+      route: "/vocabulary",
+      image: images.grammar,
     },
     {
       name: "Luyện tập",
       description:
         "Tổng hợp bài tập đa dạng giúp bạn củng cố và nâng cao kỹ năng",
       route: "/tests",
-      image: images.exams,
+      image: images.grammar,
     },
   ];
 

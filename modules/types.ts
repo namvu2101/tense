@@ -79,19 +79,37 @@ export type Examples = {
   ];
 };
 
-export type TOptionsSymbol = {
+export type TOptions = {
+  id: string;
   value: string;
   underline?: string; //nếu type = find_different thì sẽ có trường này ở đây là các chữ cái cần phân biệt để gạch chân thường là các chữ cái cần phần biệt
-  transcription: string;
-  meaning: string;
+  transcription?: string;
+  meaning?: string;
 };
 
-export type TQuestionSymbol = {
+export type TQuestion = {
   id: string;
-  symbol: string;
+  symbol?: string;
+  tense?: string;
   type: "multiple_choice" | "fill_to_the_blank"; // fill_to_the_blank là dạng Điền từ có chứa âm /æ/ vào chỗ trống: 'She carried a heavy __.'"
-  typeQuestions: "find_different" | "find_pronounce"; 
+  typeQuestions?: "find_different" | "find_pronounce";
   question: string;
-  options: TOptionsSymbol[];
+  options: TOptions[];
   correct_answer: string;
+  explain: string;
+};
+
+export type TQuestionTense = {
+  id: string;
+  tense: string;
+  type: "multiple_choice" | "fill_to_the_blank";
+  question: string;
+  options: TOptionTense[];
+  correct_answer: string;
+  explain?: string;
+};
+
+export type TOptionTense = {
+  id: string;
+  value: string;
 };

@@ -43,12 +43,12 @@ export function AppCollapsible({
   containerStyle,
   ExtraHeader,
   iconDropDownType = false,
-  isHide = true,
+  isHide = false,
   onTitlePress,
   titleStyle,
 }: Readonly<TAppCollapsibleProps>) {
   const { Colors } = useAppColor();
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(isHide);
   const [contentHeight, setContentHeight] = useState(0);
   const heightValue = useSharedValue(0);
   const measured = useRef(false); // tránh đo nhiều lần

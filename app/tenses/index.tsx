@@ -34,6 +34,12 @@ export default function Tenses() {
       route: "/tenses/future",
       image: "https://reactnative.dev/img/tiny_logo.png",
     },
+    {
+      name: "Luyện tập",
+      description: "Bài tập với các thì",
+      route: "/tenses/practice",
+      image: "https://reactnative.dev/img/tiny_logo.png",
+    },
   ];
 
   return (

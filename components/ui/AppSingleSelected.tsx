@@ -2,7 +2,7 @@ import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
 import { TOptionsSymbol } from "@/modules/types";
 import React, { useState } from "react";
-import { TouchableOpacity, View } from "react-native";
+import { StyleProp, TouchableOpacity, View, ViewStyle } from "react-native";
 import { ThemedText } from "../ThemedText";
 import {
   FieldValues,
@@ -11,10 +11,13 @@ import {
 } from "react-hook-form";
 
 type TAppSingleSelected<T extends FieldValues> = {
-  data: TOptionsSymbol[];
+  data: any[];
   size?: number;
   isEdit?: boolean;
   answer?: string;
+  explain?: string;
+  style?: StyleProp<ViewStyle>;
+  optionStyle?: StyleProp<ViewStyle>;
 } & UseControllerProps<T>;
 
 const WordDisplay = ({ word }: { word: TOptionsSymbol }) => {
@@ -51,6 +54,9 @@ export function AppSingleSelected<T extends FieldValues>(
     rules,
     isEdit = true,
     answer,
+    explain,
+    style,
+    optionStyle,
   } = props;
   const {
     field: { onChange, value },
@@ -66,7 +72,7 @@ export function AppSingleSelected<T extends FieldValues>(
   };
 
   return (
-    <View>
+    <View style={style}>
       {error && (
         <ThemedText style={{ color: "red" }}>Bạn chưa chọn đáp án</ThemedText>
       )}
@@ -75,18 +81,22 @@ export function AppSingleSelected<T extends FieldValues>(
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "space-between",
+          gap: Sizes.wpx(4),
         }}
       >
         {data.map((option) => (
           <TouchableOpacity
             activeOpacity={isEdit ? 0 : 1}
-            onPress={() => onPress(option.value)}
+            onPress={() => onPress(option.id)}
             key={option.value}
-            style={{
-              flexDirection: "row",
-              gap: Sizes.wpx(4),
-              alignItems: "center",
-            }}
+            style={[
+              {
+                flexDirection: "row",
+                alignItems: "center",
+                gap: Sizes.wpx(4),
+              },
+              optionStyle,
+            ]}
           >
             <View
               style={{
@@ -100,7 +110,7 @@ export function AppSingleSelected<T extends FieldValues>(
                 backgroundColor: Colors.background,
               }}
             >
-              {!isEdit && value !== answer && option.value === answer && (
+              {!isEdit && value !== answer && option?.id === answer && (
                 <View
                   style={{
                     position: "absolute",
@@ -117,7 +127,7 @@ export function AppSingleSelected<T extends FieldValues>(
                   width: size - 10,
                   borderRadius: size / 2,
                   backgroundColor:
-                    value === option.value ? Colors.tint : undefined,
+                    value === option.id ? Colors.tint : undefined,
                 }}
               />
             </View>
@@ -126,9 +136,14 @@ export function AppSingleSelected<T extends FieldValues>(
         ))}
       </View>
       {!isEdit && (
-        <ThemedText type="defaultSemiBold" style={{ color: Colors.link }}>
-          Đáp án đúng là: {answer}
-        </ThemedText>
+        <>
+          <ThemedText type="defaultSemiBold" style={{ color: Colors.link }}>
+            Đáp án đúng là: {answer}
+          </ThemedText>
+          <ThemedText type="defaultSemiBold" style={{ color: Colors.link }}>
+            {explain ? `Giải thích: ${explain}` : ""}
+          </ThemedText>
+        </>
       )}
     </View>
   );

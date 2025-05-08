@@ -3,7 +3,7 @@ import { ScrollView, View } from "react-native";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { Sizes } from "@/constants/Sizes";
-import { TQuestion } from "@/modules/types";
+import { TQuestionSymbol, TQuestionTense } from "@/modules/types";
 import { AppSingleSelected } from "@/components/ui/AppSingleSelected";
 import { useForm, useWatch } from "react-hook-form";
 import { AppButton } from "@/components/ui/AppButton";
@@ -14,7 +14,7 @@ const RenderItem = ({
   data,
   index,
 }: {
-  data: TQuestion;
+  data: TQuestionTense;
   index: number;
 }) => {
   const { Colors } = useAppColor();
@@ -30,6 +30,7 @@ const RenderItem = ({
         borderBottomWidth: 1,
         borderBottomColor: Colors.tint,
         paddingBottom: Sizes.tiny,
+        flex: 1,
       }}
     >
       <ThemedText type="defaultSemiBold">
@@ -52,34 +53,33 @@ type Form = {
   isSubmit: boolean;
 };
 
-export default function Tests() {
+export default function PracticeTense() {
   const refScroll = useRef<ScrollView>(null);
   const methods = useForm<Form>({
     mode: "all",
     defaultValues: { questions: {}, score: 0, isSubmit: false },
   });
   const { data: questions, refetch } = useGetRandomTests();
+
   return (
     <ThemedView
       form={methods}
-      headerTitle={`Số điểm của bạn: ${methods.getValues("score")}`}
+      headerTitle={`Số điểm của bạn: ${methods.watch("score")}`}
     >
       <ScrollView
         ref={refScroll}
         contentContainerStyle={{ padding: Sizes.default }}
       >
         {questions?.map((question, index) => (
-          <RenderItem
-            key={question?.id + index}
-            data={question}
-            index={index}
-          />
+          <RenderItem key={question.id + index} data={question} index={index} />
         ))}
         <AppButton
           show={!methods.watch("isSubmit")}
           title="Submit"
           onPress={methods.handleSubmit((data) => {
             const answers = data.questions;
+            console.log(answers);
+
             const score = questions?.filter(
               (q) => answers?.[q.id] === q.correct_answer
             );

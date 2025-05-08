@@ -10,6 +10,7 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "react-native-reanimated";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import * as Updates from "expo-updates"
 
 const queryClient = new QueryClient();
 import { useColorScheme } from "@/hooks/useColorScheme";
@@ -23,7 +24,22 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
+  useEffect(() => {
+    checkForUpdates()
+  }, [])
 
+  async function checkForUpdates() {
+    try {
+      const update = await Updates.checkForUpdateAsync()
+
+      if (update.isAvailable) {
+        await Updates.fetchUpdateAsync()
+        await Updates.reloadAsync()
+      }
+    } catch (error) {
+      console.log("Error checking for updates:", error)
+    }
+  }
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
@@ -43,6 +59,7 @@ export default function RootLayout() {
             <Stack.Screen name="tenses" options={{ headerShown: false }} />
             <Stack.Screen name="pronounce" options={{ headerShown: false }} />
             <Stack.Screen name="tests" options={{ headerShown: false }} />
+            <Stack.Screen name="vocabulary" options={{ headerShown: false }} />
             {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
             <Stack.Screen name="+not-found" />
           </Stack>
