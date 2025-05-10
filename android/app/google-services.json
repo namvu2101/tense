@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "747163379151",
+    "project_id": "app-english-329ee",
+    "storage_bucket": "app-english-329ee.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747163379151:android:2c4cfb41a1ac9518741eba",
+        "android_client_info": {
+          "package_name": "com.anonymous.tense"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7z9rar2iPxMlqd9MWptKQmkKi1uXCFRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

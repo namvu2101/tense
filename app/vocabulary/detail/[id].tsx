@@ -1,66 +1,53 @@
-import { View, Text, ScrollView } from "react-native";
-import React, { useState } from "react";
-import { useLocalSearchParams } from "expo-router";
-import { useAppColor } from "@/hooks/useAppColor";
-import { ThemedView } from "@/components/ThemedView";
-import useGetVocabulary from "../modules/useGetVocabulary";
 import { ThemedText } from "@/components/ThemedText";
-import { AppCollapsible } from "@/components/ui/AppCollapsible";
+import { ThemedView } from "@/components/ThemedView";
+import { AppViewLoading } from "@/components/ui/AppLoading";
+import {
+  CustomView1,
+  CustomView2,
+  CustomView3,
+} from "@/components/ui/CustomView";
 import { Sizes } from "@/constants/Sizes";
+import { useAppColor } from "@/hooks/useAppColor";
+import { useLocalSearchParams } from "expo-router";
+import React from "react";
+import { ScrollView, View } from "react-native";
+import useGetVocabulary from "../modules/useGetVocabulary";
 
 export default function Detail() {
   const { id } = useLocalSearchParams();
   const { Colors } = useAppColor();
-  const [selected, setSelected] = useState(0);
-  const { data } = useGetVocabulary(id as any);
+  const { data, isLoading } = useGetVocabulary(id as any);
   if (!data) return;
-  const CustomItem = ({
-    name,
-    data,
-  }: {
-    name: string;
-    data: string | string[];
-  }) => {
-    const renderData = () => {
-      if (typeof data === "string") {
-        return <ThemedText type="default">{data}</ThemedText>;
-      } else
-        return data.map((item, index) => (
-          <ThemedText key={index} type="default">
-            {item}
-          </ThemedText>
-        ));
-    };
-    return (
-      <AppCollapsible title={name}>
-        <View
-          style={{
-            borderColor: Colors.tint,
-            padding: Sizes.default,
-            borderWidth: 1,
-            borderBottomRightRadius: Sizes.border_radius * 2,
-            borderBottomLeftRadius: Sizes.border_radius * 2,
-            marginBottom: Sizes.default,
-          }}
-        >
-          {renderData()}
-        </View>
-      </AppCollapsible>
-    );
-  };
+  if (isLoading) return <AppViewLoading style={{ flex: 1 }} />;
+
   return (
     <ThemedView headerTitle={id.toString().replace("_", " ").toUpperCase()}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ padding: Sizes.small }}
       >
-        <CustomItem name="Khái niệm" data={data.concept} />
-        <CustomItem name="Cấu trúc" data={data.structure} />
-        <CustomItem name="Vị trí" data={data.position} />
-        <CustomItem name="Dấu hiệu" data={data.signs} />
-        <CustomItem name="Cách dùng" data={data.usage} />
-        <CustomItem name="Loại" data={data.types} />
-        <CustomItem name="Cấu trúc" data={data.special_cases} />
+        <View
+          style={{
+            padding: Sizes.small,
+            borderRadius: Sizes.big,
+            backgroundColor: Colors.line,
+            borderColor: Colors.tint,
+            borderWidth: 1,
+          }}
+        >
+          <ThemedText
+            type="default"
+            style={{ textAlign: "center", color: Colors.blue }}
+          >
+            {data.concept}
+          </ThemedText>
+        </View>
+        <CustomView2 name="Cấu trúc" data={data.structure} />
+        <CustomView2 name="Vị trí" data={data.position} />
+        <CustomView3 name="Dấu hiệu" data={data.signs} />
+        <CustomView1 name="Loại" data={data.types} />
+        <CustomView1 name="Sử dụng" data={data.usage} />
+        <CustomView3 name="Đặc biệt" data={data.special_cases} />
       </ScrollView>
     </ThemedView>
   );

@@ -5,6 +5,7 @@ import { AppCollapsible } from "@/components/ui/AppCollapsible";
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
 import { TenseForm, TenseStructure } from "@/modules/types";
+import { WorkSuggest } from "@/components/ui/WorkSuggest";
 
 export type TFormProps = {
   data: TenseForm;
@@ -30,41 +31,42 @@ const RenderChildren = ({
         <View
           style={{
             padding: Sizes.small,
+            borderRadius: Sizes.big,
+            backgroundColor: Colors.hightLight,
+            borderColor: Colors.tint,
             borderWidth: 1,
-            borderRadius: Sizes.border_radius,
-            borderColor: Colors.icon,
-            marginVertical: Sizes.small,
           }}
         >
-          <ThemedText type="defaultSemiBold">{data?.formula}</ThemedText>
+          <ThemedText
+            type="default"
+            style={{  color: Colors.royalBlue }}
+          >
+            {data?.formula}
+          </ThemedText>
         </View>
-
         <View>
           <ThemedText type="defaultSemiBold" style={{ marginTop: 10 }}>
             Ví dụ:
           </ThemedText>
-          {data?.examples.map((item) => (
-            <ThemedText
-              key={item}
-              type="default"
-              style={{ marginVertical: Sizes.tiny }}
-            >
-              {item}
-            </ThemedText>
-          ))}
+          <WorkSuggest data={data.examples} />
         </View>
 
         {data?.note && (
           <View
             style={{
               padding: Sizes.small,
+              borderRadius: Sizes.big,
+              backgroundColor: Colors.note,
+              borderColor: Colors.tint,
               borderWidth: 1,
-              borderRadius: Sizes.border_radius,
-              borderColor: Colors.icon,
-              marginVertical: Sizes.small,
             }}
           >
-            <ThemedText type="defaultSemiBold">{data?.note}</ThemedText>
+            <ThemedText
+              type="default"
+              style={{ textAlign: "center", color: Colors.forestGreen }}
+            >
+              {data?.note}
+            </ThemedText>
           </View>
         )}
 
@@ -72,13 +74,19 @@ const RenderChildren = ({
           <View
             style={{
               padding: Sizes.small,
+              borderRadius: Sizes.big,
+              backgroundColor: Colors.info,
+              borderColor: Colors.tint,
               borderWidth: 1,
-              borderRadius: Sizes.border_radius,
-              borderColor: Colors.icon,
-              marginVertical: Sizes.small,
+              marginVertical:Sizes.default
             }}
           >
-            <ThemedText type="defaultSemiBold">{data?.details}</ThemedText>
+            <ThemedText
+              type="default"
+              style={{ textAlign: "center", color: Colors.while }}
+            >
+              {data?.details}
+            </ThemedText>
           </View>
         )}
       </View>

@@ -15,7 +15,13 @@ export default function Vocabulary() {
     id: key,
     name: value.name,
   }));
-
+  const colors = [
+    Colors.royalBlue,
+    Colors.forestGreen,
+    Colors.indigo,
+    Colors.charcoalGray,
+    Colors.teal,
+  ];
   return (
     <ThemedView headerTitle="Vocabulary">
       <ScrollView
@@ -24,28 +30,35 @@ export default function Vocabulary() {
           paddingBottom: bottom,
         }}
       >
-        {data.map((item) => (
-          <TouchableOpacity
-            key={item.id}
-            style={{
-              borderColor: Colors.tint,
-              borderWidth: 2,
-              borderRadius: 10,
-              padding: 10,
-              margin: 10,
-              alignItems: "center",
-              gap: 10,
-            }}
-            onPress={() => {
-              router.push({
-                pathname: "/vocabulary/detail/[id]",
-                params: { id: item.id },
-              });
-            }}
-          >
-            <ThemedText type="defaultSemiBold">{item.name}</ThemedText>
-          </TouchableOpacity>
-        ))}
+        {data.map((item) => {
+          const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+          return (
+            <TouchableOpacity
+              key={item.id}
+              style={{
+                borderColor: Colors.tint,
+                borderWidth: 2,
+                borderRadius: 10,
+                padding: 10,
+                margin: 10,
+                alignItems: "center",
+                gap: 10,
+                backgroundColor: randomColor,
+              }}
+              onPress={() => {
+                router.push({
+                  pathname: "/vocabulary/detail/[id]",
+                  params: { id: item.id },
+                });
+              }}
+            >
+              <ThemedText type="defaultSemiBold" style={{ color: Colors.while }}>
+                {item.name}
+              </ThemedText>
+            </TouchableOpacity>
+          );
+        })}
       </ScrollView>
     </ThemedView>
   );
