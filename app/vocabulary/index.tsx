@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useMemo } from "react";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { Sizes } from "@/constants/Sizes";
@@ -22,6 +22,23 @@ export default function Vocabulary() {
     Colors.charcoalGray,
     Colors.teal,
   ];
+  // Shuffle data và gán màu không trùng gần nhau
+  const coloredData = useMemo(() => {
+    const result: Array<{ id: string; name: string; color: string }> = [];
+    let prevColor: string | null = null;
+
+    for (const item of data) {
+      // Lọc ra các màu khác với màu trước
+      const availableColors = colors.filter((c) => c !== prevColor);
+      // Random trong các màu hợp lệ
+      const color =
+        availableColors[Math.floor(Math.random() * availableColors.length)];
+      result.push({ ...item, color });
+      prevColor = color;
+    }
+
+    return result;
+  }, [data, colors]);
   return (
     <ThemedView headerTitle="Vocabulary">
       <ScrollView
@@ -30,9 +47,7 @@ export default function Vocabulary() {
           paddingBottom: bottom,
         }}
       >
-        {data.map((item) => {
-          const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
+        {coloredData.map((item) => {
           return (
             <TouchableOpacity
               key={item.id}
@@ -44,7 +59,7 @@ export default function Vocabulary() {
                 margin: 10,
                 alignItems: "center",
                 gap: 10,
-                backgroundColor: randomColor,
+                backgroundColor: item.color,
               }}
               onPress={() => {
                 router.push({
@@ -53,7 +68,10 @@ export default function Vocabulary() {
                 });
               }}
             >
-              <ThemedText type="defaultSemiBold" style={{ color: Colors.while }}>
+              <ThemedText
+                type="defaultSemiBold"
+                style={{ color: Colors.while }}
+              >
                 {item.name}
               </ThemedText>
             </TouchableOpacity>

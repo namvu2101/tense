@@ -6,7 +6,7 @@ import { AppIcon } from "@/components/ui/AppIcon";
 import { Sizes } from "@/constants/Sizes";
 import { TenseData } from "@/modules/types";
 import { useAppColor } from "@/hooks/useAppColor";
-import { WorkSuggest } from "@/components/ui/WorkSuggest";
+import { WordSuggest } from "@/components/ui/WordSuggest";
 import { CustomView3 } from "@/components/ui/CustomView";
 
 export function Tab({ data }: Readonly<{ data: TenseData }>) {
@@ -41,7 +41,7 @@ export function Tab({ data }: Readonly<{ data: TenseData }>) {
       <ThemedText type="defaultSemiBold" style={{ marginTop: 10 }}>
         Từ khóa nhận biết:
       </ThemedText>
-      <WorkSuggest data={usage.signalWords} type="defaultSemiBold" />
+      <WordSuggest data={usage.signalWords} type="defaultSemiBold" />
       <CustomView3 name="Ví dụ" data={usage.examples} />
 
       <View

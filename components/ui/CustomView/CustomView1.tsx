@@ -4,9 +4,15 @@ import { useAppColor } from "@/hooks/useAppColor";
 import { Sizes } from "@/constants/Sizes";
 import { ThemedText } from "@/components/ThemedText";
 import { AppCollapsible } from "../AppCollapsible";
-import { WorkSuggest } from "../WorkSuggest";
+import { WordSuggest } from "../WordSuggest";
 
-export function CustomView1({ name, data }: { name: string; data: string[] }) {
+export function CustomView1({
+  name,
+  data = [],
+}: {
+  name: string;
+  data: string[];
+}) {
   const { Colors } = useAppColor();
   const colors = [
     Colors.royalBlue,
@@ -15,6 +21,7 @@ export function CustomView1({ name, data }: { name: string; data: string[] }) {
     Colors.charcoalGray,
     Colors.teal,
   ];
+  if (data.length === 0) return null;
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   const renderData = (item: string) => {
     const title = item.split(":")[0];
@@ -34,7 +41,7 @@ export function CustomView1({ name, data }: { name: string; data: string[] }) {
         <ThemedText type="defaultSemiBold" style={{ color: Colors.while }}>
           {title}
         </ThemedText>
-        <WorkSuggest
+        <WordSuggest
           data={content}
           styleItem={{
             color: Colors.text,

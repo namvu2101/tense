@@ -41,7 +41,7 @@ export default function DetailScreen() {
     component: <Form data={form[item]} />,
   }));
 
-  const headers = ["Sử dụng", "Cấu trúc"];
+  const headers = ["Cách dùng", "Cấu trúc"];
 
   const pages: TPages = [
     {

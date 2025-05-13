@@ -1,6 +1,6 @@
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
-import { TOptionsSymbol } from "@/modules/types";
+import { TOptions, TQuestion } from "@/modules/types";
 import React, { useState } from "react";
 import { StyleProp, TouchableOpacity, View, ViewStyle } from "react-native";
 import { ThemedText } from "../ThemedText";
@@ -20,7 +20,7 @@ type TAppSingleSelected<T extends FieldValues> = {
   optionStyle?: StyleProp<ViewStyle>;
 } & UseControllerProps<T>;
 
-const WordDisplay = ({ word }: { word: TOptionsSymbol }) => {
+const WordDisplay = ({ word }: { word: TOptions }) => {
   const { value, underline } = word;
   if (!underline) {
     return <ThemedText>{value}</ThemedText>;

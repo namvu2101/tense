@@ -9,14 +9,9 @@ import { useForm, useWatch } from "react-hook-form";
 import { AppButton } from "@/components/ui/AppButton";
 import useGetRandomTests from "./modules/useGetRandomTests";
 import { useAppColor } from "@/hooks/useAppColor";
+import { QuestionSelect } from "@/components/ui/QuestionSelect";
 
-const RenderItem = ({
-  data,
-  index,
-}: {
-  data: TQuestion;
-  index: number;
-}) => {
+const RenderItem = ({ data, index }: { data: TQuestion; index: number }) => {
   const { Colors } = useAppColor();
   const isSubmit = useWatch({ name: "isSubmit", exact: true });
 
@@ -68,13 +63,11 @@ export default function Tests() {
         ref={refScroll}
         contentContainerStyle={{ padding: Sizes.default }}
       >
-        {questions?.map((question, index) => (
-          <RenderItem
-            key={question?.id + index}
-            data={question}
-            index={index}
-          />
-        ))}
+        <QuestionSelect
+          data={questions ?? []}
+          name="questions"
+          isEdit={!methods.watch("isSubmit")}
+        />
         <AppButton
           show={!methods.watch("isSubmit")}
           title="Submit"

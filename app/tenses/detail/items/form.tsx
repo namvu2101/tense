@@ -5,7 +5,7 @@ import { AppCollapsible } from "@/components/ui/AppCollapsible";
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
 import { TenseForm, TenseStructure } from "@/modules/types";
-import { WorkSuggest } from "@/components/ui/WorkSuggest";
+import { WordSuggest } from "@/components/ui/WordSuggest";
 
 export type TFormProps = {
   data: TenseForm;
@@ -26,6 +26,8 @@ const RenderChildren = ({
           borderWidth: 1,
           borderColor: Colors.tint,
           padding: Sizes.tiny,
+          borderRadius: Sizes.border_radius * 2,
+          marginTop: -10,
         }}
       >
         <View
@@ -35,12 +37,10 @@ const RenderChildren = ({
             backgroundColor: Colors.hightLight,
             borderColor: Colors.tint,
             borderWidth: 1,
+            marginTop:Sizes.default
           }}
         >
-          <ThemedText
-            type="default"
-            style={{  color: Colors.royalBlue }}
-          >
+          <ThemedText type="default" style={{ color: Colors.royalBlue }}>
             {data?.formula}
           </ThemedText>
         </View>
@@ -48,7 +48,7 @@ const RenderChildren = ({
           <ThemedText type="defaultSemiBold" style={{ marginTop: 10 }}>
             Ví dụ:
           </ThemedText>
-          <WorkSuggest data={data.examples} />
+          <WordSuggest data={data.examples} />
         </View>
 
         {data?.note && (
@@ -78,7 +78,7 @@ const RenderChildren = ({
               backgroundColor: Colors.info,
               borderColor: Colors.tint,
               borderWidth: 1,
-              marginVertical:Sizes.default
+              marginVertical: Sizes.default,
             }}
           >
             <ThemedText
@@ -103,6 +103,7 @@ export function Form({ data }: Readonly<{ data: TenseForm | TenseStructure }>) {
         flex: 1,
         width: Sizes.device_width,
         paddingHorizontal: Sizes.default,
+        paddingBottom: Sizes.default,
       }}
     >
       {!tobe && !normal && (

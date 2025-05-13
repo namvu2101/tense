@@ -37,13 +37,12 @@ export function AppButton(props: Readonly<TAppButton>) {
           flexDirection: "row",
           backgroundColor: Colors.primary,
           borderRadius: Sizes.big,
-          margin: Sizes.default,
         },
         Styles.shadow,
         style,
       ]}
     >
-      <ThemedText type="defaultSemiBold" style={titleStyle}>
+      <ThemedText type="defaultSemiBold" style={[{color:Colors.background},titleStyle]}>
         {title}
       </ThemedText>
       {icon?.name && <AppIcon {...icon} />}

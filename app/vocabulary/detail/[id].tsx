@@ -1,54 +1,59 @@
-import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { AppViewLoading } from "@/components/ui/AppLoading";
-import {
-  CustomView1,
-  CustomView2,
-  CustomView3,
-} from "@/components/ui/CustomView";
-import { Sizes } from "@/constants/Sizes";
-import { useAppColor } from "@/hooks/useAppColor";
 import { useLocalSearchParams } from "expo-router";
-import React from "react";
-import { ScrollView, View } from "react-native";
+import React, { useEffect } from "react";
+import { useWindowDimensions } from "react-native";
+import { SceneMap, TabView } from "react-native-tab-view";
+import TabOne from "../items/TabOne";
+import TabTwo from "../items/TabTwo";
+import { AppViewLoading } from "@/components/ui/AppLoading";
 import useGetVocabulary from "../modules/useGetVocabulary";
+import { useForm } from "react-hook-form";
+import useGetExams from "../modules/useGetExams";
+import TabExams from "../items/TabExams";
+
+const renderScene = SceneMap({
+  first: TabOne,
+  second: TabTwo,
+  three: TabExams,
+});
+
+const routes = [
+  { key: "first", title: "First" },
+  { key: "second", title: "Second" },
+  { key: "three", title: "three" },
+];
 
 export default function Detail() {
   const { id } = useLocalSearchParams();
-  const { Colors } = useAppColor();
+  const layout = useWindowDimensions();
   const { data, isLoading } = useGetVocabulary(id as any);
-  if (!data) return;
+  const { data: exercises } = useGetExams(id as any);
+  const [index, setIndex] = React.useState(0);
+  const methods = useForm({
+    mode: "all",
+    values: { data: data, exams: exercises, index: 0 },
+  });
+
   if (isLoading) return <AppViewLoading style={{ flex: 1 }} />;
+  if (!data) return;
 
   return (
-    <ThemedView headerTitle={id.toString().replace("_", " ").toUpperCase()}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ padding: Sizes.small }}
-      >
-        <View
-          style={{
-            padding: Sizes.small,
-            borderRadius: Sizes.big,
-            backgroundColor: Colors.line,
-            borderColor: Colors.tint,
-            borderWidth: 1,
-          }}
-        >
-          <ThemedText
-            type="default"
-            style={{ textAlign: "center", color: Colors.blue }}
-          >
-            {data.concept}
-          </ThemedText>
-        </View>
-        <CustomView2 name="Cấu trúc" data={data.structure} />
-        <CustomView2 name="Vị trí" data={data.position} />
-        <CustomView3 name="Dấu hiệu" data={data.signs} />
-        <CustomView1 name="Loại" data={data.types} />
-        <CustomView1 name="Sử dụng" data={data.usage} />
-        <CustomView3 name="Đặc biệt" data={data.special_cases} />
-      </ScrollView>
+    <ThemedView
+      form={methods}
+      headerTitle={id.toString().replace("_", " ").toUpperCase()}
+    >
+      <TabView
+        lazy
+        navigationState={{ index, routes }}
+        renderScene={renderScene}
+        onIndexChange={(index) => {
+          methods.setValue("index", index);
+          setIndex(index);
+        }}
+        initialLayout={{ width: layout.width }}
+        swipeEnabled={index !== 2 && index !== 3}
+        renderTabBar={() => null}
+      />
     </ThemedView>
   );
 }

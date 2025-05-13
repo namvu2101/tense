@@ -5,7 +5,13 @@ import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
 import { AppCollapsible } from "../AppCollapsible";
 
-export function CustomView3({ name, data }: { name: string; data: string[] }) {
+export function CustomView3({
+  name,
+  data = [],
+}: {
+  name: string;
+  data: string[];
+}) {
   const { Colors } = useAppColor();
   const colors = [
     Colors.royalBlue,
@@ -14,7 +20,7 @@ export function CustomView3({ name, data }: { name: string; data: string[] }) {
     Colors.charcoalGray,
     Colors.teal,
   ];
-
+  if (data.length === 0) return null;
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   const renderData = (item: string) => {
     return (

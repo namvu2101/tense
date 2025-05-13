@@ -7,7 +7,7 @@ import { AppCollapsible } from "../AppCollapsible";
 
 export function CustomView2({
   name,
-  data,
+  data = [],
 }: {
   name: string;
   data: string | string[];
@@ -20,6 +20,7 @@ export function CustomView2({
     Colors.charcoalGray,
     Colors.teal,
   ];
+  if (data.length === 0) return null;
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   const renderData = (item: string) => {
     const title = item.split(":")[0];

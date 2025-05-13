@@ -1,6 +1,11 @@
 // const pronounce = require("./talking.png");
 // const exams = require("./tests.png");
 const grammar = require("./grammar.png");
+const sad = require("./buon1.jpg");
+const sad2 = require("./buon2.jpg");
+const sad3 = require("./buon3.jpg");
+const happy = require("./vuive1.jpg");
+const happy2 = require("./vuive2.jpg");
 // const images = { grammar, exams, pronounce };
-const images = { grammar };
+const images = { grammar, sad, sad2, sad3, happy, happy2 };
 export { images };
