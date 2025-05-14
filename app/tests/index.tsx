@@ -89,6 +89,7 @@ export default function Tests() {
           onPress={() => {
             refetch();
             methods.reset();
+            refScroll.current?.scrollTo(0);
           }}
         />
       </ScrollView>

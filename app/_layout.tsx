@@ -16,6 +16,8 @@ const queryClient = new QueryClient();
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
+import { AIButton } from "@/components/AIButton";
+import { KeyboardProvider } from "react-native-keyboard-controller";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -55,21 +57,28 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <QueryClientProvider client={queryClient}>
         <GestureHandlerRootView style={{ flex: 1 }}>
-          <BottomSheetModalProvider>
-            <Stack>
-              <Stack.Screen name="(home)" options={{ headerShown: false }} />
-              <Stack.Screen name="tenses" options={{ headerShown: false }} />
-              <Stack.Screen name="pronounce" options={{ headerShown: false }} />
-              <Stack.Screen name="tests" options={{ headerShown: false }} />
-              <Stack.Screen
-                name="vocabulary"
-                options={{ headerShown: false }}
-              />
-              {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
-              <Stack.Screen name="+not-found" />
-            </Stack>
-            <StatusBar style="auto" />
-          </BottomSheetModalProvider>
+          <KeyboardProvider>
+            <BottomSheetModalProvider>
+              <Stack>
+                <Stack.Screen name="(home)" options={{ headerShown: false }} />
+                <Stack.Screen name="tenses" options={{ headerShown: false }} />
+                <Stack.Screen
+                  name="pronounce"
+                  options={{ headerShown: false }}
+                />
+                <Stack.Screen name="tests" options={{ headerShown: false }} />
+                <Stack.Screen
+                  name="vocabulary"
+                  options={{ headerShown: false }}
+                />
+                <Stack.Screen name="gemini" options={{ headerShown: false }} />
+                {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
+                <Stack.Screen name="+not-found" />
+              </Stack>
+              <StatusBar style="auto" />
+            </BottomSheetModalProvider>
+          </KeyboardProvider>
+          <AIButton />
         </GestureHandlerRootView>
       </QueryClientProvider>
     </ThemeProvider>
