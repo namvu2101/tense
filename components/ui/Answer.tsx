@@ -2,10 +2,17 @@ import { Convert } from "@/constants/Convert";
 import { Sizes } from "@/constants/Sizes";
 import { useAppColor } from "@/hooks/useAppColor";
 import { TOptions } from "@/modules/types";
-import { StyleProp, TextStyle, View, TouchableOpacity } from "react-native";
+import {
+  StyleProp,
+  TextStyle,
+  View,
+  TouchableOpacity,
+  LayoutAnimation,
+} from "react-native";
 import { ThemedTextProps, ThemedText } from "../ThemedText";
 import { useController, useFormState, useWatch } from "react-hook-form";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 
 export function Answers({
   data,
@@ -27,6 +34,8 @@ export function Answers({
   const { Colors } = useAppColor();
   const wrap = data.some((item) => item.value.length > 20);
   const newData = useMemo(() => Convert.shuffleArray(data), [data]);
+  const height = useSharedValue(0);
+
   const {
     fieldState: { error },
     field: { value, onChange },
@@ -41,6 +50,15 @@ export function Answers({
     if (answer === id && !isEdit) return true;
     return false;
   };
+
+  useEffect(() => {
+    height.value = withTiming(error ? 0 : 40, {
+      duration: 200,
+    });
+  }, [error]);
+  const animatedStyle = useAnimatedStyle(() => ({
+    height: height.value,
+  }));
 
   return (
     <View>
@@ -74,13 +92,16 @@ export function Answers({
               }
               onPress?.(item);
             }}
+            activeOpacity={isEdit ? 0 : 1}
           >
             <WordDisplay word={item} styleItem={styleItem} type={type} />
           </TouchableOpacity>
         ))}
       </View>
       {error && (
-        <ThemedText style={{ color: "red" }}>Bạn chưa chọn đáp án</ThemedText>
+        <Animated.View style={animatedStyle}>
+          <ThemedText style={{ color: "red" }}>Bạn chưa chọn đáp án</ThemedText>
+        </Animated.View>
       )}
     </View>
   );

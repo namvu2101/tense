@@ -1,8 +1,16 @@
-import { View, Text, ViewStyle, TextStyle } from "react-native";
+import {
+  View,
+  Text,
+  ViewStyle,
+  TextStyle,
+  TouchableOpacity,
+} from "react-native";
 import React, { useMemo } from "react";
 import { Sizes } from "@/constants/Sizes";
 import { ThemedText } from "@/components/ThemedText";
 import { useAppColor } from "@/hooks/useAppColor";
+import Clipboard from "@react-native-clipboard/clipboard";
+import { refNoti } from "@/app/_layout";
 
 export default function Message({
   item,
@@ -18,8 +26,17 @@ export default function Message({
     return { alignSelf: "flex-start", backgroundColor: Colors.tint };
   }, [item]);
 
+  const onCopy = () => {
+    Clipboard.setString(item.text);
+    refNoti.current?.show("Sao chép thành công");
+  };
+
   return (
-    <View style={{ marginVertical: Sizes.tiny }}>
+    <TouchableOpacity
+      activeOpacity={1}
+      onLongPress={onCopy}
+      style={{ marginVertical: Sizes.tiny }}
+    >
       <ThemedText
         type="defaultSemiBold"
         style={[
@@ -34,6 +51,6 @@ export default function Message({
       >
         {item.text}
       </ThemedText>
-    </View>
+    </TouchableOpacity>
   );
 }

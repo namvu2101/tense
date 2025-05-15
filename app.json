@@ -2,7 +2,7 @@
   "expo": {
     "name": "tense",
     "slug": "tense",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/app_logo.png",
     "scheme": "myapp",
@@ -41,7 +41,10 @@
           "supportsBackgroundPlayback": true,
           "supportsPictureInPicture": true
         }
-      ]
+      ],
+      "expo-font",
+      "expo-web-browser",
+      "expo-speech-recognition"
     ],
     "experiments": {
       "typedRoutes": true
@@ -54,7 +57,7 @@
         "projectId": "e492ecba-7251-4c51-82c2-6df063029c8c"
       }
     },
-    "runtimeVersion": "1.0.1",
+    "runtimeVersion": "1.0.2",
     "updates": {
       "url": "https://u.expo.dev/e492ecba-7251-4c51-82c2-6df063029c8c",
       "disableAntiBrickingMeasures": true,

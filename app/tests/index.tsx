@@ -1,46 +1,13 @@
-import React, { useRef, useState } from "react";
-import { ScrollView, View } from "react-native";
-import { ThemedText } from "@/components/ThemedText";
+import React, { useRef } from "react";
+import { useForm } from "react-hook-form";
+import { ScrollView } from "react-native";
 import { ThemedView } from "@/components/ThemedView";
-import { Sizes } from "@/constants/Sizes";
-import { TQuestion } from "@/modules/types";
-import { AppSingleSelected } from "@/components/ui/AppSingleSelected";
-import { useForm, useWatch } from "react-hook-form";
 import { AppButton } from "@/components/ui/AppButton";
-import useGetRandomTests from "./modules/useGetRandomTests";
-import { useAppColor } from "@/hooks/useAppColor";
 import { QuestionSelect } from "@/components/ui/QuestionSelect";
+import { Sizes } from "@/constants/Sizes";
+import useGetRandomTests from "./modules/useGetRandomTests";
+import { refNoti } from "../_layout";
 
-const RenderItem = ({ data, index }: { data: TQuestion; index: number }) => {
-  const { Colors } = useAppColor();
-  const isSubmit = useWatch({ name: "isSubmit", exact: true });
-
-  return (
-    <View
-      style={{
-        flexShrink: 1,
-        marginBottom: Sizes.default,
-        minHeight: Sizes.wpx(100),
-        justifyContent: "space-between",
-        borderBottomWidth: 1,
-        borderBottomColor: Colors.tint,
-        paddingBottom: Sizes.tiny,
-      }}
-    >
-      <ThemedText type="defaultSemiBold">
-        {index + 1}. {data.question}
-      </ThemedText>
-      <AppSingleSelected
-        data={data.options}
-        name={`questions.${data.id}`}
-        rules={{ required: true }}
-        isEdit={!isSubmit}
-        answer={data.correct_answer}
-        explain={data.explain}
-      />
-    </View>
-  );
-};
 type Form = {
   questions: Record<string, string>;
   score: number;
@@ -71,17 +38,24 @@ export default function Tests() {
         <AppButton
           show={!methods.watch("isSubmit")}
           title="Submit"
-          onPress={methods.handleSubmit((data) => {
-            const answers = data.questions;
-            const score = questions?.filter(
-              (q) => answers?.[q.id] === q.correct_answer
-            );
-            if (score) {
-              methods.setValue("score", score.length);
+          onPress={async () => {
+            const isCheck = await methods.trigger(["questions"]);
+            if (!isCheck) {
+              return refNoti.current?.show("Bạn chưa chọn hết đáp án");
             }
-            methods.setValue("isSubmit", true);
-            refScroll.current?.scrollTo(0);
-          })}
+
+            methods.handleSubmit((data) => {
+              const answers = data.questions;
+              const score = questions?.filter(
+                (q) => answers?.[q.id] === q.correct_answer
+              );
+              if (score) {
+                methods.setValue("score", score.length);
+              }
+              methods.setValue("isSubmit", true);
+              refScroll.current?.scrollTo(0);
+            });
+          }}
         />
         <AppButton
           show={methods.watch("isSubmit")}

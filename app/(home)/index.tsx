@@ -12,6 +12,7 @@ import { useAppColor } from "@/hooks/useAppColor";
 import { RelativePathString, Route, router } from "expo-router";
 import { images } from "@/assets/images";
 import { Sizes } from "@/constants/Sizes";
+import { appVersion, isIOS } from "@/constants/system";
 
 type TData = {
   name: string;
@@ -25,15 +26,13 @@ export default function Home() {
   const data: TData[] = [
     {
       name: "Ngữ pháp",
-      description:
-        "Hệ thống quy tắc và cấu trúc giúp bạn sử dụng tiếng anh",
+      description: "Hệ thống quy tắc và cấu trúc giúp bạn sử dụng tiếng anh",
       route: "/tenses",
       image: images.grammar,
     },
     {
       name: "Phát âm",
-      description:
-        "Hướng dẫn cách phát âm chuẩn các âm trong tiếng Anh",
+      description: "Hướng dẫn cách phát âm chuẩn các âm trong tiếng Anh",
       route: "/pronounce",
       image: images.grammar,
     },
@@ -88,6 +87,9 @@ export default function Home() {
           </TouchableOpacity>
         ))}
       </ScrollView>
+      <ThemedText type="default">
+        Phiên bản: {isIOS ? appVersion.ios : appVersion.android}
+      </ThemedText>
     </ThemedView>
   );
 }

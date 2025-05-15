@@ -49,7 +49,7 @@ export function AppCollapsible({
 }: Readonly<TAppCollapsibleProps>) {
   const { Colors } = useAppColor();
   const [collapsed, setCollapsed] = useState(isHide);
-  const [contentHeight, setContentHeight] = useState(0);
+  const [contentHeight, setContentHeight] = useState(Sizes.wpx(200));
   const heightValue = useSharedValue(0);
   const measured = useRef(false); // tránh đo nhiều lần
 

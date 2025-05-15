@@ -7,7 +7,7 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
-import { useEffect } from "react";
+import { createRef, useEffect } from "react";
 import "react-native-reanimated";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import * as Updates from "expo-updates";
@@ -16,11 +16,14 @@ const queryClient = new QueryClient();
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
-import { AIButton } from "@/components/AIButton";
 import { KeyboardProvider } from "react-native-keyboard-controller";
+import { Noti, TNoti } from "@/components/Noti";
+import { AIButton } from "@/components/AIButton";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+export const refNoti = createRef<TNoti>();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -79,6 +82,7 @@ export default function RootLayout() {
             </BottomSheetModalProvider>
           </KeyboardProvider>
           <AIButton />
+          <Noti ref={refNoti} />
         </GestureHandlerRootView>
       </QueryClientProvider>
     </ThemeProvider>

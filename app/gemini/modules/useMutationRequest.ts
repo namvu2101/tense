@@ -1,8 +1,11 @@
-import { GOOGLE_GENAI_API_KEY } from "@env";
 import { GoogleGenAI } from "@google/genai";
 import { useMutation } from "@tanstack/react-query";
 
-const ai = new GoogleGenAI({ apiKey: GOOGLE_GENAI_API_KEY });
+const key = process.env.EXPO_PUBLIC_GOOGLE_GENAI_API_KEY;
+const ai = new GoogleGenAI({
+  apiKey: key,
+});
+
 export default function useMutationRequest() {
   return useMutation({
     mutationKey: ["mutation-ai"],

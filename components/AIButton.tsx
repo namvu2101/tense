@@ -16,8 +16,8 @@ export function AIButton() {
   const route = useRouteInfo();
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  const showTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const hideTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const showTimerRef = useRef<NodeJS.Timeout | number | null>(null);
+  const hideTimerRef = useRef<NodeJS.Timeout | number | null>(null);
   const lastPathnameRef = useRef<string | null>(null);
   const [shouldRender, setShouldRender] = useState(false);
 
@@ -84,8 +84,8 @@ export function AIButton() {
         <Animated.View
           style={{
             opacity: fadeAnim,
-            right: -10,
-            top: -10,
+            right: -Sizes.default,
+            top: -Sizes.default,
             backgroundColor: Colors.tint,
             padding: Sizes.tiny,
             borderRadius: Sizes.small,
